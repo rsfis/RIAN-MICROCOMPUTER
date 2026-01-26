@@ -1,0 +1,17 @@
+make pin gpio 0 (all x5) (rtc) to switch between powered on and off (using deep sleep):
+
+SLEEP:
+
+if (...){
+digitalWrite(38, LOW);
+esp_deep_sleep_start();
+}
+
+WAKE UP:
+#define BTN GPIO_NUM_0
+void setup() {
+  pinMode(BTN, INPUT_PULLUP);
+  esp_sleep_wakeup_cause_t causa = esp_sleep_get_wakeup_cause();
+  esp_sleep_enable_ext0_wakeup(BTN, 0); // LOW wakes
+}
+(This configures awake key for the entire program. Dont need to rewrite in loop)
