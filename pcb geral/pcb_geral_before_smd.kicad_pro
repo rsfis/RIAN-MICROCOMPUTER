@@ -509,7 +509,7 @@
       "plot": "C:/Users/rsfis/OneDrive/Desktop/",
       "pos_files": "C:/Users/rsfis/OneDrive/Desktop/",
       "specctra_dsn": "",
-      "step": "C:/Users/rsfis/Desktop/pcb_geral.glb",
+      "step": "../case/everything/pcb_geral.glb",
       "svg": "",
       "vrml": ""
     },
