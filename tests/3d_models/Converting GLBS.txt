@@ -1,0 +1,11 @@
+Always open the script using the CMD
+Execute: python glb_to_header.py
+Type the input name
+Type ENTER
+Type the output name (name.h)
+Type ENTER
+
+Download these libs:
+PIL
+pygltflib
+numpy

@@ -1,0 +1,10 @@
+Battery: 3,7v 3000mah
+Converted: 5v 1800mah (85% of efficiency)
+
+System: 
+  Turned ON: 80mA (ESP32) + 95mA (TFT BACKLIGHT) = 175mA
+  HYBERNATING: 0.24mA (Esp32) + 10mA (TFT SCREEN SECURE VALUE) = 10.24mA
+
+Duration:
+  Turned ON: 10.3h
+  Hybernating: 7.2 days (Esp32)
