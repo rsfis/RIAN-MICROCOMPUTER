@@ -507,7 +507,7 @@
       "idf": "",
       "netlist": "./",
       "plot": "../gerbers/",
-      "pos_files": "C:/Users/rsfis/OneDrive/Desktop/",
+      "pos_files": "../material_list/",
       "specctra_dsn": "",
       "step": "../case/everything/pcb_geral.step",
       "svg": "",

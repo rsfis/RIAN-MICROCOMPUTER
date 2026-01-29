@@ -1,5 +1,6 @@
-"Id";"Designador";"Footprint";"Quantidade";"Designação";"Fornecedor e referência";
-1;"ESP32PinSocket_2,ESP32PinSocket_1";"PinSocket_1x21_P2.54mm_Vertical";2;"PinSocket_1x21_P2.54mm_Vertical";;;
-2;"KeyboardPinSocket";"PinSocket_2x07_P2.54mm_Vertical";1;"PinSocket_2x07_P2.54mm_Vertical";;;
-3;"FlatCable_Header";"PinHeader_1x14_P1.00mm_Vertical";1;"PinHeader_1x14_P1.00mm_Vertical";;;
-4;"FlatCableSocket";"Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal";1;"Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal";;;
+Comment;Designator;Quantity:;Footprint;JLCPCB Part#(optional)
+Pin Socket 1x21 2.54mm Vertical;ESP32PinSocket_1;1;PinSocket_1x21_P2.54mm_Vertical;
+Pin Socket 1x21 2.54mm Vertical;ESP32PinSocket_2;1;PinSocket_1x21_P2.54mm_Vertical;
+Pin Socket 2x7 2.54mm Vertical;KeyboardPinSocket;1;PinSocket_2x07_P2.54mm_Vertical;
+Pin Header 1x14 1mm Vertical;FlatCable_Header;1;PinHeader_1x14_P1.00mm_Vertical;
+FFC-FPC Flat Cable Socket Bottom Connector Pitch 0.5mm 14 pins;FlatCableSocket;1;Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal;

@@ -506,7 +506,7 @@
       "idf": "",
       "netlist": "./",
       "plot": "../gerber/",
-      "pos_files": "C:/Users/rsfis/OneDrive/Desktop/",
+      "pos_files": "../materials/",
       "specctra_dsn": "",
       "step": "C:/Users/rsfis/Desktop/teclado_matricial.glb",
       "svg": "",

@@ -1,0 +1,259 @@
+# 📘 LovyanGFX — Documentação Completa (Formas, Texto, Sprites, SD e Fontes)
+
+Biblioteca gráfica avançada para ESP32 e microcontroladores, permitindo desenhar formas, textos e imagens com aceleração por hardware.  
+Inclui suporte a sprites, fontes TTF externas e SD.
+
+---
+
+## ⚙️ Inicialização — ST7796 com SPI2 e PWM
+
+```cpp
+#include <LovyanGFX.hpp>
+#include <SD.h>
+
+class LGFX : public lgfx::LGFX_Device {
+  lgfx::Panel_ST7796 _panel_instance;
+  lgfx::Bus_SPI _bus_instance;
+  lgfx::Light_PWM _light_instance;
+
+public:
+  LGFX(void)
+  {
+    { // SPI
+      auto cfg = _bus_instance.config();
+      cfg.spi_host = SPI2_HOST;
+      cfg.spi_mode = 0;
+      cfg.freq_write = 80000000;
+      cfg.freq_read  = 16000000;
+      cfg.spi_3wire  = false;
+      cfg.use_lock   = true;
+      cfg.dma_channel = SPI_DMA_CH_AUTO;
+      cfg.pin_sclk = 14;
+      cfg.pin_mosi = 13;
+      cfg.pin_miso = 12;
+      cfg.pin_dc   = 9;
+      _bus_instance.config(cfg);
+      _panel_instance.setBus(&_bus_instance);
+    }
+
+    { // Painel ST7796
+      auto cfg = _panel_instance.config();
+      cfg.pin_cs  = 10;
+      cfg.pin_rst = 11;
+      cfg.pin_busy = -1;
+
+      cfg.memory_width  = 320;
+      cfg.memory_height = 480;
+      cfg.panel_width   = 320;
+      cfg.panel_height  = 480;
+
+      cfg.offset_x = 0;
+      cfg.offset_y = 0;
+
+      cfg.readable   = false;
+      cfg.invert     = true;
+      cfg.rgb_order  = false;
+      cfg.dlen_16bit = false;
+      cfg.bus_shared = true;
+
+      _panel_instance.config(cfg);
+    }
+
+    { // Backlight
+      auto cfg = _light_instance.config();
+      cfg.pin_bl = 38;
+      cfg.invert = false;
+      cfg.freq   = 5000;
+      cfg.pwm_channel = 7;
+      _light_instance.config(cfg);
+      _panel_instance.setLight(&_light_instance);
+    }
+
+    setPanel(&_panel_instance);
+  }
+};
+
+LGFX tft;
+LGFX_Sprite frame(&tft); // TUDO DEVE SER DESENHADO AQUI DENTRO
+
+void setup()
+{
+    tft.init();
+    tft.setRotation(1);
+    tft.setBrightness(255);
+
+    if (!SD.begin(SD_CS)) {
+      Serial.println("Falha no SD!");
+      while (1);
+    }
+    Serial.println("SD OK!");
+
+    frame.setPsram(true);
+    if (!frame.createSprite(tft.width(), tft.height())) {
+      Serial.println("Falha ao criar frame!");
+      while (1);
+    }
+}
+
+void loop(){
+  frame.fillScreen(TFT_BLACK);
+  // DESENHE TUDO ABAIXO DISSO
+  frame.pushSprite(0, 0);
+}
+```
+
+---
+
+## 🟦 Formas básicas
+
+Funções principais:
+
+| Função | Descrição |
+|--------|-----------|
+| `frame.drawPixel(x, y, color)` | Desenha um pixel |
+| `frame.drawLine(x0, y0, x1, y1, color)` | Desenha linha |
+| `frame.drawRect(x, y, w, h, color)` | Retângulo contorno |
+| `frame.fillRect(x, y, w, h, color)` | Retângulo preenchido |
+| `frame.drawCircle(x, y, r, color)` | Círculo contorno |
+| `frame.fillCircle(x, y, r, color)` | Círculo preenchido |
+| `frame.drawRoundRect(x, y, w, h, r, color)` | Retângulo arredondado contorno |
+| `frame.fillRoundRect(x, y, w, h, r, color)` | Retângulo arredondado preenchido |
+| `frame.fillTriangle(x0,y0,x1,y1,x2,y2,color)` | Triângulo preenchido |
+
+### Exemplo:
+
+```cpp
+frame.fillScreen(TFT\_BLACK);
+frame.fillCircle(50, 60, 30, TFT\_RED);
+frame.drawRect(100, 50, 80, 40, TFT\_GREEN);
+frame.drawLine(0, 0, 200, 200, TFT\_YELLOW);
+```
+
+## ✍️ Texto
+
+* `frame.setTextColor(color)` → cor do texto e fundo
+* `frame.setFont(font)` → fonte atual
+* `frame.setTextSize(n)` → escala fonte padrão
+* `frame.setCursor(x, y)` → posição para `print()`
+* `frame.print(string)` → desenha
+
+---
+
+## 🔤 Fontes
+
+### 1️⃣ Fontes internas
+
+```cpp
+frame.setFont(&fonts::Font2);
+frame.drawString("Fonte interna", 40, 40);
+```
+
+Fontes comuns: `Font0`  a `Font8`, `DejaVu18`, `DejaVu24` (UTF-8)
+
+### 2️⃣ Fontes externas
+Primeiro, transforme a fonte ttf ou otf em header file usando ttf2gfx-win-2.05.
+Ponha o header no diretório do sketch e inclua no sketch.
+```cpp
+#include "Geometos.h"
+
+frame.setFont(&Geometos14pt); // Pegue dentro do header. É a ultima variável declarada.
+// Se divirta
+void loop(){
+  frame.fillScreen(TFT_BLACK);
+  frame.setTextColor(TFT_RED);
+  frame.setCursor(10, 50);
+  frame.print("OLÁ LOVYANGFX!");
+  frame.pushSprite(0, 0);
+}
+```
+
+## 🧱 Sprites
+
+```cpp
+LGFX_Sprite sprite(&tft);
+sprite.createSprite(200, 100);
+sprite.fillSprite(TFT\_BLUE);
+sprite.setTextDatum(MC\_DATUM);
+sprite.setTextColor(TFT\_WHITE);
+sprite.drawString("Texto no Sprite", 100, 50);
+sprite.pushSprite(60, 80);
+sprite.deleteSprite();
+```
+
+💡 Dica: `sprite.setPsram(true)` para sprites grandes no ESP32-S3 com PSRAM
+
+---
+
+## 💾 SD e Imagens
+
+```cpp
+struct Sprite {
+  LGFX_Sprite spr;
+
+  Sprite() : spr(&tft) {
+    spr.setPsram(true);
+    spr.fillSprite(TFT_TRANSPARENT);
+    spr.setColorDepth(16);
+  }
+
+  bool load(const char* caminho, int largura, int altura) {
+    if (!spr.createSprite(largura, altura)) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x003 - Sprite creation failed at %s", caminho);
+      while (1);
+    }
+
+    File f = SD.open(caminho);
+    if (!f) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x004 - Couldn't open file at %s", caminho);
+      while (1);
+    }
+
+    size_t tamanho = f.size();
+    uint8_t* buffer = (uint8_t*)malloc(tamanho);
+    if (!buffer) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x005 - Malloc failed at adress %s", *buffer);
+      f.close();
+      while (1);
+    }
+
+    f.read(buffer, tamanho);
+    f.close();
+    spr.drawPng(buffer, tamanho, 0, 0);
+    free(buffer);
+    return true;
+  }
+
+  void draw(int x, int y) {
+    spr.pushSprite(&frame, x, y, 0x0000);
+  }
+};
+
+Sprite* didi;
+
+// SETUP
+didi = new Sprite();
+didi->load(caminho, tamanhox, tamanhoy);
+
+// LOOP
+frame.fillScreen(TFT_BLACK);
+didi->draw(x, y);
+frame.pushSprite(0, 0);
+```
+
+## Custom Colors
+uint16_t red = frame.color565(255, 0, 0);
+
+## 📎 Referências
+
+* [LovyanGFX GitHub](https://github.com/lovyan03/LovyanGFX)
+* [PDF básico oficial](https://lang-ship.com/blog/files/LovyanGFX/LovyanGFX_BASIC.pdf)
+* \[Exemplos oficiais](https://github.com/lovyan03/LovyanGFX/tree/master/exam
