@@ -1,0 +1,6 @@
+Designator,Mid X,Mid Y,Layer,Rotation
+ESP32PinSocket_1,157.670000,-84.250000,Top,90
+ESP32PinSocket_2,157.670000,-109.750000,Top,90
+FlatCableSocket,98.000000,-82.350000,Top,180
+FlatCable_Header,91.25,-89.1,Top,90
+KeyboardPinSocket,84.500000,-122.750000,Top,90

@@ -1,0 +1,7 @@
+Id,Designator,Footprint,Quantity,Comment,JLCPCB Part #
+1,ESP32PinSocket_1,PinSocket_1x21_P2.54mm_Vertical,1,PinSocket_1x21_P2.54mm_Vertical,
+2,ESP32PinSocket_2,PinSocket_1x21_P2.54mm_Vertical,1,PinSocket_1x21_P2.54mm_Vertical,
+3,KeyboardSocket_1,PinSocket_1x07_P2.54mm_Vertical,1,PinSocket_1x07_P2.54mm_Vertical,
+4,KeyboardSocket_2,PinSocket_1x07_P2.54mm_Vertical,1,PinSocket_1x07_P2.54mm_Vertical,
+5,FlatCable_Header,PinHeader_1x14_P1.00mm_Vertical,1,PinHeader_1x14_P1.00mm_Vertical,
+6,FlatCableSocket,Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal,1,Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal,
