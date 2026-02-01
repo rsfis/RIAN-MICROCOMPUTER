@@ -1,0 +1,3 @@
+I did not do the CAD in FreeCAD or any software like that, I made it in Blender. So it was difficult to export in a true .STEP. So, I exported inside Blender a lot of .stl and imported in FreeCAD. Then, exported in .STEP.
+
+Sorry.
