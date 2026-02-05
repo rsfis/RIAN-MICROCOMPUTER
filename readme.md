@@ -1,2 +1,2 @@
 # Rian's MicroComputer
-|:A Mini Foldable OldStyle Computer:|
+<h3 style="text-align:center;">A Mini Foldable OldStyle Computer</h3>
