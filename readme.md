@@ -1,12 +1,12 @@
 <h1 align="center">
-  Rian's MicroComputer
+  Fiscion Razor32
 </h1>
 <h3 align="center">
   A Mini Foldable OldStyle Computer
 </h3>
 
 <h3 align="center">
-  Being only 14x6x5cm, Rian's MicroComputer is a complete computer with Firmware, OS and Apps.
+  Being only 14x6x5cm, Razor32 is a complete computer with Firmware, OS and Apps.
 </h3>
 
 ## Features
@@ -25,3 +25,4 @@
 Designed using Blender, the Case comes with 5 parts: The lower box, upper box, hinges, screws and battery lid.
 <img width="1920" height="1080" alt="showcase" src="https://github.com/user-attachments/assets/3cccf4bc-ab7a-4a01-922d-23621e8450e6" />
 <img width="1920" height="1080" alt="showcase2" src="https://github.com/user-attachments/assets/1353ff8d-b118-446b-86f4-7a9aedf1dd68" />
+
