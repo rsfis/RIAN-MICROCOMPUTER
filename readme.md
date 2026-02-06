@@ -54,7 +54,7 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 
 ## BOM
 
-|Id |Designator                                                                                                                              |Quantity|Comment                                          |JLCPCB Part #|Link                                                                                                                                                                |ENTIRE PRICE WITH FREIGHT WITH TAXES:                                          |FIELD8|FIELD9|FIELD10              |
+|Id |Designator                                                                                                                              |Quantity|Comment                                          |JLCPCB Part #|Link                                                                                                                                                                |ENTIRE PRICE WITH FREIGHT WITH TAXES:                                          | | |               |
 |---|----------------------------------------------------------------------------------------------------------------------------------------|--------|-------------------------------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|------|------|---------------------|
 |1  |TFT Screen 3.5" st7796 320*480 ips                                                                                                      |2       |TFT Screen 3.5" st7796 320*480 ips Touch         |~            |https://pt.aliexpress.com/item/1005005995931721.html?spm=a2g0o.order_list.order_list_main.31.288ecaa4EGynx2&gatewayAdapt=glo2bra                                    |R$ 162,63                                                                      |      |      |                     |
 |2  |ESP32 S3 8mb PSRAM 16mb Flash                                                                                                           |2       |ESP32-S3-DevKitC-1                               |~            |https://pt.aliexpress.com/item/1005007215982839.html?spm=a2g0o.order_list.order_list_main.46.288ecaa4EGynx2&gatewayAdapt=glo2bra                                    |R$ 104,46                                                                      |      |      |                     |
@@ -110,5 +110,6 @@ Planned Apps:
 - Packet Logger
 
 OS and Firmware are still being programmed. Soon, I will have more informations about it.
+
 
 
