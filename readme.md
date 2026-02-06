@@ -43,3 +43,42 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 #### Bottom
 
 ## BOM
+
+
+## OS and APPS
+The OS is the RazorOS, made using ArduinoIDE, LovyanGFX and LUA Interpreter.
+
+The OS itself is programmed in C++ using Arduino IDE, with own firmware. The OS has:
+- Home Page with a Desktop area
+- Control Panel for Rapid Settings
+- Users
+- Clock
+- Settings
+- Task Manager
+- Notifications
+- Watchdog
+- Terminal in LUA
+
+The apps are made in LUA. Apps will create a LUA Virtual Machine to execute the code directly in the processor using various C++ External Functions. 
+
+Using the Text Editor, you will also be able to create your own apps to Razor32 and control everything.
+
+Planned Apps:
+- Internet Browser Based on Text (Lynx)
+- File Sender
+
+- Text Editor
+- Calculator
+- To-do
+- Calendar
+- PDF Viewer
+- Excel Like
+
+- Tetris
+- Snake
+
+- Scanner Wifi
+- Terminal Serial
+- Packet Logger
+
+OS and Firmware are still being programmed. Soon, I will have more informations about it.
