@@ -111,5 +111,10 @@ Planned Apps:
 
 OS and Firmware are still being programmed. Soon, I will have more informations about it.
 
-
-
+## Cart
+<img width="1919" height="1079" alt="aliexpress_part3" src="https://github.com/user-attachments/assets/d4868fa4-d680-48d4-adda-8c6005fb2e31" />
+<img width="1918" height="1079" alt="aliexpress_part2" src="https://github.com/user-attachments/assets/72f35016-bb23-401c-8030-aee20c3b7041" />
+<img width="1916" height="1079" alt="aliexpress_part1" src="https://github.com/user-attachments/assets/8302e466-119e-4487-8e66-fdd2f9b6aee8" />
+<img width="970" height="467" alt="jlcpcb_keyboard_components" src="https://github.com/user-attachments/assets/31c5ffbc-fccc-45c4-9f74-5161148dc1f4" />
+<img width="969" height="682" alt="jlcpcb_generalpcb_components" src="https://github.com/user-attachments/assets/94716b24-03b8-46f2-a09b-89a303be1b91" />
+<img width="1919" height="1079" alt="jlcpcb" src="https://github.com/user-attachments/assets/874aa010-34b3-4348-8627-57cde340be39" />
