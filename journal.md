@@ -11,7 +11,7 @@ Hi! This is the first journal entry of the Rian's MicroComputer.
 Throughout some days (From 3/01 to 18/01) tested and made the scheme on my head of how I would make this project. I tested the 3.5" TFT screen I bought, some 3D on it, SD card tests and ESP32 memory using LovyanGFX.
 
 ![20260124_194019](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjYsInB1ciI6ImJsb2JfaWQifX0=--a37fdfa36a7d4dab177f2287f12ff80d73dad620/20260124_194019.jpg)
-![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
+![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
 
 Then, within this week (From 18/01 to 24/01) I've transformed what I imagined into a real product. So, I started with the PCB, the most difficult part for me. I've made so far the upper PCB (the screen holder), the matricial keyboard pcb (the keyboard organized in matrices. so, every key has your own X and Y position, and when combined, can verify the key pressed), and finishing the main pcb.
 Therefore, I've been facing a problem with powering. I really don't know how I'm going to power up everything within a small case. I thought first some AA rechargeable 3.7v 3000mah bateries, but it has a higher voltage than the allowed, and plus: I would have only some minutes of fun. I'm browsing a module that converts 7.6v to 3.3 automatically or a battery case that outputs the same as my computer with cable.
@@ -121,6 +121,25 @@ In addition, to the 3D prints, I found a guy that prints inside Blueprint (I for
 ![imagem_2026-02-03_190743825](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc4MDQsInB1ciI6ImJsb2JfaWQifX0=--3cc36f9502937673fe28ba041904c46183192d18/imagem_2026-02-03_190743825.png)
 
 ![imagem_2026-02-03_190820493](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc4MDUsInB1ciI6ImJsb2JfaWQifX0=--5e55f74c9a0d1fba02d5b3f738c5a6e715640430/imagem_2026-02-03_190820493.png)
+
+  
+
+# 2/6/2026 - README, Github, Name and Notes for the reviewer  
+
+_Time spent: 3.0h_  
+
+During these 2 days, I've been writing the README and configuring the Github Repo.
+
+The README is already avaliable on Github.
+
+I also changed the project's name, to be more, shocking...
+
+Added some notes for the reviewer about why 2 computers and the lack of a correct .step (Current is 4gb).
+
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTkzMDksInB1ciI6ImJsb2JfaWQifX0=--4e33bb4490a814440b3904b9e3803141445c06ff/image.png)
+
+Furthermore, I made the wiring diagram for parts out of the pcb.
+![wiring diagram](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTkzMTMsInB1ciI6ImJsb2JfaWQifX0=--f7bced60d88d1517b670a2406941892d914df3e7/wiring%20diagram.png)
 
   
 
