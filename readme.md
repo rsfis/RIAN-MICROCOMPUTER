@@ -1,4 +1,4 @@
-<h1 align="center">
+[BOM.csv](https://github.com/user-attachments/files/25133573/BOM.csv)<h1 align="center">
   Fiscion Razor32
 </h1>
 <h3 align="center">
@@ -33,21 +33,27 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 
 ### General
 <img width="1550" height="640" alt="image" src="https://github.com/user-attachments/assets/11f284b7-2648-4147-8021-5cf85007e2b3" />
+
 #### Top
 <img width="1187" height="488" alt="image" src="https://github.com/user-attachments/assets/12147813-6e4d-4f62-a5c5-ef456df88fc2" />
 <img width="1123" height="571" alt="image" src="https://github.com/user-attachments/assets/70541a1f-8a9a-4981-b5fe-38dee026ddfa" />
+
 #### Bottom
 <img width="981" height="406" alt="image" src="https://github.com/user-attachments/assets/9f5db379-4d50-4417-a9ff-e687828f219a" />
+
 ### Keyboard
 <img width="1549" height="644" alt="image" src="https://github.com/user-attachments/assets/b7b1ccdd-ffe4-4a1f-959e-4b68503ee66e" />
+
 #### Top
 <img width="893" height="366" alt="image" src="https://github.com/user-attachments/assets/1b467d28-7b5b-4ef7-b5ba-74bb3d7093e3" />
 <img width="974" height="491" alt="image" src="https://github.com/user-attachments/assets/99998d80-41d5-4293-8c83-24a6404c17f1" />
+
 #### Bottom
 <img width="888" height="364" alt="image" src="https://github.com/user-attachments/assets/f4def33c-f917-460e-bfa7-b13f282e4bf4" />
 <img width="977" height="496" alt="image" src="https://github.com/user-attachments/assets/ff375853-f109-4d80-bb4a-1d2707ba1d42" />
 
 ## BOM
+
 
 
 ## OS and APPS
@@ -87,3 +93,4 @@ Planned Apps:
 - Packet Logger
 
 OS and Firmware are still being programmed. Soon, I will have more informations about it.
+
