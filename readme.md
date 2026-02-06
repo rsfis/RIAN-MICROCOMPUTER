@@ -1,4 +1,4 @@
-[BOM.csv](https://github.com/user-attachments/files/25133619/BOM.csv)[BOM.csv](https://github.com/user-attachments/files/25133573/BOM.csv)<h1 align="center">
+<h1 align="center">
   Fiscion Razor32
 </h1>
 <h3 align="center">
