@@ -1812,6 +1812,16 @@
 		)
 		(uuid "2b9ebe45-0348-4258-a0b1-da331bc69957")
 	)
+	(text "Buttons work as push up. GND is given to the push button \nleft upper pin and when it is pressed, ground flows through\nthe right lower pin, triggering push up in ESP32 GPIO."
+		(exclude_from_sim no)
+		(at 118.11 162.052 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "2bcb5d77-46fd-4270-b1bf-1b20edbd8233")
+	)
 	(text "SDI\n13"
 		(exclude_from_sim no)
 		(at 60.96 67.056 0)
@@ -1891,16 +1901,6 @@
 			)
 		)
 		(uuid "53f61083-2a3c-4364-bb8e-f7f3c4c9f97f")
-	)
-	(text "-\n"
-		(exclude_from_sim no)
-		(at 90.17 78.486 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "55665321-a115-4bdc-a954-26ea95592a5a")
 	)
 	(text "7"
 		(exclude_from_sim no)
@@ -2032,6 +2032,16 @@
 		)
 		(uuid "9b83db15-d035-4c48-8db8-1989b3f49f17")
 	)
+	(text "keyboard pins:"
+		(exclude_from_sim no)
+		(at 53.594 151.384 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "a39057da-9c57-4bf2-8501-ea3538794086")
+	)
 	(text "14"
 		(exclude_from_sim no)
 		(at 50.8 131.318 0)
@@ -2091,6 +2101,26 @@
 			)
 		)
 		(uuid "c7b9902f-2ad9-4b33-8a6a-7e71340118b3")
+	)
+	(text "gnd 21 47 48 49 35 36\n 42 41 40 39 37 08 20"
+		(exclude_from_sim no)
+		(at 52.832 161.544 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "ca2e90f8-bb2b-45cf-b7ee-9f2bab653ea4")
+	)
+	(text "gnd x1 x2 x3 x4 x5 x6\nx7 x8 x9 x10 y1 y2 y3"
+		(exclude_from_sim no)
+		(at 52.832 155.194 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "cac6e7c3-9cc9-45fb-93cf-f59f6b05781c")
 	)
 	(text "21"
 		(exclude_from_sim no)
