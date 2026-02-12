@@ -167,29 +167,29 @@ void taskLuaApp(void* arg) {
     Serial.println("ERR: No RAM avaliable");
     f.close();
     return;
+  }else{
+    f.readBytes(buffer, size);
+    buffer[size] = '\0';
+
+    f.close();
+
+    const char* script = buffer;
+    free(buffer);
+
+    if (luaL_dostring(L, script) != LUA_OK) {
+      Serial.printf("=== LUA VM INTERPRETER ERROR: %s\n", lua_tostring(L, -1));
+    }
+
+    //LOOP
+    while (!luaRequestExit) {
+      vTaskDelay(10 / portTICK_PERIOD_MS);
+    }
+
+    luaRequestExit = false;
+    lua_close(L);
+    Serial.printf("[LUA] VM Shutdown\n");
+    vTaskDelete(NULL);
   }
-
-  f.readBytes(buffer, size);
-  buffer[size] = '\0';
-
-  f.close();
-
-  const char* script = buffer;
-  free(buffer);
-
-  if (luaL_dostring(L, script) != LUA_OK) {
-    Serial.printf("=== LUA VM INTERPRETER ERROR: %s\n", lua_tostring(L, -1));
-  }
-
-  //LOOP
-  while (!luaRequestExit) {
-    vTaskDelay(10 / portTICK_PERIOD_MS);
-  }
-
-  luaRequestExit = false;
-  lua_close(L);
-  Serial.printf("[LUA] VM Shutdown\n");
-  vTaskDelete(NULL);
 }
 
 // ===== Kernel (Core 0) =====

@@ -63,7 +63,7 @@ During these 2 days of work, I've made some changes on the PCB and routed where 
 
 I will manufacture everything with JLCPCB. I've added the general board to my cart, but 1 component for the keyboard were in inventory shortage, so I pre-ordered by 5ish dollars the Pin Header I need.
 
-Everything will cost approximately 990 reais (5 general boards and 5 keyboards. 2 assembled).
+Everything will cost approximately 1300 reais (5 general boards and 5 keyboards. 2 assembled).
 
 Plus the 3D print for the case will cost ~18 dollars (Two PCs) (JayG from HackClub Printing Stuff).
 
@@ -141,5 +141,54 @@ Added some notes for the reviewer about why 2 computers and the lack of a correc
 Furthermore, I made the wiring diagram for parts out of the pcb.
 ![wiring diagram](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTkzMTMsInB1ciI6ImJsb2JfaWQifX0=--f7bced60d88d1517b670a2406941892d914df3e7/wiring%20diagram.png)
 
+  
+
+# 2/7/2026 - OS Design  
+
+_Time spent: 1.5h_  
+
+In an hour, I made the OS design and pages.
+I want the design to be a little Linux Like, kinda cozy, and easy to use. It will work with an arrow system. With WASD you control where your "cursor" is, like game consoles.
+
+Starting:
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTk2MjksInB1ciI6ImJsb2JfaWQifX0=--7888eb3ec57eb279e7b22be18cbe743046925937/image.png)
+
+Login:
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTk2MzAsInB1ciI6ImJsb2JfaWQifX0=--756ee2fe644b34610bcb12731faa80a48224071c/image.png)
+
+Home Page:
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTk2MjgsInB1ciI6ImJsb2JfaWQifX0=--49b55430845738d0b215d3726487313dc5c966ac/image.png)
+  
+
+# 2/10/2026 - Stickers and Powering Issues  
+
+_Time spent: 1.5h_  
+
+Today I've finally recieved my stickers, and they are so cute!
+
+Loved the processor one!!
+
+![20260210_185206](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAxODk4LCJwdXIiOiJibG9iX2lkIn19--748e92104835db2ac6bed7cd86872b72a087455a/20260210_185206.jpg)
+
+![20260210_185324](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAxODk5LCJwdXIiOiJibG9iX2lkIn19--306cd2bc400b15e44527433316792f43cfddd4b1/20260210_185324.jpg)
+
+To frustrate a little bit the day, though, the battery holders didn't work. It just doesn't charge and neither transfers the electricity to the esp32.
+To solve that, I will use a power bank that must have 2 USBS (one for charging, and one for output) and a powering on/off button.
+I will use a power bank module to prioritize safety, reduce development risk, and keep the project scope focused on PCB design, firmware, and system integration. The power bank provides built-in protection and regulated output.
+  
+
+# 2/12/2026 - Powering  
+
+_Time spent: 2.0h_  
+
+Today I finally found the perfect powering system to this project: Futurizta Power Bank 5000mah Mini.
+
+This power bank has 5000mah (Battery would last so longer than if I've bought a AAA battery), so it would last 27h. And with the WIFI on: 14.5h.
+
+In addition, it is so tiny being only 7.5x3.5x2cm, fitting perfectly inside the computer.
+
+This project is gonna be really fat. The lower part will be 4cm tall.
+
+![Screenshot_20260212_091511_Opera GX](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAyODc3LCJwdXIiOiJibG9iX2lkIn19--759f881e9137a489ce3d2ade971acd37526cf9fd/Screenshot_20260212_091511_Opera%20GX.jpg)
   
 
