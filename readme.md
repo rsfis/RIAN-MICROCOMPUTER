@@ -12,7 +12,7 @@
 ## Features
 - Powered by ESP32 S3 Chip with 8mb RAM and 16mb Flash
 - Embedded TFT Screen
-- 30 keys Keyboard
+- 30 keys Matricial Keyboard. Each key has X and Y push up output
 - 3000mah Rechargeable Battery
 - Foldable Case Easy and Light to Carry
 - USB C charging port
