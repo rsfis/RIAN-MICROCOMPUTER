@@ -77,16 +77,25 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 
 ## Keyboard Keys Organization
 q w e r t y u i o p
+
 a s d f g h j k l B
+
 z x c v b S n m f E
 
+
 1 2 3 4 5 6 7 8 9 0
+
 + - % < > ? & ! ( )
+
 / * = " _ ; . , f Sh
 
+
 ESC F1 F2 F3 F4 F5 F6 F7 F8 F9
+
 {    }  @ :  [  ]  
+
 |    \  ' -  HOME
+
 
 ## OS and APPS
 The OS is the RazorOS, made using ArduinoIDE, LovyanGFX and LUA Interpreter.
