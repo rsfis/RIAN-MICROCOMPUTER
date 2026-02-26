@@ -12,7 +12,7 @@
 ## Features
 - Powered by ESP32 S3 Chip with 8mb RAM and 16mb Flash
 - Embedded TFT Screen
-- 30 keys Keyboard
+- 30 keys Matricial Keyboard. Each key has X and Y push up output
 - 3000mah Rechargeable Battery
 - Foldable Case Easy and Light to Carry
 - USB C charging port
@@ -22,7 +22,7 @@
 - Easy to create your own apps in a Inside IDE and share them within a local network
 
 ## Case
-Designed using Blender, the Case comes with 5 parts: The lower box, upper box, hinges, screws and battery lid. Made using PLA material.
+Designed using Blender, the Case comes with 4 parts: The lower box, upper box, hinges and screws. Made using PLA material.
 <img width="1920" height="1080" alt="showcase" src="https://github.com/user-attachments/assets/3cccf4bc-ab7a-4a01-922d-23621e8450e6" />
 <img width="1920" height="1080" alt="showcase2" src="https://github.com/user-attachments/assets/1353ff8d-b118-446b-86f4-7a9aedf1dd68" />
 
@@ -52,25 +52,51 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 <img width="888" height="364" alt="image" src="https://github.com/user-attachments/assets/f4def33c-f917-460e-bfa7-b13f282e4bf4" />
 <img width="977" height="496" alt="image" src="https://github.com/user-attachments/assets/ff375853-f109-4d80-bb4a-1d2707ba1d42" />
 
-## BOM
+#### External Wiring Diagram
+<img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
 
-|Id |Designator                                                                                                                              |Quantity|Comment                                          |JLCPCB Part #|Link                                                                                                                                                                |ENTIRE PRICE WITH FREIGHT WITH TAXES:                                          | | |               |
+## BOM
+|Id |Designator                                                                                                                              |Quantity|Comment                                          |JLCPCB Part #|Link                                                                                                                                                                |ENTIRE PRICE WITH FREIGHT WITH TAXES:                                          |FIELD8|FIELD9|FIELD10              |
 |---|----------------------------------------------------------------------------------------------------------------------------------------|--------|-------------------------------------------------|-------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------|------|------|---------------------|
 |1  |TFT Screen 3.5" st7796 320*480 ips                                                                                                      |2       |TFT Screen 3.5" st7796 320*480 ips Touch         |~            |https://pt.aliexpress.com/item/1005005995931721.html?spm=a2g0o.order_list.order_list_main.31.288ecaa4EGynx2&gatewayAdapt=glo2bra                                    |R$ 162,63                                                                      |      |      |                     |
 |2  |ESP32 S3 8mb PSRAM 16mb Flash                                                                                                           |2       |ESP32-S3-DevKitC-1                               |~            |https://pt.aliexpress.com/item/1005007215982839.html?spm=a2g0o.order_list.order_list_main.46.288ecaa4EGynx2&gatewayAdapt=glo2bra                                    |R$ 104,46                                                                      |      |      |                     |
 |3  |Screw M3 x  6mm                                                                                                                         |1       |m3 preto 304 a�o inoxid�vel allen 6mm 50pcs      |~            |https://pt.aliexpress.com/item/1005005070119421.html?pdp_ext_f=%7B"sku_id"%3A"12000031519353304"%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra|R$ 52,45                                                                       |      |      |                     |
 |4  |ESP32PinSocket_1, ESP32PinSocket_2                                                                                                      |4       |PinSocket_1x21_P2.54mm_Vertical                  |C2883738     |https://jlcpcb.com/partdetail/XKBConnection-X6511FV_21C85D32/C2883738                                                                                               |INCLUDE IN PCBA                                                                |      |      |                     |
 |6  |KeyboardSocket_1, KeyboardSocket_2                                                                                                      |4       |PinSocket_1x07_P2.54mm_Vertical                  |C124418      |https://jlcpcb.com/partdetail/125693-B_2200S07PA120/C124418                                                                                                         |INCLUDE IN PCBA                                                                |      |      |PRICE FOR 2 COMPUTERS|
-|8  |FlatCable_Header                                                                                                                        |2       |PinHeader_1x14_P1.00mm_Vertical                  |C30607496    |https://jlcpcb.com/partdetail/XUNPU-PH1_0_0114PZD/C30607496                                                                                                         |INCLUDE IN PCBA                                                                |      |R$    |999,96               |
-|9  |FlatCableSocket                                                                                                                         |2       |Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal|C5378715     |https://jlcpcb.com/partdetail/HRS_Hirose-FH12_14S_0_5SH_55/C5378715                                                                                                 |INCLUDE IN PCBA                                                                |      |USD   |192,3                |
+|8  |FlatCable_Header                                                                                                                        |2       |PinHeader_1x14_P1.00mm_Vertical                  |C30607496    |https://jlcpcb.com/partdetail/XUNPU-PH1_0_0114PZD/C30607496                                                                                                         |INCLUDE IN PCBA                                                                |      |R$    |1352,71              |
+|9  |FlatCableSocket                                                                                                                         |2       |Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal|C5378715     |https://jlcpcb.com/partdetail/HRS_Hirose-FH12_14S_0_5SH_55/C5378715                                                                                                 |INCLUDE IN PCBA                                                                |      |USD   |260,13               |
 |10 |a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,ret,fun,enter,space                                                                 |61      |SW_PUSH_6mm                                      |C97440       |https://jlcpcb.com/partdetail/ALPSALPINE-SKHHAJA010/C97440                                                                                                          |INCLUDE IN PCBA                                                                |      |      |PRICE FOR 1 COMPUTER |
-|11 |PinHeader_1, PinHeader_2                                                                                                                |1       |PinHeader_1x07_P2.54mm_Vertical 10pcs 15mm height|~            |https://pt.aliexpress.com/item/1005001514058091.html?pdp_ext_f=%7B"sku_id"%3A"12000016418976460"%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra|R$ 59,28                                                                       |      |R$    |499,98               |
-|12 |3D Print                                                                                                                                |2       |3D Print Case                                    |~            |~                                                                                                                                                                   |$18,00                                                                         |      |USD   |96,15                |
+|11 |PinHeader_1, PinHeader_2                                                                                                                |1       |PinHeader_1x07_P2.54mm_Vertical 10pcs 15mm height|~            |https://pt.aliexpress.com/item/1005001514058091.html?pdp_ext_f=%7B"sku_id"%3A"12000016418976460"%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra|R$ 59,28                                                                       |      |R$    |676,35               |
+|12 |3D Print                                                                                                                                |2       |3D Print Case                                    |~            |~                                                                                                                                                                   |$18,00                                                                         |      |USD   |130,06               |
 |13 |PCB General                                                                                                                             |2       |PCB and PCBA Manufacture Process                 |~            |~                                                                                                                                                                   |$55,16                                                                         |      |      |                     |
 |14 |PCB Keyboard                                                                                                                            |2       |PCB and PCBA Manufacture Process                 |~            |~                                                                                                                                                                   |$46,29                                                                         |      |      |                     |
-|   |                                                                                                                                        |        |                                                 |             |                                                                                                                                                                    |                                                                               |      |      |                     |
+|15 |Pixy Mini 5000mah Power  Bank                                                                                                           |2       |Pixy Mini 5000mah Power  Bank                    |~            |https://futurizta.com/products/smallest-5000mah-usb-c-power-bank                                                                                                    |$53,00                                                                         |      |      |                     |
 |   |NOTE: I'm going to make 2 computers, because I want to do a communication system between Computers to send files and messages using WIFI|        |                                                 |             |                                                                                                                                                                    |                                                                               |      |      |                     |
 |   |                                                                                                                                        |        |                                                 |             |                                                                                                                                                                    |NOTE: THE PCB PRICES WERE CALCULATED: THE PRICE + FREIGHT DIVIDED BY THE 2 PCBS|      |      |                     |
+
+
+## Keyboard Keys Organization
+q w e r t y u i o p
+
+a s d f g h j k l B
+
+z x c v b S n m f E
+
+
+
+1 2 3 4 5 6 7 8 9 0
+
++ - % < > ? & ! ( )
+
+/ * = " _ ; . , f Sh
+
+
+
+ESC F1 F2 F3 F4 F5 F6 F7 F8 F9
+
+{    }  @ :  [  ]  
+
+|    \  ' -  HOME
 
 
 ## OS and APPS
@@ -118,3 +144,7 @@ OS and Firmware are still being programmed. Soon, I will have more informations 
 <img width="970" height="467" alt="jlcpcb_keyboard_components" src="https://github.com/user-attachments/assets/31c5ffbc-fccc-45c4-9f74-5161148dc1f4" />
 <img width="969" height="682" alt="jlcpcb_generalpcb_components" src="https://github.com/user-attachments/assets/94716b24-03b8-46f2-a09b-89a303be1b91" />
 <img width="1919" height="1079" alt="jlcpcb" src="https://github.com/user-attachments/assets/874aa010-34b3-4348-8627-57cde340be39" />
+
+
+
+
