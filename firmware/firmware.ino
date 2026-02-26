@@ -5,6 +5,11 @@
 #include <LovyanGFX.hpp>
 #include <SD.h>
 
+#define LUA_SPRITE_DEFINITION "Display.Sprite"
+#define LUA_CLEAR_SCREEN_DEFINITION "Display_ClearScreen"
+#define LUA_UPDATE_SCREEN_DEFINITION "Display_UpdateScreen"
+struct Sprite;
+
 // ===== Lua headers =====
 extern "C" {
   #include "lua.h"
@@ -111,6 +116,57 @@ void* lua_psram_alloc(void* ud, void* ptr, size_t osize, size_t nsize) {
   return newptr;
 }
 
+// KERNEL FUNCTIONS
+struct Sprite {
+  LGFX_Sprite spr;
+
+  Sprite() : spr(&tft) {
+    spr.fillSprite(TFT_TRANSPARENT);
+    spr.setColorDepth(16);
+  }
+
+  bool load(const char* caminho, int largura, int altura) {
+    spr.setPsram(true);
+    if (!spr.createSprite(largura, altura)) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x003 - Sprite creation failed at %s", caminho);
+      while (1);
+    }
+
+    File f = SD.open(caminho);
+    if (!f) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x004 - Couldn't open file at %s", caminho);
+      while (1);
+    }
+
+    size_t tamanho = f.size();
+    uint8_t* buffer = (uint8_t*)malloc(tamanho);
+    if (!buffer) {
+      tft.setTextColor(TFT_WHITE);
+      tft.setTextSize(1.5);
+      tft.setCursor(5, 5);
+      tft.printf("ERR 0x005 - Malloc failed at adress %s", *buffer);
+      f.close();
+      while (1);
+    }
+
+    f.read(buffer, tamanho);
+    f.close();
+    spr.drawPng(buffer, tamanho, 0, 0);
+    free(buffer);
+    return true;
+  }
+
+  void draw(int x, int y) {
+    spr.pushSprite(&frame, x, y, 0x0000);
+  }
+};
+
 // ===== EXPORTED FUNCTIONS =====
 //int l_teste(lua_State* L) {
 //  int numero = luaL_checkinteger(L, 1);
@@ -124,10 +180,101 @@ int l_endProgram(lua_State* L) {
   return 0;
 }
 
+int l_clearScreen(lua_State* L) {
+  frame.fillScreen(TFT_BLACK);
+  return 0;
+}
+
+int l_updateScreen(lua_State* L){
+  frame.pushSprite(0, 0);
+  return 0;
+}
+
+// Sprites
+static Sprite* checkSprite(lua_State* L, int index) {
+  return (Sprite*)luaL_checkudata(L, index, LUA_SPRITE_DEFINITION);
+}
+
+int l_sprite_free(lua_State* L) {
+  Sprite* spr = checkSprite(L, 1);
+  spr->spr.deleteSprite();   // libera sprite interno
+  return 0;
+}
+
+int l_sprite_constructor(lua_State* L) {
+  const char* path = luaL_checkstring(L, 2);
+  int w = luaL_checkinteger(L, 3);
+  int h = luaL_checkinteger(L, 4);
+
+  Sprite* spr = (Sprite*)lua_newuserdata(L, sizeof(Sprite));
+  new (spr) Sprite();
+
+  if (!spr->load(path, w, h)) {
+    return luaL_error(L, "Sprite load failed");
+  }
+
+  luaL_getmetatable(L, LUA_SPRITE_DEFINITION);
+  lua_setmetatable(L, -2);
+
+  return 1;
+}
+
+int l_sprite_draw(lua_State* L) {
+  Sprite* spr = checkSprite(L, 1);
+  int x = luaL_checkinteger(L, 2);
+  int y = luaL_checkinteger(L, 3);
+
+  spr->draw(x, y);
+  return 0;
+}
+
+int l_sprite_gc(lua_State* L) {
+  Sprite* spr = checkSprite(L, 1);
+  spr->~Sprite();
+  return 0;
+}
+
+void registerSprite(lua_State* L) {
+
+  // cria metatable do userdata
+  luaL_newmetatable(L, LUA_SPRITE_DEFINITION);
+
+  // __gc
+  lua_pushcfunction(L, l_sprite_gc);
+  lua_setfield(L, -2, "__gc");
+
+  // métodos
+  lua_newtable(L);
+
+  lua_pushcfunction(L, l_sprite_draw);
+  lua_setfield(L, -2, "draw");
+
+  lua_pushcfunction(L, l_sprite_free);
+  lua_setfield(L, -2, "free");
+
+  lua_setfield(L, -2, "__index");
+
+  lua_pop(L, 1);
+
+  // ===== Tabela global Sprite =====
+  lua_newtable(L);
+
+  // metatable da tabela para suportar __call
+  lua_newtable(L);
+  lua_pushcfunction(L, l_sprite_constructor);
+  lua_setfield(L, -2, "__call");
+  lua_setmetatable(L, -2);
+
+  lua_setglobal(L, "Sprite");
+}
+
 // ===== RESGISTER EXPORTED FUNCTIONS =====
-void registerApi(lua_State* L) {
+void registerApis(lua_State* L) {
   //lua_register(L, "teste", l_teste);
   lua_register(L, "endProgram", l_endProgram);
+  lua_register(L, LUA_CLEAR_SCREEN_DEFINITION, l_clearScreen);
+  lua_register(L, LUA_UPDATE_SCREEN_DEFINITION, l_updateScreen);
+  registerSprite(L);
 }
 
 // ===== Task Lua (Core 1) =====
@@ -145,7 +292,7 @@ void taskLuaApp(void* arg) {
   }
 
   luaL_openlibs(L);
-  registerApi(L);
+  registerApis(L);
 
   //const char* script =
   //  "print('Lua OK no Core 1')\n"
@@ -192,6 +339,7 @@ void taskLuaApp(void* arg) {
   }
 }
 
+
 // ===== Kernel (Core 0) =====
 void setup() {
   esp_task_wdt_deinit();
@@ -206,12 +354,6 @@ void setup() {
     Serial.println("PSRAM NOT FOUND!");
     return;
   }
-
-  Serial.printf("======= MEMORY =======\n");
-  Serial.printf("PSRAM total: %u bytes\n", ESP.getPsramSize());
-  Serial.printf("PSRAM free: %u bytes\n", ESP.getFreePsram());
-
-  Serial.printf("======================\n");
 
   Serial.printf("=== Starting Screen ===\n");
   tft.init();
@@ -242,7 +384,7 @@ void setup() {
   }
 
   // teste de cores puras
-  tft.fillScreen(tft.color565(255, 0, 0));
+  tft.fillScreen(tft.color565(255, 0, 255));
   delay(1000);
   tft.fillScreen(tft.color565(0, 255, 0));
   delay(1000);
@@ -256,16 +398,6 @@ void setup() {
   xTaskCreatePinnedToCore(
     taskLuaApp,
     "LUA_APP",
-    LUA_TASK_STACK,
-    NULL,
-    2,
-    NULL,
-    1
-  );
-  delay(3000);
-  xTaskCreatePinnedToCore(
-    taskLuaApp,
-    "LUA_APP2",
     LUA_TASK_STACK,
     NULL,
     2,
