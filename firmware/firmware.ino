@@ -1,13 +1,33 @@
 #include <Arduino.h>
 #include <esp_heap_caps.h>
 #include <esp_task_wdt.h>
-
 #include <LovyanGFX.hpp>
 #include <SD.h>
+#include <ArduinoJson.h>
+#include <WiFi.h>
+#include "time.h"
+
+#define LUA_HEAP_LIMIT (7 * 1024 * 1024)
+#define LUA_TASK_STACK 30000
+
+#define SD_CS 4
 
 #define LUA_SPRITE_DEFINITION "Display.Sprite"
 #define LUA_CLEAR_SCREEN_DEFINITION "Display_ClearScreen"
 #define LUA_UPDATE_SCREEN_DEFINITION "Display_UpdateScreen"
+#define LUA_GET_FREE_MEMORY_DEFINITION "OS_GetFreeMemory"
+#define LUA_GET_MEMORY_SIZE_DEFINITION "OS_GetMemorySize"
+#define LUA_GET_FREE_HEAP_MEMORY_DEFINITION "OS_GetFreeHeapMemory"
+#define LUA_GET_HEAP_MEMORY_SIZE_DEFINITION "OS_GetHeapMemorySize"
+#define LUA_GET_CPU_TEMPERATURE_DEFINITION "OS_GetCPUTemperature"
+
+const char* ntpServer = "pool.ntp.org";
+long gmtOffset_sec = -3 * 3600;  // UTC-3
+const int daylightOffset_sec = 0;
+
+StaticJsonDocument<512> SystemConfiguration;
+StaticJsonDocument<512> BiosConfiguration;
+
 struct Sprite;
 
 // ===== Lua headers =====
@@ -82,11 +102,56 @@ public:
 LGFX tft;
 LGFX_Sprite frame(&tft);
 
-// ===== Config =====
-#define LUA_HEAP_LIMIT (7 * 1024 * 1024)
-#define LUA_TASK_STACK 30000
+// TIME SYNC
+void syncTime(const char* ssid, const char* password) {
 
-#define SD_CS 4
+  if (ssid != nullptr && password != nullptr &&
+      strlen(ssid) > 0 && strlen(password) > 0) {
+
+    WiFi.begin(ssid, password);
+    Serial.println("== Wifi Begin ==");
+
+    unsigned long startAttemptTime = millis();
+
+    while (WiFi.status() != WL_CONNECTED) {
+      if (millis() - startAttemptTime > 60000) {
+        Serial.println("ERR 0x005 - WiFi timeout");
+        goto WIFI_FAIL;
+      }
+      delay(300);
+    }
+
+    Serial.println("== Wifi Connected ==");
+
+    configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
+
+    struct tm timeinfo;
+    startAttemptTime = millis();
+
+    while (!getLocalTime(&timeinfo)) {
+      if (millis() - startAttemptTime > 60000) {
+        Serial.println("ERR 0x006 - NTP timeout");
+        goto WIFI_FAIL;
+      }
+      delay(100);
+    }
+
+    Serial.println("== Time Synchronized ==");
+
+    WiFi.disconnect(true);
+    WiFi.mode(WIFI_OFF);
+    return;
+  }
+
+WIFI_FAIL:
+
+  tft.print("ERR 0x004 - Couldn't start WIFI and configure time. Using 1/1/1970 - 00:00:00");
+  Serial.println("ERR 0x004 - Couldn't start WIFI and configure time. Using 1/1/1970 - 00:00:00");
+
+  WiFi.disconnect(true);
+  WiFi.mode(WIFI_OFF);
+  delay(3000);
+}
 
 static size_t luaHeapUsed = 0;
 volatile bool luaRequestExit = false;
@@ -166,6 +231,11 @@ struct Sprite {
     spr.pushSprite(&frame, x, y, 0x0000);
   }
 };
+
+// TIME
+typedef struct {
+    time_t timestamp;
+} LuaTime;
 
 // ===== EXPORTED FUNCTIONS =====
 //int l_teste(lua_State* L) {
@@ -268,12 +338,82 @@ void registerSprite(lua_State* L) {
   lua_setglobal(L, "Sprite");
 }
 
+// OS FUNCTIONS
+int l_getFreeMemory(lua_State* L){
+  lua_pushinteger(L, ESP.getFreePsram());
+  return 1; // number of returned values
+}
+
+int l_getMemorySize(lua_State* L){
+  lua_pushinteger(L, ESP.getPsramSize());
+  return 1;
+}
+
+int l_getFreeHeapMemory(lua_State* L){
+  lua_pushinteger(L, ESP.getFreeHeap());
+  return 1; // number of returned values
+}
+
+int l_getHeapMemorySize(lua_State* L){
+  lua_pushinteger(L, ESP.getHeapSize());
+  return 1;
+}
+
+int l_getCpuTemperature(lua_State* L){
+    lua_pushnumber(L, temperatureRead());
+    return 1;
+}
+
+int l_time_toString(lua_State* L) {
+    LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
+    const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
+
+    struct tm* tm_info = localtime(&t->timestamp);
+
+    char buffer[64];
+    strftime(buffer, sizeof(buffer), format, tm_info);
+
+    lua_pushstring(L, buffer);
+    return 1;
+}
+
+int l_getTime(lua_State* L) {
+
+    LuaTime* t = (LuaTime*)lua_newuserdata(L, sizeof(LuaTime));
+    t->timestamp = time(nullptr);
+
+    luaL_getmetatable(L, "LuaTime");
+    lua_setmetatable(L, -2);
+
+    return 1;
+}
+
+void registerTime(lua_State* L) {
+
+    luaL_newmetatable(L, "LuaTime");
+
+    lua_pushvalue(L, -1);
+    lua_setfield(L, -2, "__index");
+
+    lua_pushcfunction(L, l_time_toString);
+    lua_setfield(L, -2, "toString");
+
+    lua_pop(L, 1);
+}
+
 // ===== RESGISTER EXPORTED FUNCTIONS =====
 void registerApis(lua_State* L) {
   //lua_register(L, "teste", l_teste);
   lua_register(L, "endProgram", l_endProgram);
   lua_register(L, LUA_CLEAR_SCREEN_DEFINITION, l_clearScreen);
   lua_register(L, LUA_UPDATE_SCREEN_DEFINITION, l_updateScreen);
+  lua_register(L, LUA_GET_FREE_MEMORY_DEFINITION, l_getFreeMemory);
+  lua_register(L, LUA_GET_MEMORY_SIZE_DEFINITION, l_getMemorySize);
+  lua_register(L, LUA_GET_FREE_HEAP_MEMORY_DEFINITION, l_getFreeHeapMemory);
+  lua_register(L, LUA_GET_HEAP_MEMORY_SIZE_DEFINITION, l_getHeapMemorySize);
+  lua_register(L, LUA_GET_CPU_TEMPERATURE_DEFINITION, l_getCpuTemperature);
+  lua_register(L, "OS_GetTime", l_getTime);
+  registerTime(L);
   registerSprite(L);
 }
 
@@ -301,9 +441,9 @@ void taskLuaApp(void* arg) {
   //  "end\n"
   //  "endProgram()";
 
-  File f = SD.open("/app.lua");
+  File f = SD.open("/sys/src/sys.lua");
   if (!f) {
-    Serial.println("ERR: app.lua not found");
+    Serial.println("ERR: /sys/src/sys.lua not found");
     lua_close(L);
     vTaskDelete(NULL);
     return;
@@ -339,7 +479,6 @@ void taskLuaApp(void* arg) {
   }
 }
 
-
 // ===== Kernel (Core 0) =====
 void setup() {
   esp_task_wdt_deinit();
@@ -372,6 +511,26 @@ void setup() {
     while (1);
   }
 
+  // LOAD BIOS CONFIG
+  File biosConfigFile = SD.open("/usr/sys/bios.json");
+  if (!biosConfigFile){
+    tft.setTextColor(TFT_WHITE);
+    tft.setTextSize(1.5);
+    tft.setCursor(5, 5);
+    tft.print("ERR 0x003 - Couldn't open bios settings bios.json.");
+  }
+  DeserializationError error = deserializeJson(BiosConfiguration, biosConfigFile);
+
+  if (error) {
+    Serial.print("Erro parse: ");
+    Serial.println(error.c_str());
+    biosConfigFile.close();
+    return;
+  }
+
+  biosConfigFile.close();
+
+
   Serial.printf("== Creating Frame ==\n");
   frame.setPsram(true);
   frame.setColorDepth(16);
@@ -383,14 +542,47 @@ void setup() {
     while (1);
   }
 
-  // teste de cores puras
-  tft.fillScreen(tft.color565(255, 0, 255));
-  delay(1000);
-  tft.fillScreen(tft.color565(0, 255, 0));
-  delay(1000);
-  tft.fillScreen(tft.color565(0, 0, 255));
-  delay(1000);
-  tft.fillScreen(TFT_BLACK);
+  // Colors Test
+  if (BiosConfiguration["TestScreenColorsWhenStartingUp"] == true){
+    tft.fillScreen(tft.color565(255, 0, 255));
+    delay(1000);
+    tft.fillScreen(tft.color565(0, 255, 0));
+    delay(1000);
+    tft.fillScreen(tft.color565(0, 0, 255));
+    delay(1000);
+    tft.fillScreen(TFT_BLACK);
+  }
+
+  // LOAD SYSTEM CONFIGS
+  File file = SD.open("/usr/sys/general.json");
+  if (!file) {
+    tft.setTextColor(TFT_WHITE);
+    tft.setTextSize(1.5);
+    tft.setCursor(5, 5);
+    tft.print("ERR 0x003 - Couldn't open system settings general.json.");
+    while (1);
+  }
+
+  DeserializationError _error = deserializeJson(SystemConfiguration, file);
+
+  if (_error) {
+    Serial.print("Erro parse: ");
+    Serial.println(_error.c_str());
+    file.close();
+    return;
+  }
+
+  file.close();
+
+  const char* ssid = SystemConfiguration["Wifi"]["ssid"];
+  const char* password = SystemConfiguration["Wifi"]["password"];
+
+  Serial.println("== Synchronizing Time ==");
+  gmtOffset_sec = int(SystemConfiguration["Time"]["timezone"]) * 3600;
+  syncTime(ssid, password);
+  //struct tm timeinfo;
+  //getLocalTime(&timeinfo);
+  //Serial.println(&timeinfo, "%d/%m/%Y %H:%M:%S");
 
   // ONLY IF APP PRESENT:
   Serial.printf("== Starting LUA VM ==\n");
