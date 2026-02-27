@@ -8,7 +8,7 @@
 #include "time.h"
 
 #define LUA_HEAP_LIMIT (7 * 1024 * 1024)
-#define LUA_TASK_STACK 30000
+#define LUA_TASK_STACK 20000
 
 #define SD_CS 4
 
@@ -20,13 +20,16 @@
 #define LUA_GET_FREE_HEAP_MEMORY_DEFINITION "OS_GetFreeHeapMemory"
 #define LUA_GET_HEAP_MEMORY_SIZE_DEFINITION "OS_GetHeapMemorySize"
 #define LUA_GET_CPU_TEMPERATURE_DEFINITION "OS_GetCPUTemperature"
+#define LUA_GET_TIME "OS_GetTime"
+#define LUA_GET_LUA_HEAP_USAGE "OS_GetLuaVMHeapMemoryUsage"
 
 const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
 const int daylightOffset_sec = 0;
 
-StaticJsonDocument<512> SystemConfiguration;
 StaticJsonDocument<512> BiosConfiguration;
+StaticJsonDocument<512> SystemConfiguration;
+StaticJsonDocument<512> UserConfiguration;
 
 struct Sprite;
 
@@ -109,7 +112,7 @@ void syncTime(const char* ssid, const char* password) {
       strlen(ssid) > 0 && strlen(password) > 0) {
 
     WiFi.begin(ssid, password);
-    Serial.println("== Wifi Begin ==");
+    Serial.println("Wifi Begin");
 
     unsigned long startAttemptTime = millis();
 
@@ -121,7 +124,7 @@ void syncTime(const char* ssid, const char* password) {
       delay(300);
     }
 
-    Serial.println("== Wifi Connected ==");
+    Serial.println("Wifi Connected");
 
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
 
@@ -136,7 +139,7 @@ void syncTime(const char* ssid, const char* password) {
       delay(100);
     }
 
-    Serial.println("== Time Synchronized ==");
+    Serial.println("Time Synchronized");
 
     WiFi.disconnect(true);
     WiFi.mode(WIFI_OFF);
@@ -159,53 +162,104 @@ volatile bool luaRequestExit = false;
 // ===== Alocador Lua usando PSRAM =====
 void* lua_psram_alloc(void* ud, void* ptr, size_t osize, size_t nsize) {
   (void)ud;
+  (void)osize; // NÃO confiamos mais nisso
 
+  const size_t HEADER_SIZE = sizeof(size_t);
+
+  // =========================
+  // FREE
+  // =========================
   if (nsize == 0) {
     if (ptr) {
-      luaHeapUsed -= osize;
-      heap_caps_free(ptr);
+      uint8_t* realPtr = (uint8_t*)ptr - HEADER_SIZE;
+      size_t storedSize = *((size_t*)realPtr);
+
+      if (luaHeapUsed >= storedSize)
+        luaHeapUsed -= storedSize;
+      else
+        luaHeapUsed = 0;
+
+      heap_caps_free(realPtr);
     }
     return NULL;
   }
 
-  if (luaHeapUsed - osize + nsize > LUA_HEAP_LIMIT) {
-    Serial.println("ERR: Lua HEAP is OVER");
+  // =========================
+  // REALLOC
+  // =========================
+  if (ptr) {
+    uint8_t* realPtr = (uint8_t*)ptr - HEADER_SIZE;
+    size_t oldSize = *((size_t*)realPtr);
+
+    size_t futureUsed = luaHeapUsed - oldSize + nsize;
+
+    if (futureUsed > LUA_HEAP_LIMIT) {
+      Serial.println("ERR: Lua HEAP LIMIT REACHED");
+      return NULL;
+    }
+
+    uint8_t* newRealPtr = (uint8_t*)heap_caps_realloc(realPtr, nsize + HEADER_SIZE,
+                  MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);
+
+    if (!newRealPtr) return NULL;
+
+    *((size_t*)newRealPtr) = nsize;
+    luaHeapUsed = futureUsed;
+
+    return newRealPtr + HEADER_SIZE;
+  }
+
+  // =========================
+  // MALLOC
+  // =========================
+  if (luaHeapUsed + nsize > LUA_HEAP_LIMIT) {
+    Serial.println("ERR: Lua HEAP LIMIT REACHED");
     return NULL;
   }
 
-  void* newptr = heap_caps_realloc(ptr, nsize, MALLOC_CAP_SPIRAM);
-  if (newptr) {
-    luaHeapUsed = luaHeapUsed - osize + nsize;
-  }
+  uint8_t* realPtr = (uint8_t*)heap_caps_malloc(
+    nsize + HEADER_SIZE,
+    MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT
+  );
 
-  return newptr;
+  if (!realPtr) return NULL;
+
+  *((size_t*)realPtr) = nsize;
+  luaHeapUsed += nsize;
+
+  return realPtr + HEADER_SIZE;
 }
 
 // KERNEL FUNCTIONS
 struct Sprite {
   LGFX_Sprite spr;
 
+  float rotation = 0.0f;   // graus
+  int width = 0;
+  int height = 0;
+
   Sprite() : spr(&tft) {
-    spr.fillSprite(TFT_TRANSPARENT);
     spr.setColorDepth(16);
   }
 
   bool load(const char* caminho, int largura, int altura) {
+    width = largura;
+    height = altura;
+
     spr.setPsram(true);
+
     if (!spr.createSprite(largura, altura)) {
       tft.setTextColor(TFT_WHITE);
-      tft.setTextSize(1.5);
       tft.setCursor(5, 5);
-      tft.printf("ERR 0x003 - Sprite creation failed at %s", caminho);
+      tft.printf("ERR 0x007 - Sprite creation failed at %s", caminho);
       while (1);
     }
 
     File f = SD.open(caminho);
     if (!f) {
       tft.setTextColor(TFT_WHITE);
-      tft.setTextSize(1.5);
       tft.setCursor(5, 5);
-      tft.printf("ERR 0x004 - Couldn't open file at %s", caminho);
+      tft.printf("ERR 0x008 - Couldn't open file at %s", caminho);
       while (1);
     }
 
@@ -213,22 +267,35 @@ struct Sprite {
     uint8_t* buffer = (uint8_t*)malloc(tamanho);
     if (!buffer) {
       tft.setTextColor(TFT_WHITE);
-      tft.setTextSize(1.5);
       tft.setCursor(5, 5);
-      tft.printf("ERR 0x005 - Malloc failed at adress %s", *buffer);
+      tft.printf("ERR 0x009 - Malloc failed");
       f.close();
       while (1);
     }
 
     f.read(buffer, tamanho);
     f.close();
+
     spr.drawPng(buffer, tamanho, 0, 0);
     free(buffer);
+
     return true;
   }
 
+  void setRotation(float graus) {
+    rotation = graus;
+  }
+
   void draw(int x, int y) {
-    spr.pushSprite(&frame, x, y, 0x0000);
+    if (rotation == 0.0f) {
+      spr.pushSprite(&frame, x, y, 0x0000);
+      return;
+    }
+
+    spr.setPivot(width / 2, height / 2);
+    frame.setPivot(x + width / 2, y + height / 2);
+
+    spr.pushRotateZoom(&frame, rotation, 1.0f, 1.0f, 0x0000);
   }
 };
 
@@ -364,6 +431,11 @@ int l_getCpuTemperature(lua_State* L){
     return 1;
 }
 
+int l_getLuaHeapUsage(lua_State* L){
+  lua_pushnumber(L, luaHeapUsed);
+  return 1;
+}
+
 int l_time_toString(lua_State* L) {
     LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
     const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
@@ -412,7 +484,8 @@ void registerApis(lua_State* L) {
   lua_register(L, LUA_GET_FREE_HEAP_MEMORY_DEFINITION, l_getFreeHeapMemory);
   lua_register(L, LUA_GET_HEAP_MEMORY_SIZE_DEFINITION, l_getHeapMemorySize);
   lua_register(L, LUA_GET_CPU_TEMPERATURE_DEFINITION, l_getCpuTemperature);
-  lua_register(L, "OS_GetTime", l_getTime);
+  lua_register(L, LUA_GET_LUA_HEAP_USAGE, l_getLuaHeapUsage);
+  lua_register(L, LUA_GET_TIME, l_getTime);
   registerTime(L);
   registerSprite(L);
 }
@@ -426,20 +499,12 @@ void taskLuaApp(void* arg) {
   lua_State* L = lua_newstate(lua_psram_alloc, NULL, esp_random());
   if (!L) {
     Serial.println("ERR: Couldn't create LUA VM");
-    Serial.println("SOL: Deleting Task");
     vTaskDelete(NULL);
     return;
   }
 
   luaL_openlibs(L);
   registerApis(L);
-
-  //const char* script =
-  //  "print('Lua OK no Core 1')\n"
-  //  "for i=1,5 do\n"
-  //  "  print('[LUA] Teste: ', i)\n"
-  //  "end\n"
-  //  "endProgram()";
 
   File f = SD.open("/sys/src/sys.lua");
   if (!f) {
@@ -448,35 +513,61 @@ void taskLuaApp(void* arg) {
     vTaskDelete(NULL);
     return;
   }
+
   size_t size = f.size();
   char* buffer = (char*)malloc(size + 1);
+
   if (!buffer) {
-    Serial.println("ERR: No RAM avaliable");
+    Serial.println("ERR: No RAM available");
     f.close();
-    return;
-  }else{
-    f.readBytes(buffer, size);
-    buffer[size] = '\0';
-
-    f.close();
-
-    const char* script = buffer;
-    free(buffer);
-
-    if (luaL_dostring(L, script) != LUA_OK) {
-      Serial.printf("=== LUA VM INTERPRETER ERROR: %s\n", lua_tostring(L, -1));
-    }
-
-    //LOOP
-    while (!luaRequestExit) {
-      vTaskDelay(10 / portTICK_PERIOD_MS);
-    }
-
-    luaRequestExit = false;
     lua_close(L);
-    Serial.printf("[LUA] VM Shutdown\n");
     vTaskDelete(NULL);
+    return;
   }
+
+  f.readBytes(buffer, size);
+  buffer[size] = '\0';
+  f.close();
+
+  // EXECUTA ANTES DE DAR FREE
+  if (luaL_dostring(L, buffer) != LUA_OK) {
+    Serial.printf("LUA ERROR: %s\n", lua_tostring(L, -1));
+  }
+
+  free(buffer);
+
+  // LOOP
+  while (!luaRequestExit) {
+    vTaskDelay(10 / portTICK_PERIOD_MS);
+  }
+
+  luaRequestExit = false;
+  lua_close(L);
+
+  Serial.println("[LUA] VM Shutdown");
+  vTaskDelete(NULL);
+}
+
+// Boot
+Sprite* boot_bg = new Sprite();
+Sprite* boot_loadingicon = new Sprite();
+
+TaskHandle_t bootTaskHandle = NULL;
+bool bootTaskExit = false;
+
+void taskDrawBootImages(void* arg) {
+  while (bootTaskExit != true) {
+    boot_loadingicon->rotation += 8;
+
+    boot_bg->draw(0,0);
+    boot_loadingicon->draw(204,118);
+
+    frame.pushSprite(0, 0);
+
+    vTaskDelay(pdMS_TO_TICKS(16));
+  }
+
+  vTaskDelete(bootTaskHandle);
 }
 
 // ===== Kernel (Core 0) =====
@@ -485,7 +576,7 @@ void setup() {
 
   Serial.begin(115200);
 
-  Serial.printf("====== FiscionOS ======\n");
+  Serial.printf("====== RazorOS ======\n");
 
   Serial.printf("Starting Kernel at core %d\n", xPortGetCoreID());
 
@@ -494,15 +585,16 @@ void setup() {
     return;
   }
 
-  Serial.printf("=== Starting Screen ===\n");
+  // SCREEN START
   tft.init();
   tft.setRotation(1);
   tft.fillScreen(TFT_BLACK);
   tft.setColorDepth(16);
   tft.setBrightness(255);
   tft.setSwapBytes(true);
+  Serial.printf("Screen Started\n");
 
-  Serial.printf("===== SD Start =====\n");
+  // SD BEGIN
   if (!SD.begin(SD_CS)) {
     tft.setTextColor(TFT_WHITE);
     tft.setTextSize(1.5);
@@ -510,9 +602,10 @@ void setup() {
     tft.print("ERR 0x001 - Couldn't initiate SD Card module.");
     while (1);
   }
+  Serial.printf("Started SD module\n");
 
   // LOAD BIOS CONFIG
-  File biosConfigFile = SD.open("/usr/sys/bios.json");
+  File biosConfigFile = SD.open("/boot/boot.json");
   if (!biosConfigFile){
     tft.setTextColor(TFT_WHITE);
     tft.setTextSize(1.5);
@@ -529,9 +622,9 @@ void setup() {
   }
 
   biosConfigFile.close();
+  Serial.printf("Loaded /boot/boot.json configs\n");
 
-
-  Serial.printf("== Creating Frame ==\n");
+  // CREATING SCREEN FRAME
   frame.setPsram(true);
   frame.setColorDepth(16);
   if (!frame.createSprite(tft.width(), tft.height())) {
@@ -541,9 +634,11 @@ void setup() {
     tft.print("ERR 0x002 - Couldn't create drawing frame.");
     while (1);
   }
+  Serial.printf("Screen Frame created\n");
 
   // Colors Test
   if (BiosConfiguration["TestScreenColorsWhenStartingUp"] == true){
+    Serial.printf("Testing screen colours\n");
     tft.fillScreen(tft.color565(255, 0, 255));
     delay(1000);
     tft.fillScreen(tft.color565(0, 255, 0));
@@ -553,9 +648,22 @@ void setup() {
     tft.fillScreen(TFT_BLACK);
   }
 
+  // DRAW BOOT IMAGES
+  boot_bg->load("/boot/img/boot_bg.png", 480, 320);
+  boot_loadingicon->load("/boot/img/boot_loading.png", 72, 72);
+  xTaskCreatePinnedToCore(
+    taskDrawBootImages,
+    "DrawBootImages",
+    LUA_TASK_STACK,
+    NULL,
+    2,
+    &bootTaskHandle,
+    1
+  );
+
   // LOAD SYSTEM CONFIGS
-  File file = SD.open("/usr/sys/general.json");
-  if (!file) {
+  File generalConfigFile = SD.open("/usr/sys/general.json");
+  if (!generalConfigFile) {
     tft.setTextColor(TFT_WHITE);
     tft.setTextSize(1.5);
     tft.setCursor(5, 5);
@@ -563,29 +671,57 @@ void setup() {
     while (1);
   }
 
-  DeserializationError _error = deserializeJson(SystemConfiguration, file);
+  DeserializationError _error = deserializeJson(SystemConfiguration, generalConfigFile);
 
   if (_error) {
     Serial.print("Erro parse: ");
     Serial.println(_error.c_str());
-    file.close();
+    generalConfigFile.close();
     return;
   }
 
-  file.close();
+  generalConfigFile.close();
+  Serial.printf("Loaded /usr/sys/general.json configs\n");
 
   const char* ssid = SystemConfiguration["Wifi"]["ssid"];
   const char* password = SystemConfiguration["Wifi"]["password"];
 
-  Serial.println("== Synchronizing Time ==");
+  Serial.println("Synchronizing Time");
   gmtOffset_sec = int(SystemConfiguration["Time"]["timezone"]) * 3600;
   syncTime(ssid, password);
   //struct tm timeinfo;
   //getLocalTime(&timeinfo);
   //Serial.println(&timeinfo, "%d/%m/%Y %H:%M:%S");
 
+  //vTaskDelete(bootTaskHandle);
+  //bootTaskHandle = NULL;
+  bootTaskExit = true;
+  delay(2000);
+  bootTaskExit = false;
+
+  // LOAD USER
+  // LOAD BIOS CONFIG
+  File userConfigFile = SD.open("/usr/sys/user.json");
+  if (!userConfigFile){
+    tft.setTextColor(TFT_WHITE);
+    tft.setTextSize(1.5);
+    tft.setCursor(5, 5);
+    tft.print("ERR 0x003 - Couldn't open user user.json.");
+  }
+  DeserializationError _errorUser = deserializeJson(UserConfiguration, userConfigFile);
+
+  if (_errorUser) {
+    Serial.print("Erro parse: ");
+    Serial.println(_errorUser.c_str());
+    userConfigFile.close();
+    return;
+  }
+
+  userConfigFile.close();
+  Serial.printf("Loaded /usr/sys/user.json user configs\n");
+
   // ONLY IF APP PRESENT:
-  Serial.printf("== Starting LUA VM ==\n");
+  Serial.printf("Starting LUA VM\n");
 
   xTaskCreatePinnedToCore(
     taskLuaApp,
