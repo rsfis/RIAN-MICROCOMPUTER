@@ -22,6 +22,8 @@
 #define LUA_GET_CPU_TEMPERATURE_DEFINITION "OS_GetCPUTemperature"
 #define LUA_GET_TIME "OS_GetTime"
 #define LUA_GET_LUA_HEAP_USAGE "OS_GetLuaVMHeapMemoryUsage"
+#define LUA_GET_USER_USERNAME "OS_GetUserUsername"
+#define LUA_GET_USER_PASSWORD "OS_GetUserPassword"
 
 const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
@@ -436,6 +438,18 @@ int l_getLuaHeapUsage(lua_State* L){
   return 1;
 }
 
+int l_getUserUsername(lua_State* L){
+  const char* username = UserConfiguration["username"];
+  lua_pushstring(L, username);
+  return 1;
+}
+
+int l_getUserPassword(lua_State* L){
+  const char* password = UserConfiguration["password"];
+  lua_pushstring(L, password);
+  return 1;
+}
+
 int l_time_toString(lua_State* L) {
     LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
     const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
@@ -473,6 +487,238 @@ void registerTime(lua_State* L) {
     lua_pop(L, 1);
 }
 
+struct Font {
+
+#pragma pack(push, 1)
+    struct Glyph {
+        uint32_t code;
+        uint16_t atlas_x;
+        uint16_t atlas_y;
+        uint16_t w;
+        uint16_t h;
+        int16_t  xOff;
+        int16_t  yOff;
+        uint16_t advance;
+    };
+#pragma pack(pop)
+
+    uint8_t* data = nullptr;
+    size_t size = 0;
+
+    uint16_t fontSize = 0;
+    uint16_t ascent = 0;
+    uint16_t glyphCount = 0;
+    uint16_t atlasW = 0;
+    uint16_t atlasH = 0;
+
+    Glyph* glyphs = nullptr;
+    uint8_t* bitmap = nullptr;
+
+    Font(const char* path){
+        load(path);
+    }
+
+    bool load(const char* path){
+
+        File f = SD.open(path, FILE_READ);
+        if(!f){
+            Serial.println("0x010 - Font open error");
+            return false;
+        }
+
+        size = f.size();
+
+        data = (uint8_t*)heap_caps_malloc(
+            size,
+            MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT
+        );
+
+        if(!data){
+            Serial.println("0x011 - Font alloc error");
+            f.close();
+            return false;
+        }
+
+        f.read(data, size);
+        f.close();
+
+        uint8_t* ptr = data;
+
+        if(memcmp(ptr, "FNT1", 4) != 0){
+            Serial.println("0x012 - Invalid font format");
+            return false;
+        }
+
+        ptr += 4;
+
+        fontSize   = *(uint16_t*)ptr; ptr += 2;
+        ascent     = *(uint16_t*)ptr; ptr += 2;
+        glyphCount = *(uint16_t*)ptr; ptr += 2;
+        atlasW     = *(uint16_t*)ptr; ptr += 2;
+        atlasH     = *(uint16_t*)ptr; ptr += 2;
+
+        glyphs = (Glyph*)ptr;
+        ptr += sizeof(Glyph) * glyphCount;
+
+        uint32_t bitmapSize = *(uint32_t*)ptr;
+        ptr += 4;
+
+        bitmap = ptr;
+
+        //Serial.printf("Font loaded: %d glyphs | sizeof(Glyph)=%d\n",
+        //              glyphCount, sizeof(Glyph));
+
+        return true;
+    }
+
+    Glyph* findGlyph(uint32_t code){
+        for(int i = 0; i < glyphCount; i++){
+            if(glyphs[i].code == code)
+                return &glyphs[i];
+        }
+        return nullptr;
+    }
+
+    void drawString(LGFX_Sprite &spr,
+                    const char* text,
+                    int x,
+                    int y,
+                    int pts,
+                    int r,
+                    int g,
+                    int b){
+
+        if(!data) return;
+
+        float scale = (float)pts / (float)fontSize;
+        uint16_t color = tft.color565(r,g,b);
+
+        int cursorX = x;
+
+        while(*text){
+
+            uint8_t c = *text++;
+            Glyph* gptr = findGlyph(c);
+
+            if(!gptr){
+                cursorX += pts / 2;
+                continue;
+            }
+
+            int drawX = cursorX + (int)(gptr->xOff * scale);
+            int drawY = y + (int)((ascent + gptr->yOff) * scale);
+
+            int scaledW = (int)(gptr->w * scale);
+            int scaledH = (int)(gptr->h * scale);
+
+            for(int sy = 0; sy < scaledH; sy++){
+                for(int sx = 0; sx < scaledW; sx++){
+
+                    int srcX = (int)(sx / scale);
+                    int srcY = (int)(sy / scale);
+
+                    int atlasIndex =
+                        (gptr->atlas_y + srcY) * atlasW +
+                        (gptr->atlas_x + srcX);
+
+                    uint8_t alpha = bitmap[atlasIndex];
+
+                    if(alpha > 128){
+                        spr.drawPixel(
+                            drawX + sx,
+                            drawY + sy,
+                            color
+                        );
+                    }
+                }
+            }
+
+            cursorX += (int)(gptr->advance * scale);
+        }
+    }
+
+    void freeMemory(){
+        if(data){
+            heap_caps_free(data);
+            data = nullptr;
+            size = 0;
+        }
+    }
+
+    ~Font(){
+        freeMemory();
+    }
+};
+
+int l_font_constructor(lua_State* L){
+
+    const char* path = luaL_checkstring(L, 2);
+
+    Font* font = (Font*)lua_newuserdata(L, sizeof(Font));
+    new (font) Font(path);
+
+    if(!font->load(path)){
+        return luaL_error(L, "Font load failed");
+    }
+
+    luaL_getmetatable(L, "Font");
+    lua_setmetatable(L, -2);
+
+    return 1;
+}
+
+int l_font_draw(lua_State* L){
+
+    Font* font = (Font*)luaL_checkudata(L, 1, "Font");
+
+    const char* text = luaL_checkstring(L, 2);
+    int x = luaL_checkinteger(L, 3);
+    int y = luaL_checkinteger(L, 4);
+    int pts = luaL_checkinteger(L, 5);
+    int r = luaL_checkinteger(L, 6);
+    int g = luaL_checkinteger(L, 7);
+    int b = luaL_checkinteger(L, 8);
+
+    font->drawString(frame, text, x, y, pts, r, g, b);
+
+    return 0;
+}
+
+int l_font_gc(lua_State* L){
+
+    Font* font = (Font*)luaL_checkudata(L, 1, "Font");
+    font->freeMemory();
+
+    return 0;
+}
+
+void registerFont(lua_State* L){
+
+    luaL_newmetatable(L, "Font");
+
+    lua_pushcfunction(L, l_font_gc);
+    lua_setfield(L, -2, "__gc");
+
+    lua_newtable(L);
+
+    lua_pushcfunction(L, l_font_draw);
+    lua_setfield(L, -2, "drawString");
+
+    lua_setfield(L, -2, "__index");
+
+    lua_pop(L, 1);
+
+    // Global Font constructor
+    lua_newtable(L);
+
+    lua_pushcfunction(L, l_font_constructor);
+    lua_setfield(L, -2, "__call");
+
+    lua_setmetatable(L, -2);
+
+    lua_setglobal(L, "Font");
+}
+
 // ===== RESGISTER EXPORTED FUNCTIONS =====
 void registerApis(lua_State* L) {
   //lua_register(L, "teste", l_teste);
@@ -486,8 +732,11 @@ void registerApis(lua_State* L) {
   lua_register(L, LUA_GET_CPU_TEMPERATURE_DEFINITION, l_getCpuTemperature);
   lua_register(L, LUA_GET_LUA_HEAP_USAGE, l_getLuaHeapUsage);
   lua_register(L, LUA_GET_TIME, l_getTime);
+  lua_register(L, LUA_GET_USER_USERNAME, l_getUserUsername);
+  lua_register(L, LUA_GET_USER_PASSWORD, l_getUserPassword);
   registerTime(L);
   registerSprite(L);
+  registerFont(L);
 }
 
 // ===== Task Lua (Core 1) =====
