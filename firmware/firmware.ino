@@ -20,10 +20,12 @@
 #define LUA_GET_FREE_HEAP_MEMORY_DEFINITION "OS_GetFreeHeapMemory"
 #define LUA_GET_HEAP_MEMORY_SIZE_DEFINITION "OS_GetHeapMemorySize"
 #define LUA_GET_CPU_TEMPERATURE_DEFINITION "OS_GetCPUTemperature"
-#define LUA_GET_TIME "OS_GetTime"
-#define LUA_GET_LUA_HEAP_USAGE "OS_GetLuaVMHeapMemoryUsage"
-#define LUA_GET_USER_USERNAME "OS_GetUserUsername"
-#define LUA_GET_USER_PASSWORD "OS_GetUserPassword"
+#define LUA_GET_TIME_DEFINITION "OS_GetTime"
+#define LUA_GET_LUA_HEAP_USAGE_DEFINITION "OS_GetLuaVMHeapMemoryUsage"
+#define LUA_GET_USER_USERNAME_DEFINITION "OS_GetUserUsername"
+#define LUA_GET_USER_PASSWORD_DEFINITION "OS_GetUserPassword"
+#define LUA_OS_SLEEP_DEFINITION "OS_Sleep"
+#define LUA_OS_RESTART_DEFINITION "OS_Restart"
 
 const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
@@ -450,6 +452,16 @@ int l_getUserPassword(lua_State* L){
   return 1;
 }
 
+int l_OS_Sleep(lua_State* L){
+  delay(luaL_checkinteger(L, 1));
+  return 1;
+}
+
+int l_OS_Restart(lua_State* L){
+  esp_restart();
+  return 0;
+}
+
 int l_time_toString(lua_State* L) {
     LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
     const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
@@ -730,10 +742,12 @@ void registerApis(lua_State* L) {
   lua_register(L, LUA_GET_FREE_HEAP_MEMORY_DEFINITION, l_getFreeHeapMemory);
   lua_register(L, LUA_GET_HEAP_MEMORY_SIZE_DEFINITION, l_getHeapMemorySize);
   lua_register(L, LUA_GET_CPU_TEMPERATURE_DEFINITION, l_getCpuTemperature);
-  lua_register(L, LUA_GET_LUA_HEAP_USAGE, l_getLuaHeapUsage);
-  lua_register(L, LUA_GET_TIME, l_getTime);
-  lua_register(L, LUA_GET_USER_USERNAME, l_getUserUsername);
-  lua_register(L, LUA_GET_USER_PASSWORD, l_getUserPassword);
+  lua_register(L, LUA_GET_LUA_HEAP_USAGE_DEFINITION, l_getLuaHeapUsage);
+  lua_register(L, LUA_GET_TIME_DEFINITION, l_getTime);
+  lua_register(L, LUA_GET_USER_USERNAME_DEFINITION, l_getUserUsername);
+  lua_register(L, LUA_GET_USER_PASSWORD_DEFINITION, l_getUserPassword);
+  lua_register(L, LUA_OS_SLEEP_DEFINITION, l_OS_Sleep);
+  lua_register(L, LUA_OS_RESTART_DEFINITION, l_OS_Restart);
   registerTime(L);
   registerSprite(L);
   registerFont(L);
