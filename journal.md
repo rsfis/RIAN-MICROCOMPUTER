@@ -192,3 +192,74 @@ This project is gonna be really fat. The lower part will be 4cm tall.
 ![Screenshot_20260212_091511_Opera GX](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTAyODc3LCJwdXIiOiJibG9iX2lkIn19--759f881e9137a489ce3d2ade971acd37526cf9fd/Screenshot_20260212_091511_Opera%20GX.jpg)
   
 
+# 2/27/2026 - System's Kernel and Tests  
+
+_Time spent: 12.0h_  
+
+During 4 days (From 4 days ago to today), I've been developing the OS Kernel.
+I've spent great 12 hours developing the kernel main functions and folder structure.
+
+The kernel now starts screen, starts sd module, loads boot configs, creates screen frame, loads general configs, synchronize time using wifi to obtain real life time and set it to the RTC and then turns off wifi to save energy, loads user, starts first lua vm (OS Graphic Interface).
+
+OS functions:
+Display_ClearScreen, Display_UpdateScreen, OS_GetFreeMemory, OS_GetMemorySize, OS_GetFreeHeapMemory, OS_GetHeapMemorySize, OS_GetCPUTemperature, OS_GetTime:toString("%d/%m/%Y - %H:%M:%S"), OS_GetLuaVMHeapMemoryUsage, OS_GetUserUsername, OS_GetUserPassword
+
+Furthermore, I've made the Sprite exported structure and exported lua variable type and so with Fonts.
+This is a simple example lua code of how the system is working:
+´´´lua
+local user_login_bg = Sprite("/sys/img/user_login_bg.png", 480, 320)
+local gothambold_font = Font("/sys/fonts/Gotham Bold.bin")
+
+-- FPS
+local fps = 0
+local frameCount = 0
+local lastTime = os.clock()
+
+function loop()
+   while true do
+      local currentTime = os.clock()
+      frameCount = frameCount + 1
+
+      -- Atualiza FPS a cada 1 segundo
+      if currentTime - lastTime >= 1 then
+         collectgarbage("collect")
+         fps = frameCount
+         frameCount = 0
+         lastTime = currentTime
+         --print("FPS:", fps)
+         --print("Temperature: ", OS_GetCPUTemperature())
+         --print("Free Memory: ", OS_GetFreeHeapMemory())
+         --print("Memory Size: ", OS_GetMemorySize())
+         --print("RTC: ", OS_GetTime():toString("%d/%m/%Y - %H:%M:%S"))
+         --print("Lua Heap Memory Usage: ", OS_GetLuaVMHeapMemoryUsage())
+      end
+
+      Display_ClearScreen()
+
+      user_login_bg:draw(0, 0)
+      gothambold_font:drawString(OS_GetUserUsername(), 148, 150, 20, 255, 255, 255)
+
+      Display_UpdateScreen()
+   end
+end
+
+function start()
+   loop()
+end
+
+start()
+endProgram()
+
+´´´
+
+Images are always in .png, supported transparency, and fonts are always in .bin.
+The fonts are converted from ttf to binary files using a python script avaliable on github.
+
+The most difficult part was the Lua VM memory management: In the beginning, there was a big memory leak in LUA VMs. The solution was to call every second collectgarbage("collect").
+And also: the luaHeapUsed variable was being miscounted, causing a memory leak.
+
+Here is the OS booting and start page:
+![WhatsApp Image 2026-02-27 at 21.43.36(1)](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEyNTcyLCJwdXIiOiJibG9iX2lkIn19--fad7c37d7f5d2ae81a223833f3933576445f9c32/WhatsApp%20Image%202026-02-27%20at%2021.43.36(1).jpeg)
+![WhatsApp Image 2026-02-27 at 21.43.36](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEyNTczLCJwdXIiOiJibG9iX2lkIn19--fc565008f973b24c9f828267c535f0b0d1358455/WhatsApp%20Image%202026-02-27%20at%2021.43.36.jpeg)
+  
+
