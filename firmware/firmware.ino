@@ -7,6 +7,8 @@
 #include <WiFi.h>
 #include "time.h"
 
+#define KERNEL_VERSION "ALPHA 0.2.5"
+
 #define LUA_HEAP_LIMIT (7 * 1024 * 1024)
 #define LUA_TASK_STACK 20000
 
@@ -26,6 +28,7 @@
 #define LUA_GET_USER_PASSWORD_DEFINITION "OS_GetUserPassword"
 #define LUA_OS_SLEEP_DEFINITION "OS_Sleep"
 #define LUA_OS_RESTART_DEFINITION "OS_Restart"
+#define LUA_OS_GET_KERNEL_VERSION_DEFINITION "OS_GetKernelVersion"
 
 const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
@@ -462,6 +465,11 @@ int l_OS_Restart(lua_State* L){
   return 0;
 }
 
+int l_OS_GetKernelVersion(lua_State* L){
+  lua_pushstring(L, KERNEL_VERSION);
+  return 1;
+}
+
 int l_time_toString(lua_State* L) {
     LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
     const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
@@ -748,6 +756,7 @@ void registerApis(lua_State* L) {
   lua_register(L, LUA_GET_USER_PASSWORD_DEFINITION, l_getUserPassword);
   lua_register(L, LUA_OS_SLEEP_DEFINITION, l_OS_Sleep);
   lua_register(L, LUA_OS_RESTART_DEFINITION, l_OS_Restart);
+  lua_register(L, LUA_OS_GET_KERNEL_VERSION_DEFINITION, l_OS_GetKernelVersion);
   registerTime(L);
   registerSprite(L);
   registerFont(L);
