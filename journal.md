@@ -33,7 +33,7 @@ Therefore, I've been facing a problem with powering. I really don't know how I'm
 
 # 1/25/2026 - Design  
 
-_Time spent: 12.0h_  
+_Time spent: 15.0h_  
 
 Today I've made the computer design and also discovered how I will power it up, charge and power down.
 
@@ -44,13 +44,16 @@ To charging up, I will put a USB-C male connected to the input of the battery an
 The system will never turn down completely, because this battery holder I ordered doesn't have a switch and I wouldn't be able to cut the powering of the usb-c cable (at least for now).
 
 So, there will be a button in the system to turn off, which will activate the esp32 deep hybernation mode and turn off the screen. Then, when clicking any key on the keyboard's row 5 (tgv row), it will restart and exit hybernation. The only way to turn it completely down, would be letting it run out od battery.
-![20260125_224601](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODQsInB1ciI6ImJsb2JfaWQifX0=--3ee1f17a1ca277fa3d08d09cab695fff2dc70835/20260125_224601.jpg)
-![20260125_224615](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODUsInB1ciI6ImJsb2JfaWQifX0=--0c92161010bdf78996041a66f735ab7a132e7073/20260125_224615.jpg)
-![20260125_224622](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODYsInB1ciI6ImJsb2JfaWQifX0=--f7c00ac296d268843dbff484d2b339fd82ba300d/20260125_224622.jpg)
-![20260125_224638](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODcsInB1ciI6ImJsb2JfaWQifX0=--3f39b146c5413a85d09a21fd6e5c458943268ba6/20260125_224638.jpg)
+![20260125_224601](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODQsInB1ciI6ImJsb2JfaWQifX0=--3ee1f17a1ca277fa3d08d09cab695fff2dc70835/20260125_224601.jpg)
+![20260125_224615](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODUsInB1ciI6ImJsb2JfaWQifX0=--0c92161010bdf78996041a66f735ab7a132e7073/20260125_224615.jpg)
+![20260125_224622](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODYsInB1ciI6ImJsb2JfaWQifX0=--f7c00ac296d268843dbff484d2b339fd82ba300d/20260125_224622.jpg)
+![20260125_224638](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODcsInB1ciI6ImJsb2JfaWQifX0=--3f39b146c5413a85d09a21fd6e5c458943268ba6/20260125_224638.jpg)
+
+I also made some modifications on the PCB (Cut a hole on the PCB to pass the USB C to charge the ESP32, removed the battery support and added the flat cable socket for screen).
+![image](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI1LCJwdXIiOiJibG9iX2lkIn19--866f290b92e460524438a53ec64dbde56d7bb9ac/image.png)
+![image](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI2LCJwdXIiOiJibG9iX2lkIn19--a9698914f51cd54f19db0e5f263cfd2db0b42320/image.png)
 
 
-  
 
 # 1/26/2026 - Design Edited and More Powering Tests  
 
