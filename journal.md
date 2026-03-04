@@ -8,10 +8,19 @@ _Time spent: 50.0h_
 
 Hi! This is the first journal entry of the Rian's MicroComputer.
 
-Throughout some days (From 3/01 to 18/01) tested and made the scheme on my head of how I would make this project. I tested the 3.5" TFT screen I bought, some 3D on it, SD card tests and ESP32 memory using LovyanGFX.
+## 03/01 to 05/01 - The idea: 6h hours
+From 3rd January to 5th January, I had an idea: what if I made my own computer? 
+
+And then I started to search for components and I found a screen and realised that an ESP32 would be the perfect choice: small, strong, and easy to make the firmware.
+
+## 06/01 to 18/01 Screen Testing: 30h
+
+During these days, I tested the 3.5" TFT screen, with some 3D on it, SD card tests and ESP32 memory using LovyanGFX.
 
 ![20260124_194019](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjYsInB1ciI6ImJsb2JfaWQifX0=--a37fdfa36a7d4dab177f2287f12ff80d73dad620/20260124_194019.jpg)
 ![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
+
+## 19/01 to 24/01 - First PCBs: 14h
 
 Then, within this week (From 18/01 to 24/01) I've transformed what I imagined into a real product. So, I started with the PCB, the most difficult part for me. I've made so far the upper PCB (the screen holder), the matricial keyboard pcb (the keyboard organized in matrices. so, every key has your own X and Y position, and when combined, can verify the key pressed), and finishing the main pcb.
 Therefore, I've been facing a problem with powering. I really don't know how I'm going to power up everything within a small case. I thought first some AA rechargeable 3.7v 3000mah bateries, but it has a higher voltage than the allowed, and plus: I would have only some minutes of fun. I'm browsing a module that converts 7.6v to 3.3 automatically or a battery case that outputs the same as my computer with cable.
@@ -57,7 +66,7 @@ Powering looks decent and so the battery duration.
 
 # 1/30/2026 - Tracked Prices  
 
-_Time spent: 22.0h_  
+_Time spent: 7.0h_  
 
 During these 2 days of work, I've made some changes on the PCB and routed where I should manufacture them.
 

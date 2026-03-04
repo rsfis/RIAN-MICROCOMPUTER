@@ -7,7 +7,7 @@
 #include <WiFi.h>
 #include "time.h"
 
-#define KERNEL_VERSION "ALPHA 0.2.5"
+#define KERNEL_VERSION "ALPHA 0.2.6"
 
 #define LUA_HEAP_LIMIT (7 * 1024 * 1024)
 #define LUA_TASK_STACK 20000
@@ -34,9 +34,9 @@ const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
 const int daylightOffset_sec = 0;
 
-StaticJsonDocument<512> BiosConfiguration;
-StaticJsonDocument<512> SystemConfiguration;
-StaticJsonDocument<512> UserConfiguration;
+StaticJsonDocument<1024> BiosConfiguration;
+StaticJsonDocument<1024> SystemConfiguration;
+StaticJsonDocument<1024> UserConfiguration;
 
 struct Sprite;
 
@@ -238,6 +238,75 @@ void* lua_psram_alloc(void* ud, void* ptr, size_t osize, size_t nsize) {
 }
 
 // KERNEL FUNCTIONS
+bool saveBiosPreferences() {
+
+  if (SD.exists("/boot/boot.json")) {
+    SD.remove("/boot/boot.json");
+  }
+
+  File file = SD.open("/boot/boot.json", FILE_WRITE);
+  if (!file) {
+    Serial.println("ERR 0x101 - Couldn't open boot.json for writing.");
+    return false;
+  }
+
+  if (serializeJson(BiosConfiguration, file) == 0) {
+    Serial.println("ERR 0x102 - Failed to write boot.json.");
+    file.close();
+    return false;
+  }
+
+  file.close();
+  Serial.println("Saved boot.json");
+  return true;
+}
+
+bool saveSystemPreferences() {
+
+  if (SD.exists("/usr/sys/general.json")) {
+    SD.remove("/usr/sys/general.json");
+  }
+
+  File file = SD.open("/usr/sys/general.json", FILE_WRITE);
+  if (!file) {
+    Serial.println("ERR 0x201 - Couldn't open general.json for writing.");
+    return false;
+  }
+
+  if (serializeJson(SystemConfiguration, file) == 0) {
+    Serial.println("ERR 0x202 - Failed to write general.json.");
+    file.close();
+    return false;
+  }
+
+  file.close();
+  Serial.println("Saved system.json");
+  return true;
+}
+
+bool saveUserPreferences() {
+
+  if (SD.exists("/usr/sys/user.json")) {
+    SD.remove("/usr/sys/user.json");
+  }
+
+  File file = SD.open("/usr/sys/user.json", FILE_WRITE);
+  if (!file) {
+    Serial.println("ERR 0x301 - Couldn't open user.json for writing.");
+    return false;
+  }
+
+  if (serializeJson(UserConfiguration, file) == 0) {
+    Serial.println("ERR 0x302 - Failed to write user.json.");
+    file.close();
+    return false;
+  }
+
+  file.close();
+  Serial.println("Saved user.json");
+  return true;
+}
+
 struct Sprite {
   LGFX_Sprite spr;
 
@@ -991,6 +1060,14 @@ void setup() {
 
   userConfigFile.close();
   Serial.printf("Loaded /usr/sys/user.json user configs\n");
+
+  // TEST
+  //BiosConfiguration["TestScreenColorsWhenStartingUp"] = true;
+  //UserConfiguration["username"] = "Rian Fiscina";
+  //SystemConfiguration["Time"]["timezone"] = -4;
+  //saveBiosPreferences();
+  //saveUserPreferences();
+  //saveSystemPreferences();
 
   // ONLY IF APP PRESENT:
   Serial.printf("Starting LUA VM\n");
