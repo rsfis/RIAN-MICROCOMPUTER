@@ -17,8 +17,16 @@ And then I started to search for components and I found a screen and realised th
 
 During these days, I tested the 3.5" TFT screen, with some 3D on it, SD card tests and ESP32 memory using LovyanGFX.
 
+The main problem I had with the screen, was that I was trying to follow the manufacturer manual, but it suggested the library TFT_eSPI, and it didn't matter how much I tried, it didn't work. So, I tried some different libraries, like Arduino_ST76.., and the one that finally worked: LovyanGFX!
+
+At the start, LovyanGFX didn't work. The pins were a little off (I connected some pins wrong and also configured the library wrong. But, I made it work (5h)! And here are some tests I made:
+
+Images covering the entire screen at 13.8fps, simple screen general test, simple 3D perspective with cubes (3h):
 ![20260124_194019](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjYsInB1ciI6ImJsb2JfaWQifX0=--a37fdfa36a7d4dab177f2287f12ff80d73dad620/20260124_194019.jpg)
-![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
+![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
+Complex 3D models rendering CPU bound from scratch (22h)
+![Screenshot_20260304_143709_WhatsApp](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTc5LCJwdXIiOiJibG9iX2lkIn19--0de2718384356b252dbc36896d52fab86999a1b0/Screenshot_20260304_143709_WhatsApp.jpg)
+
 
 ## 19/01 to 24/01 - First PCBs: 14h
 
@@ -29,7 +37,6 @@ Therefore, I've been facing a problem with powering. I really don't know how I'm
 ![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)![Captura de tela 2026-01-24 215628](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzQsInB1ciI6ImJsb2JfaWQifX0=--83743c123c276c650e272b6dc75b6033b5ef782d/Captura%20de%20tela%202026-01-24%20215628.png)
 ![Captura de tela 2026-01-24 215708](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzIsInB1ciI6ImJsb2JfaWQifX0=--ee4ffd9532ae39152e276f660a2b885854b54427/Captura%20de%20tela%202026-01-24%20215708.png)
 
-  
 
 # 1/25/2026 - Design  
 
