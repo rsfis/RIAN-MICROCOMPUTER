@@ -153,6 +153,8 @@ OS and Firmware are still being programmed. For now, RazorOS already has basic d
 -- ArduinoJSON, by BenoitBlanchon
 - Install the following Board Managers:
 -- esp32, by Espressif Systems
+-- Select the COM and board 4D Systems gen4-ESP32 Modules (ESP32-S3)
 ### Extract the files from /firmware/MicroSD Backup.rar
 - Copy the files from /firmware/MicroSD Backup.rar to the microsd root directory
 - Insert the micro sd in the MicroSD socket below the screen
+
