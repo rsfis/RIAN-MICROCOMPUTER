@@ -135,7 +135,7 @@ Planned Apps:
 - Terminal Serial
 - Packet Logger
 
-OS and Firmware are still being programmed. Soon, I will have more informations about it.
+OS and Firmware are still being programmed. For now, RazorOS already has basic drawing and OS functions and Lua VM implemented.
 
 ## Cart
 <img width="1919" height="1079" alt="aliexpress_part3" src="https://github.com/user-attachments/assets/d4868fa4-d680-48d4-adda-8c6005fb2e31" />
@@ -145,6 +145,14 @@ OS and Firmware are still being programmed. Soon, I will have more informations 
 <img width="969" height="682" alt="jlcpcb_generalpcb_components" src="https://github.com/user-attachments/assets/94716b24-03b8-46f2-a09b-89a303be1b91" />
 <img width="1919" height="1079" alt="jlcpcb" src="https://github.com/user-attachments/assets/874aa010-34b3-4348-8627-57cde340be39" />
 
-
-
-
+## Getting Started
+### How to flash the ESP32:
+- Install ArduinoIDE
+- Install the following libraries:
+-- LovyanGFX, by lovyan03
+-- ArduinoJSON, by BenoitBlanchon
+- Install the following Board Managers:
+-- esp32, by Espressif Systems
+### Extract the files from /firmware/MicroSD Backup.rar
+- Copy the files from /firmware/MicroSD Backup.rar to the microsd root directory
+- Insert the micro sd in the MicroSD socket below the screen
