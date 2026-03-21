@@ -2242,6 +2242,16 @@
 		)
 		(uuid "f57cd0c2-a4ae-4a38-abb0-95b628f6b7d7")
 	)
+	(text "Keyboard will be connected using pin headers and sockets"
+		(exclude_from_sim no)
+		(at 117.602 173.99 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "f9027a60-2b83-4b31-a470-fc5583a9e908")
+	)
 	(junction
 		(at 96.52 129.54)
 		(diameter 0)
@@ -3749,7 +3759,7 @@
 			)
 		)
 		(property "Value" "ESP32 Connector_1"
-			(at 79.756 142.494 90)
+			(at 80.264 128.524 90)
 			(effects
 				(font
 					(size 1.27 1.27)

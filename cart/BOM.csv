@@ -1,16 +1,16 @@
 Id,Designator,Quantity,Comment,JLCPCB Part #,Link,ENTIRE PRICE WITH FREIGHT WITH TAXES:,,,
-1,"TFT Screen 3.5"" st7796 320*480 ips ",2,"TFT Screen 3.5"" st7796 320*480 ips Touch",~,https://pt.aliexpress.com/item/1005005995931721.html?spm=a2g0o.order_list.order_list_main.31.288ecaa4EGynx2&gatewayAdapt=glo2bra,"R$ 162,63",,,
-2,ESP32 S3 8mb PSRAM 16mb Flash,2,ESP32-S3-DevKitC-1 ,~,https://pt.aliexpress.com/item/1005007215982839.html?spm=a2g0o.order_list.order_list_main.46.288ecaa4EGynx2&gatewayAdapt=glo2bra,"R$ 104,46",,,
+1,"TFT Screen 3.5"" st7796 320*480 ips ",1,"TFT Screen 3.5"" st7796 320*480 ips Touch",~,https://pt.aliexpress.com/item/1005005995931721.html?spm=a2g0o.order_list.order_list_main.31.288ecaa4EGynx2&gatewayAdapt=glo2bra,"R$ 90,84",,,
+2,ESP32 S3 8mb PSRAM 16mb Flash,1,ESP32-S3-DevKitC-1 ,~,https://pt.aliexpress.com/item/1005007215982839.html?spm=a2g0o.order_list.order_list_main.46.288ecaa4EGynx2&gatewayAdapt=glo2bra,"R$ 63,38",,,
 3,Screw M3 x  6mm,1,m3 preto 304 aço inoxidável allen 6mm 50pcs,~,"https://pt.aliexpress.com/item/1005005070119421.html?pdp_ext_f=%7B""sku_id""%3A""12000031519353304""%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra","R$ 52,45",,,
 4,"ESP32PinSocket_1, ESP32PinSocket_2",4,PinSocket_1x21_P2.54mm_Vertical,C2883738,https://jlcpcb.com/partdetail/XKBConnection-X6511FV_21C85D32/C2883738,INCLUDE IN PCBA,,,
 6,"KeyboardSocket_1, KeyboardSocket_2",4,PinSocket_1x07_P2.54mm_Vertical,C124418,https://jlcpcb.com/partdetail/125693-B_2200S07PA120/C124418,INCLUDE IN PCBA,,,PRICE FOR 2 COMPUTERS
-8,FlatCable_Header,2,PinHeader_1x14_P1.00mm_Vertical,C30607496,https://jlcpcb.com/partdetail/XUNPU-PH1_0_0114PZD/C30607496,INCLUDE IN PCBA,,R$,"1352,71"
-9,FlatCableSocket,2,Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal,C5378715,https://jlcpcb.com/partdetail/HRS_Hirose-FH12_14S_0_5SH_55/C5378715,INCLUDE IN PCBA,,USD,"260,13"
+8,FlatCable_Header,2,PinHeader_1x14_P1.00mm_Vertical,C30607496,https://jlcpcb.com/partdetail/XUNPU-PH1_0_0114PZD/C30607496,INCLUDE IN PCBA,,R$,"899,03"
+9,FlatCableSocket,2,Hirose_FH12-14S-0.5SH_1x14-1MP_P0.50mm_Horizontal,C5378715,https://jlcpcb.com/partdetail/HRS_Hirose-FH12_14S_0_5SH_55/C5378715,INCLUDE IN PCBA,,USD,"169,62"
 10,"a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,ret,fun,enter,space",61,SW_PUSH_6mm,C97440,https://jlcpcb.com/partdetail/ALPSALPINE-SKHHAJA010/C97440,INCLUDE IN PCBA,,,PRICE FOR 1 COMPUTER
-11,"PinHeader_1, PinHeader_2",1,PinHeader_1x07_P2.54mm_Vertical 10pcs 15mm height,~,"https://pt.aliexpress.com/item/1005001514058091.html?pdp_ext_f=%7B""sku_id""%3A""12000016418976460""%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra","R$ 59,28",,R$,"676,35"
-12,3D Print,2,3D Print Case,~,~,"$18,00",,USD,"130,06"
+11,"PinHeader_1, PinHeader_2",1,PinHeader_1x07_P2.54mm_Vertical 10pcs 15mm height,~,"https://pt.aliexpress.com/item/1005001514058091.html?pdp_ext_f=%7B""sku_id""%3A""12000016418976460""%7D&sourceType=1&spm=a2g0o.wish-manage-home.0.0&gatewayAdapt=glo2bra","R$ 59,28",,R$,"449,51"
+12,3D Print,2,3D Print Case,~,~,"$18,00",,USD,"84,81"
 13,PCB General,2,PCB and PCBA Manufacture Process,~,~,"$55,16",,,
 14,PCB Keyboard,2,PCB and PCBA Manufacture Process,~,~,"$46,29",,,
-15,Pixy Mini 5000mah Power  Bank,2,Pixy Mini 5000mah Power  Bank,~,https://futurizta.com/products/smallest-5000mah-usb-c-power-bank,"$53,00",,,
+15,Pixy Mini 5000mah Power  Bank,2,Pixy Mini 5000mah Power  Bank,~,https://futurizta.com/products/smallest-5000mah-usb-c-power-bank,PAID BY MY OWN,,,
 ,"NOTE: I'm going to make 2 computers, because I want to do a communication system between Computers to send files and messages using WIFI",,,,,,,,
 ,,,,,,NOTE: THE PCB PRICES WERE CALCULATED: THE PRICE + FREIGHT DIVIDED BY THE 2 PCBS,,,
