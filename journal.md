@@ -23,9 +23,9 @@ At the start, LovyanGFX didn't work. The pins were a little off (I connected som
 
 Images covering the entire screen at 13.8fps, simple screen general test, simple 3D perspective with cubes (3h):
 ![20260124_194019](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjYsInB1ciI6ImJsb2JfaWQifX0=--a37fdfa36a7d4dab177f2287f12ff80d73dad620/20260124_194019.jpg)
-![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
+![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)![20260124_193836](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
 Complex 3D models rendering CPU bound from scratch (22h)
-![Screenshot_20260304_143709_WhatsApp](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTc5LCJwdXIiOiJibG9iX2lkIn19--0de2718384356b252dbc36896d52fab86999a1b0/Screenshot_20260304_143709_WhatsApp.jpg)
+![Screenshot_20260304_143709_WhatsApp](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTc5LCJwdXIiOiJibG9iX2lkIn19--0de2718384356b252dbc36896d52fab86999a1b0/Screenshot_20260304_143709_WhatsApp.jpg)
 
 
 ## 19/01 to 24/01 - First PCBs: 14h
@@ -37,6 +37,7 @@ Therefore, I've been facing a problem with powering. I really don't know how I'm
 ![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)![Captura de tela 2026-01-24 215628](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzQsInB1ciI6ImJsb2JfaWQifX0=--83743c123c276c650e272b6dc75b6033b5ef782d/Captura%20de%20tela%202026-01-24%20215628.png)
 ![Captura de tela 2026-01-24 215708](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzIsInB1ciI6ImJsb2JfaWQifX0=--ee4ffd9532ae39152e276f660a2b885854b54427/Captura%20de%20tela%202026-01-24%20215708.png)
 
+  
 
 # 1/25/2026 - Design  
 
@@ -51,16 +52,18 @@ To charging up, I will put a USB-C male connected to the input of the battery an
 The system will never turn down completely, because this battery holder I ordered doesn't have a switch and I wouldn't be able to cut the powering of the usb-c cable (at least for now).
 
 So, there will be a button in the system to turn off, which will activate the esp32 deep hybernation mode and turn off the screen. Then, when clicking any key on the keyboard's row 5 (tgv row), it will restart and exit hybernation. The only way to turn it completely down, would be letting it run out od battery.
-![20260125_224601](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODQsInB1ciI6ImJsb2JfaWQifX0=--3ee1f17a1ca277fa3d08d09cab695fff2dc70835/20260125_224601.jpg)
-![20260125_224615](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODUsInB1ciI6ImJsb2JfaWQifX0=--0c92161010bdf78996041a66f735ab7a132e7073/20260125_224615.jpg)
-![20260125_224622](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODYsInB1ciI6ImJsb2JfaWQifX0=--f7c00ac296d268843dbff484d2b339fd82ba300d/20260125_224622.jpg)
-![20260125_224638](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODcsInB1ciI6ImJsb2JfaWQifX0=--3f39b146c5413a85d09a21fd6e5c458943268ba6/20260125_224638.jpg)
+![20260125_224601](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODQsInB1ciI6ImJsb2JfaWQifX0=--3ee1f17a1ca277fa3d08d09cab695fff2dc70835/20260125_224601.jpg)
+![20260125_224615](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODUsInB1ciI6ImJsb2JfaWQifX0=--0c92161010bdf78996041a66f735ab7a132e7073/20260125_224615.jpg)
+![20260125_224622](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODYsInB1ciI6ImJsb2JfaWQifX0=--f7c00ac296d268843dbff484d2b339fd82ba300d/20260125_224622.jpg)
+![20260125_224638](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTE0ODcsInB1ciI6ImJsb2JfaWQifX0=--3f39b146c5413a85d09a21fd6e5c458943268ba6/20260125_224638.jpg)
 
 I also made some modifications on the PCB (Cut a hole on the PCB to pass the USB C to charge the ESP32, removed the battery support and added the flat cable socket for screen).
-![image](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI1LCJwdXIiOiJibG9iX2lkIn19--866f290b92e460524438a53ec64dbde56d7bb9ac/image.png)
-![image](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI2LCJwdXIiOiJibG9iX2lkIn19--a9698914f51cd54f19db0e5f263cfd2db0b42320/image.png)
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI1LCJwdXIiOiJibG9iX2lkIn19--866f290b92e460524438a53ec64dbde56d7bb9ac/image.png)
+![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI2LCJwdXIiOiJibG9iX2lkIn19--a9698914f51cd54f19db0e5f263cfd2db0b42320/image.png)
 
 
+
+  
 
 # 1/26/2026 - Design Edited and More Powering Tests  
 
@@ -164,7 +167,7 @@ Furthermore, I made the wiring diagram for parts out of the pcb.
 
 # 2/7/2026 - OS Design  
 
-_Time spent: 1.5h_  
+_Time spent: 1.0h_  
 
 In an hour, I made the OS design and pages.
 I want the design to be a little Linux Like, kinda cozy, and easy to use. It will work with an arrow system. With WASD you control where your "cursor" is, like game consoles.
