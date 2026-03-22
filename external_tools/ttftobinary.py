@@ -2,7 +2,7 @@ from PIL import Image, ImageFont, ImageDraw
 import struct
 import math
 
-FONT_PATH = "GothamBold.ttf"
+FONT_PATH = "American Western.ttf"
 SIZE = 32
 
 CHARS = [chr(i) for i in range(32, 127)]
