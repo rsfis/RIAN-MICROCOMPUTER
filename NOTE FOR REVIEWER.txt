@@ -1,3 +1,1 @@
 The "CAD" was not made in a real CAD software, because I didn't know it was supposed to be. It was made in Blender, so, to provide a .step and CAD file, inside "case" there is a Design.FCStd (.obj imported in CAD).
-
-I'm really sorry, but the 3D print will be ok.

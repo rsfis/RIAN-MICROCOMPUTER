@@ -29,6 +29,15 @@
 #define LUA_OS_SLEEP_DEFINITION "OS_Sleep"
 #define LUA_OS_RESTART_DEFINITION "OS_Restart"
 #define LUA_OS_GET_KERNEL_VERSION_DEFINITION "OS_GetKernelVersion"
+#define LUA_OS_SAVE_BIOS_CONFIGURATION_DEFINITION "OS_SaveBiosConfig"
+#define LUA_OS_SAVE_SYSTEM_CONFIGURATION_DEFINITION "OS_SaveSystemConfig"
+#define LUA_OS_SAVE_USER_CONFIGURATION_DEFINITION "OS_SaveUserConfig"
+#define LUA_OS_SET_BIOS_CONFIG_INTEGER_KEY "OS_SetBiosConfigIntegerKey"
+#define LUA_OS_SET_BIOS_CONFIG_INTEGER_KEY "OS_SetBiosConfigStringKey"
+#define LUA_OS_SET_SYSTEM_CONFIG_INTEGER_KEY "OS_SetSystemConfigIntegerKey"
+#define LUA_OS_SET_SYSTEM_CONFIG_INTEGER_KEY "OS_SetSystemConfigStringKey"
+#define LUA_OS_SET_USER_CONFIG_INTEGER_KEY "OS_SetUserConfigIntegerKey"
+#define LUA_OS_SET_USER_CONFIG_INTEGER_KEY "OS_SetUserConfigStringKey"
 
 const char* ntpServer = "pool.ntp.org";
 long gmtOffset_sec = -3 * 3600;  // UTC-3
@@ -539,6 +548,75 @@ int l_OS_GetKernelVersion(lua_State* L){
   return 1;
 }
 
+int l_OS_SetBiosConfigIntegerKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    int val = luaL_checkinteger(L, 2);
+
+    BiosConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SetBiosConfigStringKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    const char* val = luaL_checkstring(L, 2);
+
+    BiosConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SetSystemConfigIntegerKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    int val = luaL_checkinteger(L, 2);
+
+    SystemConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SetSystemConfigStringKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    const char* val = luaL_checkstring(L, 2);
+
+    SystemConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SetUserConfigIntegerKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    int val = luaL_checkinteger(L, 2);
+
+    UserConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SetUserConfigStringKey(lua_State* L){
+    const char* key = luaL_checkstring(L, 1);
+    const char* val = luaL_checkstring(L, 2);
+
+    UserConfiguration[key] = val;
+
+    return 0;
+}
+
+int l_OS_SaveBiosConfig(lua_State* L){
+  saveBiosPreferences();
+  return 0;
+}
+
+int l_OS_SaveSystemConfig(lua_State* L){
+  saveSystemPreferences();
+  return 0;
+}
+
+int l_OS_SaveUserConfig(lua_State* L){
+  saveUserPreferences();
+  return 0;
+}
+
 int l_time_toString(lua_State* L) {
     LuaTime* t = (LuaTime*)luaL_checkudata(L, 1, "LuaTime");
     const char* format = luaL_optstring(L, 2, "%d/%m/%Y %H:%M:%S");
@@ -826,6 +904,15 @@ void registerApis(lua_State* L) {
   lua_register(L, LUA_OS_SLEEP_DEFINITION, l_OS_Sleep);
   lua_register(L, LUA_OS_RESTART_DEFINITION, l_OS_Restart);
   lua_register(L, LUA_OS_GET_KERNEL_VERSION_DEFINITION, l_OS_GetKernelVersion);
+  lua_register(L, LUA_OS_SAVE_BIOS_CONFIGURATION_DEFINITION, l_OS_SaveBiosConfig);
+  lua_register(L, LUA_OS_SAVE_SYSTEM_CONFIGURATION_DEFINITION, l_OS_SaveSystemConfig);
+  lua_register(L, LUA_OS_SAVE_USER_CONFIGURATION_DEFINITION, l_OS_SaveUserConfig);
+  lua_register(L, LUA_OS_SET_BIOS_CONFIG_INTEGER_KEY, l_OS_SetBiosConfigIntegerKey);
+  lua_register(L, LUA_OS_SET_BIOS_CONFIG_INTEGER_KEY, l_OS_SetBiosConfigStringKey);
+  lua_register(L, LUA_OS_SET_SYSTEM_CONFIG_INTEGER_KEY, l_OS_SetSystemConfigIntegerKey);
+  lua_register(L, LUA_OS_SET_SYSTEM_CONFIG_INTEGER_KEY, l_OS_SetSystemConfigStringKey);
+  lua_register(L, LUA_OS_SET_USER_CONFIG_INTEGER_KEY, l_OS_SetUserConfigIntegerKey);
+  lua_register(L, LUA_OS_SET_USER_CONFIG_INTEGER_KEY, l_OS_SetUserConfigStringKey);
   registerTime(L);
   registerSprite(L);
   registerFont(L);
@@ -1063,7 +1150,7 @@ void setup() {
 
   // TEST
   //BiosConfiguration["TestScreenColorsWhenStartingUp"] = true;
-  //UserConfiguration["username"] = "Rian Fiscina";
+  //UserConfiguration["username"] = "rsfiscina";
   //SystemConfiguration["Time"]["timezone"] = -4;
   //saveBiosPreferences();
   //saveUserPreferences();
