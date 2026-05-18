@@ -9,7 +9,7 @@ _Time spent: 21.0h_
 Hi! This is the first journal entry of the Rian's MicroComputer.
 This is my first hardware project, and it was in these 3 weeks that I learned how to use KiCad and 3D rendering (thats why it has 12h only for pcbs and 22h only for 3D rendering from scratch using pixels, no 3D lib behind it)
 
-## 03/01 to 05/01 - The idea: 1h hour
+03/01 to 05/01 - The idea: 1h hour
 From 3rd January to 5th January, I had an idea: what if I made my own computer?
 
 I started studying my idea, and tried to create the first image on my head. I wanted it to be like a Nintendo 3DS - portable, foldable, small, but instead of an analog stick, it would have a keyboard.
@@ -19,23 +19,24 @@ For the processor, I thought about an Arduino micro controller, and for the scre
 With the ESP32-S3 I found, I would have the great amount of 16mb flash, 8mb RAM, and 240mhz (While arduino only had 2mb flash, a few kb of RAM and 16mhz).
 I bought the ESP32 and tested it with the screen, and this is what I realised...
 
-## 06/01 to 18/01 Screen Testing:
+06/01 to 18/01 Screen Testing:
 
-### Breaking my patience with drivers and display (5h)
+Breaking my patience with drivers and display (5h)
 During these days, I tested the 3.5" TFT screen, with some 3D on it, SD card tests and ESP32 memory using LovyanGFX.
 
 The main problem I had with the screen, was that I was trying to follow the manufacturer manual, but it suggested the library TFT_eSPI, and it didn't matter how much I tried, it didn't work. So, I tried some different libraries, like Arduino_ST76.., and the one that finally worked: LovyanGFX!
 
 At the start, LovyanGFX didn't work. The pins were a little off (I connected some pins wrong and also configured the library wrong. But, I made it work! And here are some tests I made:
 
-### Simple Tests: 3h
+Simple Tests: 3h
 Images covering the entire screen at great 17.1fps. First, created a frame to store every pixel and then blit the entire frame directly to the screen to increase performance. Then, created a struct called Sprite that creates and loads a sprite. Its Draw function draws the sprite (With transparency) to the frame. It loads .png from the SD Card.
 ![20260124_194019](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjYsInB1ciI6ImJsb2JfaWQifX0=--a37fdfa36a7d4dab177f2287f12ff80d73dad620/20260124_194019.jpg)
 3D cubes rendering using the same principle of the frame, but drawing and calculating each pixel separately. Calculates the camera perspective and each cube's face and vertices position and draw each pixel.
 ![20260124_195411](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjQsInB1ciI6ImJsb2JfaWQifX0=--ab4d0df64d6d80756e12fca480fa017a22d12070/20260124_195411.jpg)
 Pre made test for LovyanGFX of its drawing functions
 ![20260124_193836](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjUsInB1ciI6ImJsb2JfaWQifX0=--97f63dd6c2c810071073146a804c88524ef17844/20260124_193836.jpg)![20260124_195241](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0MjMsInB1ciI6ImJsb2JfaWQifX0=--107dadf43ba48247facb8de4e10d6ba769181fbb/20260124_195241.jpg)
-### Complex 3D models rendering CPU bound from scratch (22h disconsidered from counting!)
+
+Complex 3D models rendering CPU bound from scratch (22h disconsidered from counting!)
 Here I tested the screen making from scratch a 3D models renderer using only the CPU and functions from LovyanGFX.
 To do that, I thought I could work with the .glb. But I realised that the ESP32 wouldn't be able to read it because it would be so slow to read and interpret the glb data, and it would be a binary file (more difficult to make the interpreter), so I created a script that converts a .glb model to a cpp header with the texture and vertices. After that, I created a program in ArduinoIDE (the program I'll be using to make everything) that imports some models in RAW .h (Lists of meshes and textures with int and float values) and calculates the perspective, rotation, position, scale and the colour of each pixel in the screen. But it turned out that the colours were messed up and inverted:
 ![IMG-20251025-WA0013](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI3OTc0LCJwdXIiOiJibG9iX2lkIn19--f193c59cf5f3eeb16e3c53aed920c6b55dee7e6d/IMG-20251025-WA0013.jpg)
@@ -44,7 +45,7 @@ When I changed the orders: Perfect pixels and render.
 ![Screenshot_20260304_143709_WhatsApp](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTc5LCJwdXIiOiJibG9iX2lkIn19--0de2718384356b252dbc36896d52fab86999a1b0/Screenshot_20260304_143709_WhatsApp.jpg)
 The code is avaliable on github at tests/3d_models/3d_models.ino
 
-## 19/01 to 24/01 - First PCBs: 12h
+19/01 to 24/01 - First PCBs: 12h
 
 Then, within this week (From 19/01 to 24/01) I've transformed what I imagined and tested on the protoboard into a real product. So, I started with the PCB, the most difficult part for me. I've made so far the matricial keyboard pcb - This was a really challenge, because I got to use as less amount of GPIO Pins as possible, so I thought about the screen: We use X and Y to represent pixels- (8h. From 19/01 to 22/01 The keyboard organized in matrices. so, every key has your own X and Y position, and when combined, can verify the key pressed), and finishing the main pcb (4h. This is going to connect all components. The esp32 to the screen (using flat cable socket) and the keyboard). The keyboard PCB will be attatched to the main PCB using pin headers and sockets.
 
