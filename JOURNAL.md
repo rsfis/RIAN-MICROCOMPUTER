@@ -91,7 +91,7 @@ I still haven't figured out how to power the device inside a small case. AA rech
 ![Captura de tela 2026-01-24 215636](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzUsInB1ciI6ImJsb2JfaWQifX0=--9a6e509a2bff8d439121e55667efe845e7c6a250/Captura%20de%20tela%202026-01-24%20215636.png)
 
 
-# 2026-05-28: 2026-05-18: 1/25/2026 - Design
+# 1/25/2026 - Design
 
 **Total time spent: 4.0h_**
 
@@ -118,7 +118,7 @@ I also made some modifications on the PCB (Cut a hole on the PCB to pass the USB
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI1LCJwdXIiOiJibG9iX2lkIn19--866f290b92e460524438a53ec64dbde56d7bb9ac/image.png)
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTI2LCJwdXIiOiJibG9iX2lkIn19--a9698914f51cd54f19db0e5f263cfd2db0b42320/image.png)
 
-# 2026-05-28: 2026-05-18: 1/26/2026 - Design Edited and More Powering Tests
+# 1/26/2026 - Design Edited and More Powering Tests
 
 **Total time spent: 1.0h**
 
@@ -132,7 +132,7 @@ I made a chart about the powering:
 ![imagem_2026-01-26_164341373](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTIyMDAsInB1ciI6ImJsb2JfaWQifX0=--f1d5ed56aafea86e646d89e5facfebdd9489e9de/imagem_2026-01-26_164341373.png)
 Powering looks decent and so the battery duration.
 
-# 2026-05-28: 2026-05-18: 1/30/2026 - Tracked Prices
+# 1/30/2026 - Tracked Prices
 
 **Total time spent: 2.0h**
 
@@ -156,7 +156,7 @@ The ESP32: ~90 reais (paid by me)
 
 ![imagem_2026-01-30_211424497](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTU0NTEsInB1ciI6ImJsb2JfaWQifX0=--8c480420b0e525c17d8782693c50ae5fa6362665/imagem_2026-01-30_211424497.png)
 
-# 2026-05-28: 2026-05-18: 1/31/2026 - First Firmware steps and OS
+# 1/31/2026 - First Firmware steps and OS
 
 **Total time spent: 6.0h**
 
@@ -180,7 +180,7 @@ This is the base of the firmware. So far it has only the screen and sd init, int
 
 ![imagem_2026-01-31_182833809](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTU4NjksInB1ciI6ImJsb2JfaWQifX0=--957d23f0206282a48f3ed2b585673e3b99ef78ae/imagem_2026-01-31_182833809.png)
 
-# 2026-05-28: 2026-05-18: 2/3/2026 - Case Fixes and More PCB Quotings
+# 2/3/2026 - Case Fixes and More PCB Quotings
 
 **Total time spent: 2.0h**
 
@@ -196,7 +196,7 @@ In addition, to the 3D prints, I found a guy that prints inside Blueprint (I for
 
 ![imagem_2026-02-03_190820493](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc4MDUsInB1ciI6ImJsb2JfaWQifX0=--5e55f74c9a0d1fba02d5b3f738c5a6e715640430/imagem_2026-02-03_190820493.png)
 
-# 2026-05-28: 2026-05-18: 2/6/2026 - README, Github, Name and Notes for the reviewer
+# 2/6/2026 - README, Github, Name and Notes for the reviewer
 
 **Total time spent: 1.0h**
 
@@ -215,7 +215,7 @@ Added some notes for the reviewer about why 2 computers and the lack of a correc
 Furthermore, I made the wiring diagram for parts out of the pcb.
 ![wiring diagram](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTkzMTMsInB1ciI6ImJsb2JfaWQifX0=--f7bced60d88d1517b670a2406941892d914df3e7/wiring%20diagram.png)
 
-# 2026-05-28: 2026-05-18: 2/7/2026 - OS Design
+# 2/7/2026 - OS Design
 
 **Total time spent: 0.5h**
 
@@ -233,7 +233,7 @@ Login:
 Home Page:
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTk2MjgsInB1ciI6ImJsb2JfaWQifX0=--49b55430845738d0b215d3726487313dc5c966ac/image.png)
 
-# 2026-05-28: 2026-05-18: 2/10/2026 - Powering Issues
+# 2/10/2026 - Powering Issues
 
 **Total time spent: 0.3h**
 
@@ -251,7 +251,7 @@ To frustrate a little bit the day, though, the battery holders didn't work. It j
 To solve that, I will use a power bank that must have 2 USBS (one for charging, and one for output) and a powering on/off button.
 I will use a power bank module to prioritize safety, reduce development risk, and keep the project scope focused on PCB design, firmware, and system integration. The power bank provides built-in protection and regulated output.
 
-# 2026-05-28: 2026-05-18: 2/12/2026 - Powering
+# 2/12/2026 - Powering
 
 **Total time spent: 0.3h**
 
@@ -270,7 +270,7 @@ This project is gonna be really fat. The lower part will be 4cm tall.
 So, the powering chart is like this now:
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI1MTExLCJwdXIiOiJibG9iX2lkIn19--6597fe36b5fe80526b3fae7c83df5907cb1d0270/image.png)
 
-# 2026-05-28: 2026-05-18: 2/27/2026 - System's Kernel and Tests
+# 2/27/2026 - System's Kernel and Tests
 
 **Total time spent: 12.0h**
 
@@ -343,7 +343,7 @@ Here is the OS booting and start page:
 ![WhatsApp Image 2026-02-27 at 21.43.36(1)](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEyNTcyLCJwdXIiOiJibG9iX2lkIn19--fad7c37d7f5d2ae81a223833f3933576445f9c32/WhatsApp%20Image%202026-02-27%20at%2021.43.36(1).jpeg)
 ![WhatsApp Image 2026-02-27 at 21.43.36](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEyNTczLCJwdXIiOiJibG9iX2lkIn19--fc565008f973b24c9f828267c535f0b0d1358455/WhatsApp%20Image%202026-02-27%20at%2021.43.36.jpeg)
 
-# 2026-05-28: 2026-05-18: 5/18/2026 - Transference from Blueprint to Forge program
+# 5/18/2026 - Transference from Blueprint to Forge program
 
 **Total time spent: 0.1 hours**
 
