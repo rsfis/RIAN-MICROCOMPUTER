@@ -1,7 +1,3 @@
-# Fiscion Razor32
-
-Portable Foldable Computer
-
 # 1/03/2026 - The idea
 
 **Total time spent: 1.0h_**
@@ -99,8 +95,6 @@ I still haven't figured out how to power the device inside a small case. AA rech
 
 **Total time spent: 4.0h_**
 
-**Total time spent: 4.0h_**
-
 _Time spent: 4.0h_  
 
 Today I've made the computer design  using Blender. Since this was my first time working on Blender, it was pretty hard to get the shortcuts and become fast on it.
@@ -126,8 +120,6 @@ I also made some modifications on the PCB (Cut a hole on the PCB to pass the USB
 
 # 2026-05-28: 2026-05-18: 1/26/2026 - Design Edited and More Powering Tests
 
-**Total time spent: 2.5h**
-
 **Total time spent: 1.0h**
 
 Time spent: 1.0h  
@@ -141,8 +133,6 @@ I made a chart about the powering:
 Powering looks decent and so the battery duration.
 
 # 2026-05-28: 2026-05-18: 1/30/2026 - Tracked Prices
-
-**Total time spent: 2.0h**
 
 **Total time spent: 2.0h**
 
@@ -170,8 +160,6 @@ The ESP32: ~90 reais (paid by me)
 
 **Total time spent: 6.0h**
 
-**Total time spent: 6.0h**
-
 Time spent: 6.0h
 
 Today, I've researched some ways to run the Firmware, multitasking and apps.
@@ -196,8 +184,6 @@ This is the base of the firmware. So far it has only the screen and sd init, int
 
 **Total time spent: 2.0h**
 
-**Total time spent: 2.0h**
-
 Time spent: 2.0h
 
 During these days, I've added screw holes to my case, and discovered that the JLCPCB don't have the part I need (Pinheader Pitch 2.54mm 8mm height), so I'm going to buy this part from AliExpress, and solder it by myself with a borrowed Solding Station from the theater lights guy.
@@ -211,8 +197,6 @@ In addition, to the 3D prints, I found a guy that prints inside Blueprint (I for
 ![imagem_2026-02-03_190820493](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTc4MDUsInB1ciI6ImJsb2JfaWQifX0=--5e55f74c9a0d1fba02d5b3f738c5a6e715640430/imagem_2026-02-03_190820493.png)
 
 # 2026-05-28: 2026-05-18: 2/6/2026 - README, Github, Name and Notes for the reviewer
-
-**Total time spent: 1.0h**
 
 **Total time spent: 1.0h**
 
@@ -235,8 +219,6 @@ Furthermore, I made the wiring diagram for parts out of the pcb.
 
 **Total time spent: 0.5h**
 
-**Total time spent: 1.0h**
-
 Time spent: 0.5h  
 
 In an hour, I made the OS design and pages in paint.
@@ -252,8 +234,6 @@ Home Page:
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTk2MjgsInB1ciI6ImJsb2JfaWQifX0=--49b55430845738d0b215d3726487313dc5c966ac/image.png)
 
 # 2026-05-28: 2026-05-18: 2/10/2026 - Powering Issues
-
-**Total time spent: 0.3h**
 
 **Total time spent: 0.3h**
 
@@ -275,8 +255,6 @@ I will use a power bank module to prioritize safety, reduce development risk, an
 
 **Total time spent: 0.3h**
 
-**Total time spent: 0.3h**
-
 Time spent: 0.3h
 
 Today I finally found the perfect powering system to this project: Futurizta Power Bank 5000mah Mini.
@@ -293,8 +271,6 @@ So, the powering chart is like this now:
 ![image](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI1MTExLCJwdXIiOiJibG9iX2lkIn19--6597fe36b5fe80526b3fae7c83df5907cb1d0270/image.png)
 
 # 2026-05-28: 2026-05-18: 2/27/2026 - System's Kernel and Tests
-
-**Total time spent: 12.0h**
 
 **Total time spent: 12.0h**
 
@@ -368,8 +344,6 @@ Here is the OS booting and start page:
 ![WhatsApp Image 2026-02-27 at 21.43.36](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTEyNTczLCJwdXIiOiJibG9iX2lkIn19--fc565008f973b24c9f828267c535f0b0d1358455/WhatsApp%20Image%202026-02-27%20at%2021.43.36.jpeg)
 
 # 2026-05-28: 2026-05-18: 5/18/2026 - Transference from Blueprint to Forge program
-
-**Total time spent: 0.1 hours**
 
 **Total time spent: 0.1 hours**
 
