@@ -1004,7 +1004,7 @@ void setup() {
 
   Serial.begin(115200);
 
-  Serial.printf("====== RazorOS ======\n");
+  Serial.printf("\n\n====== RazorOS ======\n");
 
   Serial.printf("Starting Kernel at core %d\n", xPortGetCoreID());
 
