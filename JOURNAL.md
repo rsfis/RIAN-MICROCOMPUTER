@@ -2,9 +2,7 @@
 
 Portable Foldable Computer
 
-# 2026-05-28: 2026-05-18: 1/03/2026 - The idea
-
-**Total time spent: 1.0h_**
+# 1/03/2026 - The idea
 
 **Total time spent: 1.0h_**
 
@@ -13,7 +11,7 @@ _Time spent: 1.0h_
 Hi! This is the first journal entry of the Rian's MicroComputer.
 This is my first hardware project, and it was in these 3 weeks that I learned how to use KiCad and 3D rendering (thats why it has 12h only for pcbs and 22h only for 3D rendering from scratch using pixels, no 3D lib behind it)
 
-From 3rd January to 5th January, I had an idea: what if I made my own computer?
+I always was addicted to computers, mainly in how they work. Recently I've been addicted to OS's and PCBs. Then, I wanted so much to do something that unified these 2 addictions. So, from 3rd January to 5th January, I had an idea: what if I made my own computer?
 
 I started studying my idea, and tried to create the first image on my head. I wanted it to be like a Nintendo 3DS - portable, foldable, small, but instead of an analog stick, it would have a keyboard.
 
@@ -22,7 +20,7 @@ For the processor, I thought about an Arduino micro controller, and for the scre
 With the ESP32-S3 I found, I would have the great amount of 16mb flash, 8mb RAM, and 240mhz (While arduino only had 2mb flash, a few kb of RAM and 16mhz).
 I bought the ESP32 and tested it with the screen, and this is what I realised... in the next journal.
 
-![image.png](https://cdn.hackclub.com/019e70e4-26a3-7585-b1a7-4c293bf3d547/image.png)
+![image.png](https://cdn.hackclub.com/019e8a63-f0dd-7ce1-8837-bdf56b8ea6bc/image.png)
 
 References: 
 LovyanGFX Graphics Lib Docs I created: [docs](/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTI4MTgwLCJwdXIiOiJibG9iX2lkIn19--34296b57b84e30e53a206c20e1219ba0597a7385/docs.txt)
@@ -33,9 +31,7 @@ KiCad tutorial: https://www.youtube.com/watch?v=mmhareh99P8
 Blender tutorial: https://www.youtube.com/watch?v=peSv5IT5Ve4
 LovyanGFX tutorial: https://www.youtube.com/watch?v=IPCvQ4o_WP8
 
-# 2026-05-28: 2026-05-18: 1/03/2026 - Screen Testing
-
-**Total time spent: 8.0h_**
+# 1/03/2026 - Screen Testing
 
 **Total time spent: 8.0h_**
 
@@ -65,25 +61,39 @@ When I changed the orders: Perfect pixels and render.
 ![Screenshot_20260304_143709_WhatsApp](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTE1MTc5LCJwdXIiOiJibG9iX2lkIn19--0de2718384356b252dbc36896d52fab86999a1b0/Screenshot_20260304_143709_WhatsApp.jpg)
 The code is avaliable on github at tests/3d_models/3d_models.ino
 
-# 2026-05-28: 2026-05-18: 1/19/2026 - First PCBS
+# 1/19/2026 - Keyboard PCB
 
-**Total time spent: 12.0h_**
+**Total time spent: 8.0h_**
 
-**Total time spent: 12.0h_**
+_Time spent: 8.0h_  
 
-_Time spent: 12.0h_  
+This week I turned everything I had tested on the protoboard into actual PCBs. I used KiCad, which I had never used before, so it took a while to figure out. I made two separate boards.
 
-Then, within this week (From 19/01 to 24/01) I've transformed what I imagined and tested on the protoboard into a real product. So, I started with the PCB, the most difficult part for me. I've made so far the matricial keyboard pcb - This was a really challenge, because I got to use as less amount of GPIO Pins as possible, so I thought about the screen: We use X and Y to represent pixels- (8h. From 19/01 to 22/01 The keyboard organized in matrices. so, every key has your own X and Y position, and when combined, can verify the key pressed), and finishing the main pcb (4h. This is going to connect all components. The esp32 to the screen (using flat cable socket) and the keyboard). The keyboard PCB will be attatched to the main PCB using pin headers and sockets.
 
-I started by placing components based on my protoboard layout, then routed the tracks manually copying the connections I had tested. I used KiCad for everything — first the footprint placement, then the copper tracks, and finally the schematic copying the tracks from the PCB.
+Keyboard PCB (8h | Jan 19 to Jan 22)
+The biggest challenge here was that the ESP32 doesn't have that many GPIO pins, so I couldn't just dedicate one pin per key. I organized the keys in a matrix — the same idea used in screens, where every pixel has an X and Y position. Each key has its own column and row, and when both are activated at the same time, the firmware knows which key was pressed. This way I use way fewer pins.
+I placed the components based on my protoboard layout and routed the tracks manually. I actually drew the schematic after finishing the PCB, copying from the tracks I had already placed — not the usual order, but it worked. This board connects to the main PCB using pin headers and sockets.
 
-This was the most difficult part, because I had to learn how to use KiCad. So, the PCB may have bad routings and thats why it took so long. But, at the end, I learned how to use KiCad and create my own PCBs.
-
-Therefore, I've been facing a problem with powering. I really don't know how I'm going to power up everything within a small case. I thought first some AA rechargeable 3.7v 3000mah bateries, but it has a higher voltage than the allowed, and plus: I would have only some minutes of fun. I'm browsing a module that converts 7.6v to 3.3 automatically or a battery case that outputs the same as my computer with cable USB C.
-
-![Captura de tela 2026-01-24 215636](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzUsInB1ciI6ImJsb2JfaWQifX0=--9a6e509a2bff8d439121e55667efe845e7c6a250/Captura%20de%20tela%202026-01-24%20215636.png)
-![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)![Captura de tela 2026-01-24 215628](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzQsInB1ciI6ImJsb2JfaWQifX0=--83743c123c276c650e272b6dc75b6033b5ef782d/Captura%20de%20tela%202026-01-24%20215628.png)
+![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)
 ![Captura de tela 2026-01-24 215708](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzIsInB1ciI6ImJsb2JfaWQifX0=--ee4ffd9532ae39152e276f660a2b885854b54427/Captura%20de%20tela%202026-01-24%20215708.png)
+
+# 1/23/2026 - Main PCB
+
+**Total time spent: 4.0h_**
+
+_Time spent: 4.0h_
+
+Main PCB (4h | Jan 22 to Jan 24)
+This one connects everything together: the ESP32, the screen (via a flat cable socket), and the keyboard PCB. I based the connections on what I had already tested, which made it a bit faster. The main difficulty was figuring out the placement so everything fits inside the case.
+
+I made two separate PCBs instead of one because fitting everything on a single board would be too tight. Having them separate also makes the project more reliable — if one board gets damaged, I can just replace that one without losing the other.
+
+Power issue
+I still haven't figured out how to power the device inside a small case. AA rechargeable batteries at 3.7V are already above what the ESP32 can take directly, and the capacity would probably only last a few minutes anyway. I'm looking into either a step-down module that converts 7.6V to 3.3V, or a battery case with a USB-C output that handles the voltage for me.
+
+![Captura de tela 2026-01-24 215628](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzQsInB1ciI6ImJsb2JfaWQifX0=--83743c123c276c650e272b6dc75b6033b5ef782d/Captura%20de%20tela%202026-01-24%20215628.png)
+![Captura de tela 2026-01-24 215636](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzUsInB1ciI6ImJsb2JfaWQifX0=--9a6e509a2bff8d439121e55667efe845e7c6a250/Captura%20de%20tela%202026-01-24%20215636.png)
+
 
 # 2026-05-28: 2026-05-18: 1/25/2026 - Design
 
@@ -94,7 +104,7 @@ Therefore, I've been facing a problem with powering. I really don't know how I'm
 _Time spent: 4.0h_  
 
 Today I've made the computer design  using Blender. Since this was my first time working on Blender, it was pretty hard to get the shortcuts and become fast on it.
-The most difficult part was making the upper lid, because it needs to have some space on the hinge to turn. The 3D printer makes everything more fat (3.7h)
+The most difficult part was making the upper lid, because it needs to have some space on the hinge to turn. The 3D printer makes everything more fat (3.8h)
 
 Also discovered how I will power it up, charge and power down.
 
@@ -118,9 +128,9 @@ I also made some modifications on the PCB (Cut a hole on the PCB to pass the USB
 
 **Total time spent: 2.5h**
 
-**Total time spent: 2.5h**
+**Total time spent: 1.0h**
 
-Time spent: 2.5h  
+Time spent: 1.0h  
 
 Today I've made some changes on the design. Added a USB port, added the esp32 on the board, modified the hinges to be more tight to the hinge "connector).
 
@@ -223,11 +233,11 @@ Furthermore, I made the wiring diagram for parts out of the pcb.
 
 # 2026-05-28: 2026-05-18: 2/7/2026 - OS Design
 
-**Total time spent: 1.0h**
+**Total time spent: 0.5h**
 
 **Total time spent: 1.0h**
 
-Time spent: 1.0h  
+Time spent: 0.5h  
 
 In an hour, I made the OS design and pages in paint.
 I want the design to be a little Linux Like, kinda cozy, and easy to use. It will work with an arrow system. With WASD you control where your "cursor" is, like game consoles.
@@ -296,6 +306,7 @@ I've spent great 12 hours developing the kernel main functions and folder struct
 The kernel now starts screen, starts sd module, loads boot configs, creates screen frame, loads general configs, synchronize time using wifi to obtain real life time and set it to the RTC and then turns off wifi to save energy, loads user, starts first lua vm (OS Graphic Interface).
 
 OS functions:
+
 Display_ClearScreen, Display_UpdateScreen, OS_GetFreeMemory, OS_GetMemorySize, OS_GetFreeHeapMemory, OS_GetHeapMemorySize, OS_GetCPUTemperature, OS_GetTime:toString("%d/%m/%Y - %H:%M:%S"), OS_GetLuaVMHeapMemoryUsage, OS_GetUserUsername, OS_GetUserPassword
 
 Furthermore, I've made the Sprite exported structure and exported lua variable type and so with Fonts.
