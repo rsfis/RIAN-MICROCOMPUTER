@@ -159,3 +159,4 @@ OS and Firmware are still being programmed. For now, RazorOS already has basic d
 - Copy the files from /firmware/MicroSD Backup.rar to the microsd root directory
 - Insert the micro sd in the MicroSD socket below the screen
 
+Made for: Hackclub FORGE - https://forge.hackclub.com/projects/457
