@@ -63,12 +63,29 @@ The code is avaliable on github at tests/3d_models/3d_models.ino
 
 _Time spent: 8.0h_  
 
-This week I turned everything I had tested on the protoboard into actual PCBs. I used KiCad, which I had never used before, so it took a while to figure out. I made two separate boards.
+This week I tested the components on the protoboard and its connections again, and I also tested some push buttons, because I had to know how they work.
+I discovered that these push buttons work by 2 pins, the left-upper (GND input) and right-lower (RESISTANCE output). So, for 30 keys, I would have to use 30 GPIO pins of the esp32, which wasn't economic. So, I decided to use a matricial keyboard, which is a economic way to use fewer pins. It works just like a screen, where there is a X and Y position. This position determinates which button you press based on a bidimensional matrix, a map.
+
+So, I defined the buttons and its variations:
+q w e r t y u i o p
+a s d f g h j k l B
+z x c v b S n m f E
+
+1 2 3 4 5 6 7 8 9 0
++ - % < > ? & !  (   )
+/ *  =  "  _  ;  .  ,  f Sh
+
+ESC F1 F2 F3 F4 F5 F6 F7 F8 F9
+{  }  @ :  [ ]  
+|  \  '  -  HOME
 
 
-Keyboard PCB (8h | Jan 19 to Jan 22)
+I used KiCad, which I had never used before, so it took a while to figure out. I made two separate boards.
+
 The biggest challenge here was that the ESP32 doesn't have that many GPIO pins, so I couldn't just dedicate one pin per key. I organized the keys in a matrix — the same idea used in screens, where every pixel has an X and Y position. Each key has its own column and row, and when both are activated at the same time, the firmware knows which key was pressed. This way I use way fewer pins.
-I placed the components based on my protoboard layout and routed the tracks manually. I actually drew the schematic after finishing the PCB, copying from the tracks I had already placed — not the usual order, but it worked. This board connects to the main PCB using pin headers and sockets.
+I placed the components based on my protoboard layout and routed the tracks manually. I actually drew the schematic after finishing the PCB, copying from the tracks I had already placed — not the usual order, but it worked.
+
+So, basically this PCB have the push buttons and the pin header connector, which is a lot of pins to connect the keyboard over the main pcb.
 
 ![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)
 ![Captura de tela 2026-01-24 215708](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzIsInB1ciI6ImJsb2JfaWQifX0=--ee4ffd9532ae39152e276f660a2b885854b54427/Captura%20de%20tela%202026-01-24%20215708.png)
@@ -79,8 +96,9 @@ I placed the components based on my protoboard layout and routed the tracks manu
 
 _Time spent: 4.0h_
 
-Main PCB (4h | Jan 22 to Jan 24)
-This one connects everything together: the ESP32, the screen (via a flat cable socket), and the keyboard PCB. I based the connections on what I had already tested, which made it a bit faster. The main difficulty was figuring out the placement so everything fits inside the case.
+This one connects everything together: the ESP32, the screen (via a flat cable socket), and the keyboard PCB. I based the connections on what I had already tested on the PCB, which made it a bit faster. The main difficulty was figuring out the placement so everything fits inside the case.
+
+So, basically this PCB has a 
 
 I made two separate PCBs instead of one because fitting everything on a single board would be too tight. Having them separate also makes the project more reliable — if one board gets damaged, I can just replace that one without losing the other.
 
