@@ -85,6 +85,8 @@ I used KiCad, which I had never used before, so it took a while to figure out. I
 The biggest challenge here was that the ESP32 doesn't have that many GPIO pins, so I couldn't just dedicate one pin per key. I organized the keys in a matrix — the same idea used in screens, where every pixel has an X and Y position. Each key has its own column and row, and when both are activated at the same time, the firmware knows which key was pressed. This way I use way fewer pins.
 I placed the components based on my protoboard layout and routed the tracks manually. I actually drew the schematic after finishing the PCB, copying from the tracks I had already placed — not the usual order, but it worked.
 
+Unfortunately, I had to remake the traces because I wasn't understanding how it worked (I didn't understand networks, and neither I do now).
+
 So, basically this PCB have the push buttons and the pin header connector, which is a lot of pins to connect the keyboard over the main pcb.
 
 ![Captura de tela 2026-01-24 215701](https://blueprint.hackclub.com/user-attachments/blobs/proxy/eyJfcmFpbHMiOnsiZGF0YSI6OTA0NzMsInB1ciI6ImJsb2JfaWQifX0=--4cadd019df3daf6a296604d1bb966342517b0124/Captura%20de%20tela%202026-01-24%20215701.png)
@@ -98,9 +100,13 @@ _Time spent: 4.0h_
 
 This one connects everything together: the ESP32, the screen (via a flat cable socket), and the keyboard PCB. I based the connections on what I had already tested on the PCB, which made it a bit faster. The main difficulty was figuring out the placement so everything fits inside the case.
 
-So, basically this PCB has a 
+So, basically this PCB has a pin header connector to connect the keyboard, a flat cable socket to connect the screen using a flat cable, and a pin header connector to fit the esp32.
+
+If one of these components get damaged, I can only replace the damaged one, by a new.
 
 I made two separate PCBs instead of one because fitting everything on a single board would be too tight. Having them separate also makes the project more reliable — if one board gets damaged, I can just replace that one without losing the other.
+
+I placed the components based on my protoboard layout and routed the tracks manually. I actually drew the schematic after finishing the PCB, copying from the tracks I had already placed — not the usual order, but it worked.
 
 Power issue
 I still haven't figured out how to power the device inside a small case. AA rechargeable batteries at 3.7V are already above what the ESP32 can take directly, and the capacity would probably only last a few minutes anyway. I'm looking into either a step-down module that converts 7.6V to 3.3V, or a battery case with a USB-C output that handles the voltage for me.
