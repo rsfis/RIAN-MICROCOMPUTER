@@ -33,6 +33,7 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 
 ### General
 <img width="1550" height="640" alt="image" src="https://github.com/user-attachments/assets/11f284b7-2648-4147-8021-5cf85007e2b3" />
+<img width="723" height="893" alt="image" src="https://github.com/user-attachments/assets/e7489bb8-36ba-487c-bcd5-2ace1e8749c5" />
 
 #### Top
 <img width="1187" height="488" alt="image" src="https://github.com/user-attachments/assets/12147813-6e4d-4f62-a5c5-ef456df88fc2" />
@@ -43,6 +44,7 @@ These 2 PCBs will fit perfectly on top of each other using pins headers and pin 
 
 ### Keyboard
 <img width="1549" height="644" alt="image" src="https://github.com/user-attachments/assets/b7b1ccdd-ffe4-4a1f-959e-4b68503ee66e" />
+<img width="1274" height="789" alt="image" src="https://github.com/user-attachments/assets/4759c521-9880-4fd6-a3e2-1af24be136eb" />
 
 #### Top
 <img width="893" height="366" alt="image" src="https://github.com/user-attachments/assets/1b467d28-7b5b-4ef7-b5ba-74bb3d7093e3" />
