@@ -31,28 +31,19 @@ The PCBs were made using KiCad. One board for general purpose components and ano
 
 These 2 PCBs will fit perfectly on top of each other using pins headers and pin sockets.
 
-### General
-<img width="1550" height="640" alt="image" src="https://github.com/user-attachments/assets/11f284b7-2648-4147-8021-5cf85007e2b3" />
-<img width="723" height="893" alt="image" src="https://github.com/user-attachments/assets/e7489bb8-36ba-487c-bcd5-2ace1e8749c5" />
-
-#### Top
-<img width="1187" height="488" alt="image" src="https://github.com/user-attachments/assets/12147813-6e4d-4f62-a5c5-ef456df88fc2" />
-<img width="1123" height="571" alt="image" src="https://github.com/user-attachments/assets/70541a1f-8a9a-4981-b5fe-38dee026ddfa" />
-
-#### Bottom
-<img width="981" height="406" alt="image" src="https://github.com/user-attachments/assets/9f5db379-4d50-4417-a9ff-e687828f219a" />
-
-### Keyboard
-<img width="1549" height="644" alt="image" src="https://github.com/user-attachments/assets/b7b1ccdd-ffe4-4a1f-959e-4b68503ee66e" />
-<img width="1274" height="789" alt="image" src="https://github.com/user-attachments/assets/4759c521-9880-4fd6-a3e2-1af24be136eb" />
-
-#### Top
-<img width="893" height="366" alt="image" src="https://github.com/user-attachments/assets/1b467d28-7b5b-4ef7-b5ba-74bb3d7093e3" />
-<img width="974" height="491" alt="image" src="https://github.com/user-attachments/assets/99998d80-41d5-4293-8c83-24a6404c17f1" />
-
-#### Bottom
-<img width="888" height="364" alt="image" src="https://github.com/user-attachments/assets/f4def33c-f917-460e-bfa7-b13f282e4bf4" />
-<img width="977" height="496" alt="image" src="https://github.com/user-attachments/assets/ff375853-f109-4d80-bb4a-1d2707ba1d42" />
+![image.png](https://cdn.hackclub.com/019e9a14-9995-791b-8da9-a8cd481a6d7d/image.png)
+F.Cu
+![image.png](https://cdn.hackclub.com/019e9a14-ef15-776e-ab54-2a114d270246/image.png)
+In.1.Cu
+![image.png](https://cdn.hackclub.com/019e9a15-2ac7-7f65-a99d-7dbcc88320c5/image.png)
+In.2.Cu
+![image.png](https://cdn.hackclub.com/019e9a15-5ecc-78b3-8588-41ce45a9a9ad/image.png)
+B.Cu
+![image.png](https://cdn.hackclub.com/019e9a15-8c56-7ef0-9d29-8406d29d2e8c/image.png)
+3D render front
+![image.png](https://cdn.hackclub.com/019e9a15-c1cd-702c-8423-ca17017fb9ae/image.png)
+3D render back
+![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
