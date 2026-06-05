@@ -41,9 +41,14 @@ In.2.Cu
 B.Cu
 ![image.png](https://cdn.hackclub.com/019e9a15-8c56-7ef0-9d29-8406d29d2e8c/image.png)
 3D render front
+
 ![image.png](https://cdn.hackclub.com/019e9a15-c1cd-702c-8423-ca17017fb9ae/image.png)
 3D render back
+
 ![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
+
+Schematic
+<img width="4961" height="3508" alt="schematic" src="https://github.com/user-attachments/assets/6e44b57b-2fc0-4e3b-9ddc-f8a348e92192" />
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
