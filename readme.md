@@ -23,7 +23,7 @@
 
 ## Case
 Designed using Blender, the Case comes with 4 parts: The lower box, upper box, hinges and screws. Made using PLA material.
-<img width="1920" height="1080" alt="showcase" src="https://github.com/user-attachments/assets/3cccf4bc-ab7a-4a01-922d-23621e8450e6" />
+<img width="1920" height="1080" alt="showcase" src="https://github.com/user-attachments/assets/b38d05f8-6946-4924-aa4b-648328f9abd5" />
 <img width="1920" height="1080" alt="showcase2" src="https://github.com/user-attachments/assets/1353ff8d-b118-446b-86f4-7a9aedf1dd68" />
 
 ## PCB
