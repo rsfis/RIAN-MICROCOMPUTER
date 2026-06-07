@@ -137,9 +137,8 @@ Planned Apps:
 OS and Firmware are still being programmed. For now, RazorOS already has basic drawing and OS functions and Lua VM implemented.
 
 ## Cart
-<img width="1558" height="491" alt="jlc" src="https://github.com/user-attachments/assets/e4d19497-573a-46a8-b4a9-d9d5a8b76855" />
-<img width="1919" height="1079" alt="aliexpress_part2" src="https://github.com/user-attachments/assets/b1e4eaaf-577a-48d2-9abe-aabe4ceeaddf" />
-<img width="1918" height="1079" alt="aliexpress_part1" src="https://github.com/user-attachments/assets/d718e924-0470-451b-8e50-f4c35a468519" />
+<img width="1565" height="662" alt="jlc" src="https://github.com/user-attachments/assets/0c8c7bd0-e917-4651-b4a3-fb7c22d53816" />
+<img width="662" height="781" alt="aliexpress" src="https://github.com/user-attachments/assets/f880e897-592a-4915-9808-7078666de3db" />
 
 ## Getting Started
 ### How to flash the ESP32:
