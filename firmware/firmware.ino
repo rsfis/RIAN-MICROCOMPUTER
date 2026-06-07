@@ -1159,6 +1159,14 @@ void setup() {
   // ONLY IF APP PRESENT:
   Serial.printf("Starting LUA VM\n");
 
+  pinMode(46, INPUT_PULLUP);
+  int buttonState = digitalRead(46);
+  if (buttonState == LOW) {
+    Serial.println("Button: PRESSED");
+  } else {
+    Serial.println("Button: Released");
+  }
+
   xTaskCreatePinnedToCore(
     taskLuaApp,
     "LUA_APP",
