@@ -7,6 +7,21 @@
 #include <WiFi.h>
 #include "time.h"
 
+//Keys Pins
+//y1   9
+//y2   21
+//y3   41
+//x1   48
+//x2   45
+//x3   17
+//x4   16
+//x5   40
+//x6   18
+//x7   42
+//x8   39
+//x9   47
+//x10  46
+
 #define KERNEL_VERSION "ALPHA 0.2.6"
 
 #define LUA_HEAP_LIMIT (7 * 1024 * 1024)
