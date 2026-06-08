@@ -27,9 +27,7 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 <img width="1920" height="1080" alt="showcase2" src="https://github.com/user-attachments/assets/1353ff8d-b118-446b-86f4-7a9aedf1dd68" />
 
 ## PCB
-The PCBs were made using KiCad. One board for general purpose components and another for the keyboard.
-
-These 2 PCBs will fit perfectly on top of each other using pins headers and pin sockets.
+The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
 ![image.png](https://cdn.hackclub.com/019e9a14-9995-791b-8da9-a8cd481a6d7d/image.png)
 F.Cu
