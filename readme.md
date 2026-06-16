@@ -27,9 +27,7 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 <img width="1920" height="1080" alt="showcase2" src="https://github.com/user-attachments/assets/1353ff8d-b118-446b-86f4-7a9aedf1dd68" />
 
 ## PCB
-The PCBs were made using KiCad. One board for general purpose components and another for the keyboard.
-
-These 2 PCBs will fit perfectly on top of each other using pins headers and pin sockets.
+The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
 ![image.png](https://cdn.hackclub.com/019e9a14-9995-791b-8da9-a8cd481a6d7d/image.png)
 F.Cu
@@ -137,9 +135,8 @@ Planned Apps:
 OS and Firmware are still being programmed. For now, RazorOS already has basic drawing and OS functions and Lua VM implemented.
 
 ## Cart
-<img width="1558" height="491" alt="jlc" src="https://github.com/user-attachments/assets/e4d19497-573a-46a8-b4a9-d9d5a8b76855" />
-<img width="1919" height="1079" alt="aliexpress_part2" src="https://github.com/user-attachments/assets/b1e4eaaf-577a-48d2-9abe-aabe4ceeaddf" />
-<img width="1918" height="1079" alt="aliexpress_part1" src="https://github.com/user-attachments/assets/d718e924-0470-451b-8e50-f4c35a468519" />
+<img width="1565" height="662" alt="jlc" src="https://github.com/user-attachments/assets/0c8c7bd0-e917-4651-b4a3-fb7c22d53816" />
+<img width="662" height="781" alt="aliexpress" src="https://github.com/user-attachments/assets/f880e897-592a-4915-9808-7078666de3db" />
 
 ## Getting Started
 ### How to flash the ESP32:
