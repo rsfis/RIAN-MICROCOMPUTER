@@ -31,7 +31,7 @@ The PCBs were made using KiCad. The board contains the sockets for esp32 and scr
 
 <img width="1554" height="643" alt="image" src="https://github.com/user-attachments/assets/978d0212-b814-4360-8908-0f115b7902e9" />
 F.Cu
-<img width="1549" height="644" alt="f_cu" src="https://github.com/user-attachments/assets/4fc0755a-84ee-4675-b042-9cee1f851ede" />
+<img width="1553" height="647" alt="image" src="https://github.com/user-attachments/assets/03a0e6d1-09b2-4657-9c0a-62f6257420bb" />
 In.1.Cu
 <img width="1549" height="645" alt="in_1_cu" src="https://github.com/user-attachments/assets/6f52b10a-beeb-4c9d-9fab-ef5318c1a9e0" />
 In.2.Cu
