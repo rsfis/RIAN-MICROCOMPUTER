@@ -136,6 +136,51 @@ public:
 LGFX tft;
 LGFX_Sprite frame(&tft);
 
+// ===== DIRTY RECT TRACKING =====
+// Em vez de limpar/enviar a tela inteira (fillScreen + pushSprite completo) a
+// cada ciclo Display_ClearScreen()/Display_UpdateScreen(), rastreamos apenas a
+// região que efetivamente foi desenhada (por Sprite:draw() e Font:drawString())
+// entre um clear e o update seguinte, e só tocamos essa região na PSRAM e no SPI.
+struct DirtyRect {
+  int x = 0, y = 0, w = 0, h = 0;
+  bool valid = false;
+};
+
+DirtyRect frameDirtyAccum;  // o que foi desenhado NESTE frame (entre clear e update)
+DirtyRect frameDirtyPrev;   // o que foi desenhado (e portanto ficou visível) no frame anterior
+bool frameEverPushed = false;
+
+void markDirty(int x, int y, int w, int h) {
+  if (w <= 0 || h <= 0) return;
+
+  if (!frameDirtyAccum.valid) {
+    frameDirtyAccum.x = x;
+    frameDirtyAccum.y = y;
+    frameDirtyAccum.w = w;
+    frameDirtyAccum.h = h;
+    frameDirtyAccum.valid = true;
+    return;
+  }
+
+  int x1 = min(frameDirtyAccum.x, x);
+  int y1 = min(frameDirtyAccum.y, y);
+  int x2 = max(frameDirtyAccum.x + frameDirtyAccum.w, x + w);
+  int y2 = max(frameDirtyAccum.y + frameDirtyAccum.h, y + h);
+  frameDirtyAccum.x = x1;
+  frameDirtyAccum.y = y1;
+  frameDirtyAccum.w = x2 - x1;
+  frameDirtyAccum.h = y2 - y1;
+}
+
+void clampRectToScreen(int &x, int &y, int &w, int &h) {
+  if (x < 0) { w += x; x = 0; }
+  if (y < 0) { h += y; y = 0; }
+  if (x + w > tft.width())  w = tft.width()  - x;
+  if (y + h > tft.height()) h = tft.height() - y;
+  if (w < 0) w = 0;
+  if (h < 0) h = 0;
+}
+
 // TIME SYNC
 void syncTime(const char* ssid, const char* password) {
 
@@ -389,6 +434,7 @@ struct Sprite {
   void draw(int x, int y) {
     if (rotation == 0.0f) {
       spr.pushSprite(&frame, x, y, 0x0000);
+      markDirty(x, y, width, height);
       return;
     }
 
@@ -396,6 +442,14 @@ struct Sprite {
     frame.setPivot(x + width / 2, y + height / 2);
 
     spr.pushRotateZoom(&frame, rotation, 1.0f, 1.0f, 0x0000);
+
+    // Com rotação a sprite pode ocupar mais área que width x height original.
+    // Marca com margem de segurança usando a diagonal como lado do quadrado
+    // que envolve qualquer ângulo de rotação.
+    int diag = (int)ceilf(sqrtf((float)(width * width + height * height)));
+    int cx = x + width / 2;
+    int cy = y + height / 2;
+    markDirty(cx - diag / 2, cy - diag / 2, diag, diag);
   }
 };
 
@@ -418,12 +472,57 @@ int l_endProgram(lua_State* L) {
 }
 
 int l_clearScreen(lua_State* L) {
-  frame.fillScreen(TFT_BLACK);
+  // Só precisamos apagar (voltar pra preto) a região que ficou visível no
+  // frame anterior -- o resto da tela já está preto. Isso troca um
+  // fillScreen() de 307KB por um fillRect() bem menor na maioria dos casos.
+  if (frameDirtyPrev.valid) {
+    frame.fillRect(frameDirtyPrev.x, frameDirtyPrev.y,
+                    frameDirtyPrev.w, frameDirtyPrev.h, TFT_BLACK);
+  } else {
+    // Primeiro clear (ou sem histórico confiável ainda): limpa tudo por segurança.
+    frame.fillScreen(TFT_BLACK);
+  }
+
+  frameDirtyAccum = DirtyRect();  // começa a acumular o que for desenhado neste novo frame
   return 0;
 }
 
 int l_updateScreen(lua_State* L){
-  frame.pushSprite(0, 0);
+  // A região que precisa ir pro display é a união de:
+  //  - o que foi apagado agora (frameDirtyPrev, do clear deste ciclo)
+  //  - o que foi desenhado agora (frameDirtyAccum)
+  DirtyRect pushRect;
+
+  if (frameDirtyPrev.valid && frameDirtyAccum.valid) {
+    int x1 = min(frameDirtyPrev.x, frameDirtyAccum.x);
+    int y1 = min(frameDirtyPrev.y, frameDirtyAccum.y);
+    int x2 = max(frameDirtyPrev.x + frameDirtyPrev.w, frameDirtyAccum.x + frameDirtyAccum.w);
+    int y2 = max(frameDirtyPrev.y + frameDirtyPrev.h, frameDirtyAccum.y + frameDirtyAccum.h);
+    pushRect = { x1, y1, x2 - x1, y2 - y1, true };
+  } else if (frameDirtyAccum.valid) {
+    pushRect = frameDirtyAccum;
+  } else if (frameDirtyPrev.valid) {
+    pushRect = frameDirtyPrev;
+  }
+
+  if (!frameEverPushed) {
+    // Primeiro update depois de ligar/trocar de app: manda a tela inteira
+    // uma vez pra garantir que o display fique sincronizado com o frame.
+    frame.pushSprite(0, 0);
+    frameEverPushed = true;
+  } else if (pushRect.valid) {
+    clampRectToScreen(pushRect.x, pushRect.y, pushRect.w, pushRect.h);
+    if (pushRect.w > 0 && pushRect.h > 0) {
+      frame.setClipRect(pushRect.x, pushRect.y, pushRect.w, pushRect.h);
+      frame.pushSprite(0, 0);
+      frame.setClipRect(0, 0, frame.width(), frame.height());  // limpa o clip
+    }
+  }
+  // Se pushRect não é válido e já houve push antes, nada mudou desde o
+  // último update -- não há necessidade de gastar SPI reenviando a mesma coisa.
+
+  frameDirtyPrev = frameDirtyAccum;
+  frameDirtyAccum = DirtyRect();
   return 0;
 }
 
@@ -777,6 +876,11 @@ struct Font {
 
         int cursorX = x;
 
+        // bbox real dos pixels desenhados, pra reportar ao dirty-rect tracker
+        int bboxMinX = x, bboxMaxX = x;
+        int bboxMinY = y, bboxMaxY = y;
+        bool drewAnything = false;
+
         while(*text){
 
             uint8_t c = *text++;
@@ -811,11 +915,20 @@ struct Font {
                             drawY + sy,
                             color
                         );
+                        drewAnything = true;
+                        if (drawX + sx < bboxMinX) bboxMinX = drawX + sx;
+                        if (drawX + sx > bboxMaxX) bboxMaxX = drawX + sx;
+                        if (drawY + sy < bboxMinY) bboxMinY = drawY + sy;
+                        if (drawY + sy > bboxMaxY) bboxMaxY = drawY + sy;
                     }
                 }
             }
 
             cursorX += (int)(gptr->advance * scale);
+        }
+
+        if (drewAnything) {
+            markDirty(bboxMinX, bboxMinY, bboxMaxX - bboxMinX + 1, bboxMaxY - bboxMinY + 1);
         }
     }
 
