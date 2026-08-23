@@ -46,7 +46,7 @@ B.Cu
 ![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
 
 Schematic
-<img width="1245" height="841" alt="image" src="https://github.com/user-attachments/assets/30c24f9f-eaa1-464d-a96c-f321188a95d4" />
+<img width="1406" height="940" alt="image" src="https://github.com/user-attachments/assets/c855fa32-a0d0-49cf-b6a7-035c64f532b4" />
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
