@@ -29,9 +29,9 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 ## PCB
 The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
-<img width="1549" height="641" alt="image" src="https://github.com/user-attachments/assets/5cfe1b39-436e-4f0f-b822-f321d94aad84" />
+<img width="1554" height="643" alt="image" src="https://github.com/user-attachments/assets/978d0212-b814-4360-8908-0f115b7902e9" />
 F.Cu
-<img width="1549" height="644" alt="f_cu" src="https://github.com/user-attachments/assets/4fc0755a-84ee-4675-b042-9cee1f851ede" />
+<img width="1553" height="647" alt="image" src="https://github.com/user-attachments/assets/03a0e6d1-09b2-4657-9c0a-62f6257420bb" />
 In.1.Cu
 <img width="1549" height="645" alt="in_1_cu" src="https://github.com/user-attachments/assets/6f52b10a-beeb-4c9d-9fab-ef5318c1a9e0" />
 In.2.Cu
@@ -46,7 +46,7 @@ B.Cu
 ![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
 
 Schematic
-<img width="1245" height="841" alt="image" src="https://github.com/user-attachments/assets/30c24f9f-eaa1-464d-a96c-f321188a95d4" />
+<img width="1406" height="940" alt="image" src="https://github.com/user-attachments/assets/c855fa32-a0d0-49cf-b6a7-035c64f532b4" />
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
