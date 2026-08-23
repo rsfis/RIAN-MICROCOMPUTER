@@ -29,15 +29,15 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 ## PCB
 The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
-![image.png](https://cdn.hackclub.com/019e9a14-9995-791b-8da9-a8cd481a6d7d/image.png)
+<img width="1549" height="641" alt="image" src="https://github.com/user-attachments/assets/5cfe1b39-436e-4f0f-b822-f321d94aad84" />
 F.Cu
-![image.png](https://cdn.hackclub.com/019e9a14-ef15-776e-ab54-2a114d270246/image.png)
+<img width="1549" height="644" alt="f_cu" src="https://github.com/user-attachments/assets/4fc0755a-84ee-4675-b042-9cee1f851ede" />
 In.1.Cu
-![image.png](https://cdn.hackclub.com/019e9a15-2ac7-7f65-a99d-7dbcc88320c5/image.png)
+<img width="1549" height="645" alt="in_1_cu" src="https://github.com/user-attachments/assets/6f52b10a-beeb-4c9d-9fab-ef5318c1a9e0" />
 In.2.Cu
-![image.png](https://cdn.hackclub.com/019e9a15-5ecc-78b3-8588-41ce45a9a9ad/image.png)
+<img width="1552" height="643" alt="in_2_cu" src="https://github.com/user-attachments/assets/255fb91b-1b1d-4447-a878-a5c38d252215" />
 B.Cu
-![image.png](https://cdn.hackclub.com/019e9a15-8c56-7ef0-9d29-8406d29d2e8c/image.png)
+<img width="1555" height="649" alt="b_cu" src="https://github.com/user-attachments/assets/e560d248-3e61-44b0-adb1-6e0abcc9557c" />
 3D render front
 
 ![image.png](https://cdn.hackclub.com/019e9a15-c1cd-702c-8423-ca17017fb9ae/image.png)
@@ -46,7 +46,7 @@ B.Cu
 ![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
 
 Schematic
-<img width="4961" height="3508" alt="schematic" src="https://github.com/user-attachments/assets/6e44b57b-2fc0-4e3b-9ddc-f8a348e92192" />
+<img width="1245" height="841" alt="image" src="https://github.com/user-attachments/assets/30c24f9f-eaa1-464d-a96c-f321188a95d4" />
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
