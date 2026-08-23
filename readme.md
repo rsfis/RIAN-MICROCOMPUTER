@@ -29,7 +29,7 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 ## PCB
 The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
-![image.png](https://cdn.hackclub.com/019e9a14-9995-791b-8da9-a8cd481a6d7d/image.png)
+<img width="1549" height="641" alt="image" src="https://github.com/user-attachments/assets/5cfe1b39-436e-4f0f-b822-f321d94aad84" />
 F.Cu
 <img width="1549" height="644" alt="f_cu" src="https://github.com/user-attachments/assets/4fc0755a-84ee-4675-b042-9cee1f851ede" />
 In.1.Cu
