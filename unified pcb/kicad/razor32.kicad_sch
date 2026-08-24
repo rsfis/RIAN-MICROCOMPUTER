@@ -6592,7 +6592,7 @@
 			(uuid "3f51f774-6846-44f7-ab3a-a650f8fcaaa1")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D13")
 					(unit 1)
@@ -6695,7 +6695,7 @@
 			(uuid "8912b096-1bde-4fa6-b539-abeb7d213671")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D1")
 					(unit 1)
@@ -6783,7 +6783,7 @@
 			(uuid "0c672e35-2a89-4472-bc5a-fb08c3aa3b32")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW3")
 					(unit 1)
@@ -6886,7 +6886,7 @@
 			(uuid "8d32fdb5-4d59-42cb-bf79-dce3a2281f64")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D28")
 					(unit 1)
@@ -6974,7 +6974,7 @@
 			(uuid "4951cc26-7c4b-4c3f-a50f-a17d58a5755a")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW1")
 					(unit 1)
@@ -7062,7 +7062,7 @@
 			(uuid "395bb446-3075-42b6-8ccd-f17b981283b7")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW30")
 					(unit 1)
@@ -7157,7 +7157,7 @@
 			(uuid "64542b3b-3217-4893-a791-751d9a9fb83b")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J3")
 					(unit 1)
@@ -7235,7 +7235,7 @@
 			(uuid "2fd5eb72-db0e-456f-a4f3-8ee56e35a551")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR011")
 					(unit 1)
@@ -7338,7 +7338,7 @@
 			(uuid "8f764e26-247b-4753-8152-62005b1376e6")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D87")
 					(unit 1)
@@ -7441,7 +7441,7 @@
 			(uuid "0ff1a39a-da05-408f-ae6b-39aab6700154")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D79")
 					(unit 1)
@@ -7544,7 +7544,7 @@
 			(uuid "2d87ad18-e4cb-4571-8d55-a09450eff831")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D12")
 					(unit 1)
@@ -7647,7 +7647,7 @@
 			(uuid "0618fa1d-214c-482f-baa1-b2fdb930805e")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D7")
 					(unit 1)
@@ -7735,7 +7735,7 @@
 			(uuid "957040fc-efa5-452a-9ad6-5b60a7f23160")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW18")
 					(unit 1)
@@ -7830,7 +7830,7 @@
 			(uuid "b4603272-0816-467e-817a-64dd9545ea49")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J4")
 					(unit 1)
@@ -7933,7 +7933,7 @@
 			(uuid "d79a00d0-a61a-477a-a1e3-947536c1f4b7")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D71")
 					(unit 1)
@@ -8036,7 +8036,7 @@
 			(uuid "599dec12-7305-4c69-a67e-84cd8c6e2f51")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D63")
 					(unit 1)
@@ -8124,7 +8124,7 @@
 			(uuid "749b70c9-9f07-4d97-b553-ab31c58ae5d7")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW29")
 					(unit 1)
@@ -8202,7 +8202,7 @@
 			(uuid "44d631df-9bc2-4f96-9b50-900c321a7963")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR02")
 					(unit 1)
@@ -8305,7 +8305,7 @@
 			(uuid "ab2e2b1f-843f-4f4b-8b2c-a724889e5153")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D85")
 					(unit 1)
@@ -8408,7 +8408,7 @@
 			(uuid "c33edd57-e33d-41b7-a1ed-f19981efc8a0")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D27")
 					(unit 1)
@@ -8511,7 +8511,7 @@
 			(uuid "0c2e9cf4-d5d2-45c5-8a08-b83de8d4bc2d")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D88")
 					(unit 1)
@@ -8599,7 +8599,7 @@
 			(uuid "f1b3fd9c-7cc9-47e2-8516-d8f8f16feb15")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW16")
 					(unit 1)
@@ -8687,7 +8687,7 @@
 			(uuid "43919000-47d4-4fa3-ade2-b1e18fe96b60")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW10")
 					(unit 1)
@@ -8775,7 +8775,7 @@
 			(uuid "dbf4ca9e-7d79-4295-ba8e-0896010e4915")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW17")
 					(unit 1)
@@ -8878,7 +8878,7 @@
 			(uuid "149d6df6-f26f-4266-abcb-ce7939de5c0d")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D26")
 					(unit 1)
@@ -8956,7 +8956,7 @@
 			(uuid "11ab2959-ce10-4113-8a04-f417989d0e4c")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR07")
 					(unit 1)
@@ -9044,7 +9044,7 @@
 			(uuid "91830aa7-dfca-490d-bff0-f5b445204e8e")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW14")
 					(unit 1)
@@ -9147,7 +9147,7 @@
 			(uuid "2c21c568-f0d7-4eaf-87f3-1ca4affa4802")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D22")
 					(unit 1)
@@ -9235,7 +9235,7 @@
 			(uuid "88535d80-bddf-4133-b340-83244ac17207")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW8")
 					(unit 1)
@@ -9313,7 +9313,7 @@
 			(uuid "5857597a-9364-4a55-983d-9cbc59c139b4")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR031")
 					(unit 1)
@@ -9401,7 +9401,7 @@
 			(uuid "6393f147-2e74-44fb-9666-f8206f040538")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW5")
 					(unit 1)
@@ -9489,7 +9489,7 @@
 			(uuid "4496058b-e995-42c2-90e5-da32952eb898")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW21")
 					(unit 1)
@@ -9592,7 +9592,7 @@
 			(uuid "8869175c-d8fb-43ba-903e-c642037c4f65")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D6")
 					(unit 1)
@@ -9680,7 +9680,7 @@
 			(uuid "4745f994-af49-4847-b7b8-59c4b939ed77")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW24")
 					(unit 1)
@@ -9758,7 +9758,7 @@
 			(uuid "d6473036-d9ce-4f4f-a9b5-849bdf3f54b3")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR05")
 					(unit 1)
@@ -9861,7 +9861,7 @@
 			(uuid "93415606-baf0-4009-8543-3fdb97b6e9d0")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D80")
 					(unit 1)
@@ -9949,7 +9949,7 @@
 			(uuid "ceafb46b-dc21-431d-8029-b0a31df85c98")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW22")
 					(unit 1)
@@ -10052,7 +10052,7 @@
 			(uuid "3f5eb207-caf2-4806-8e85-836af98323f9")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D5")
 					(unit 1)
@@ -10155,7 +10155,7 @@
 			(uuid "c4527235-e8a3-44e6-83ca-1fd3f19ab2e4")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D68")
 					(unit 1)
@@ -10258,7 +10258,7 @@
 			(uuid "276a337a-b74f-4d9a-a067-70597652804b")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D19")
 					(unit 1)
@@ -10336,7 +10336,7 @@
 			(uuid "85dfec9c-8a69-40a6-a719-345f209d220a")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR08")
 					(unit 1)
@@ -10424,7 +10424,7 @@
 			(uuid "45bb8459-1403-4609-a5b5-8521339d2f66")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW28")
 					(unit 1)
@@ -10512,7 +10512,7 @@
 			(uuid "53c72b07-8bcc-4613-be22-da2cae34f829")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW6")
 					(unit 1)
@@ -10615,7 +10615,7 @@
 			(uuid "54f31357-bb3d-451b-b342-b28978029c6a")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D10")
 					(unit 1)
@@ -10718,7 +10718,7 @@
 			(uuid "75973dc2-028d-452b-ba6a-a0df18b37dc3")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D21")
 					(unit 1)
@@ -10821,7 +10821,7 @@
 			(uuid "40ed3fb9-9a69-48aa-9565-079fa04ecb2b")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D18")
 					(unit 1)
@@ -10909,7 +10909,7 @@
 			(uuid "28740906-7dcc-43bf-90a4-d876e89decdc")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW27")
 					(unit 1)
@@ -11012,7 +11012,7 @@
 			(uuid "ecb83043-6bda-40c6-8160-4d53cc3f7481")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D20")
 					(unit 1)
@@ -11115,7 +11115,7 @@
 			(uuid "2d820b36-3607-4db5-b44b-fcdcd267d27e")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D58")
 					(unit 1)
@@ -11218,7 +11218,7 @@
 			(uuid "a39c4153-c96c-4f62-a0a8-66c5b3abdced")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D75")
 					(unit 1)
@@ -11306,7 +11306,7 @@
 			(uuid "74bdce03-980e-42ba-b487-fdc9619dadb7")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW25")
 					(unit 1)
@@ -11409,7 +11409,7 @@
 			(uuid "7e47d7cf-3f92-48ac-9181-7941841e8e6c")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D67")
 					(unit 1)
@@ -11512,7 +11512,7 @@
 			(uuid "f835291d-664a-4a4c-a557-51252b39fabc")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D70")
 					(unit 1)
@@ -11615,7 +11615,7 @@
 			(uuid "1866d799-bfc2-46fc-b3c6-4c35c71c52b3")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D23")
 					(unit 1)
@@ -11718,7 +11718,7 @@
 			(uuid "78357177-8118-444a-896e-7c1dbe0246dd")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D16")
 					(unit 1)
@@ -11806,7 +11806,7 @@
 			(uuid "67ac08f1-f4be-4400-8033-cdc1979abc03")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW19")
 					(unit 1)
@@ -11909,7 +11909,7 @@
 			(uuid "621e2eeb-35b6-4700-9562-398b7cf98f81")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D76")
 					(unit 1)
@@ -12012,7 +12012,7 @@
 			(uuid "fa07fe82-1098-4cc9-9e9d-6303b9436b30")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D65")
 					(unit 1)
@@ -12100,7 +12100,7 @@
 			(uuid "fa68e762-39dd-4e2c-a964-64a5d6b9ae57")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW26")
 					(unit 1)
@@ -12203,7 +12203,7 @@
 			(uuid "9036edcf-ba6d-4b7d-94ed-788ae84a1eaa")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D14")
 					(unit 1)
@@ -12320,7 +12320,7 @@
 			(uuid "847ce9ad-abca-4969-8560-80af9a796bd8")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J6")
 					(unit 1)
@@ -12398,7 +12398,7 @@
 			(uuid "6abb9727-3970-405d-8068-cd0b5d575db8")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR010")
 					(unit 1)
@@ -12501,7 +12501,7 @@
 			(uuid "6ac2f5ff-a61b-4940-87b1-860eca95b0b5")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D83")
 					(unit 1)
@@ -12604,7 +12604,7 @@
 			(uuid "b7917e13-a3e9-4c28-a986-c47cf69cef5b")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D3")
 					(unit 1)
@@ -12707,7 +12707,7 @@
 			(uuid "4ecd16cb-7510-4c0d-9b90-dbd996582dd1")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D89")
 					(unit 1)
@@ -12810,7 +12810,7 @@
 			(uuid "8512046c-5f48-47dc-b8d9-906443c2309f")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D29")
 					(unit 1)
@@ -12913,7 +12913,7 @@
 			(uuid "8d4bc4a2-6fa0-402b-ab9c-e55e030f6b30")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D90")
 					(unit 1)
@@ -12991,7 +12991,7 @@
 			(uuid "7cc8eb6d-40dd-4f8a-b498-948cfae52cb5")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR020")
 					(unit 1)
@@ -13094,7 +13094,7 @@
 			(uuid "42aa93f0-a2ba-45db-afbd-fd017a9bc2cf")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D4")
 					(unit 1)
@@ -13197,7 +13197,7 @@
 			(uuid "2464445f-aaee-4515-a278-0af139802a51")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D82")
 					(unit 1)
@@ -13275,7 +13275,7 @@
 			(uuid "c96d9613-13ae-4ba4-8303-093bb711bf07")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR03")
 					(unit 1)
@@ -13378,7 +13378,7 @@
 			(uuid "4e8c02aa-872c-4a37-a938-675c84d17769")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D78")
 					(unit 1)
@@ -13466,7 +13466,7 @@
 			(uuid "823689ff-61b7-455d-b83a-6bb7a2772cba")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW15")
 					(unit 1)
@@ -13569,7 +13569,7 @@
 			(uuid "b0297a9a-7cf5-40d8-bd2d-3ccfd8f96bcc")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D84")
 					(unit 1)
@@ -13657,7 +13657,7 @@
 			(uuid "8fd8945a-b5a8-476d-ba57-0e2e34bb001f")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW12")
 					(unit 1)
@@ -13760,7 +13760,7 @@
 			(uuid "812819f0-d13b-4b83-8013-a97bf31d1db4")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D25")
 					(unit 1)
@@ -13863,7 +13863,7 @@
 			(uuid "59c4e379-fe71-499b-9bbb-d538f22f6664")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D17")
 					(unit 1)
@@ -13966,7 +13966,7 @@
 			(uuid "a4c73b00-5270-4378-b722-d31e898ef427")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D2")
 					(unit 1)
@@ -14069,7 +14069,7 @@
 			(uuid "03ccf11f-4d2a-46da-bf09-d0ec6fdaba63")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D24")
 					(unit 1)
@@ -14147,7 +14147,7 @@
 			(uuid "66943ace-c1ee-4404-a5c5-ddf57a057185")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR030")
 					(unit 1)
@@ -14250,7 +14250,7 @@
 			(uuid "cda24bb8-c67b-4a8d-a5d1-419c6b3ce1d7")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D8")
 					(unit 1)
@@ -14353,7 +14353,7 @@
 			(uuid "e3a1138f-562c-4893-9aea-4e620a2da191")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D11")
 					(unit 1)
@@ -14492,7 +14492,7 @@
 			(uuid "b80ab7d1-426c-425f-ad8c-124dd2d444ed")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J1")
 					(unit 1)
@@ -14580,7 +14580,7 @@
 			(uuid "50ffaa40-b801-411a-8083-a71577c29f09")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW23")
 					(unit 1)
@@ -14683,7 +14683,7 @@
 			(uuid "95e0c68e-8064-4029-8280-f6c37d73713d")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D73")
 					(unit 1)
@@ -14771,7 +14771,7 @@
 			(uuid "380763e4-5284-4757-900d-f3be549762e9")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW4")
 					(unit 1)
@@ -14859,7 +14859,7 @@
 			(uuid "534fac01-d227-4956-95bf-c9f9b324b845")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW9")
 					(unit 1)
@@ -14946,7 +14946,7 @@
 			(uuid "637a50bf-8ed0-4938-b91a-48142e16f142")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW2")
 					(unit 1)
@@ -15024,7 +15024,7 @@
 			(uuid "1e00626f-0c10-4858-8381-5976a9127b14")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR04")
 					(unit 1)
@@ -15102,7 +15102,7 @@
 			(uuid "d0e11aca-0510-4af5-8ee4-f6d0fee3826f")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR018")
 					(unit 1)
@@ -15205,7 +15205,7 @@
 			(uuid "26895b4f-59be-41fb-8177-3298393067e5")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D77")
 					(unit 1)
@@ -15308,7 +15308,7 @@
 			(uuid "9f664298-250d-45ca-9736-c6a0c54a8309")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D86")
 					(unit 1)
@@ -15411,7 +15411,7 @@
 			(uuid "5031933b-6a87-467f-8772-f2d42390b335")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D15")
 					(unit 1)
@@ -15499,7 +15499,7 @@
 			(uuid "b9b5012b-7204-415d-97e6-8df2c617408b")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW11")
 					(unit 1)
@@ -15602,7 +15602,7 @@
 			(uuid "cdcc0c5b-f08c-402e-8585-5dc3716a5a46")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D74")
 					(unit 1)
@@ -15680,7 +15680,7 @@
 			(uuid "af20846a-08aa-4392-a530-eee7cdee02b3")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR06")
 					(unit 1)
@@ -15758,7 +15758,7 @@
 			(uuid "515efd32-34d4-4fa0-9c9c-5453397396be")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR09")
 					(unit 1)
@@ -15861,7 +15861,7 @@
 			(uuid "d9cfe005-c433-4f3e-9c74-a08a48b87d0f")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D64")
 					(unit 1)
@@ -15964,7 +15964,7 @@
 			(uuid "2510e102-563c-42ab-8b31-caf3c7c9b430")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D66")
 					(unit 1)
@@ -16080,7 +16080,7 @@
 			(uuid "d5885bda-d63b-4f35-a1e1-c2d2a60a1da5")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J5")
 					(unit 1)
@@ -16168,7 +16168,7 @@
 			(uuid "6ed24118-9df6-4801-9bee-035358be93e5")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW7")
 					(unit 1)
@@ -16271,7 +16271,7 @@
 			(uuid "b2f49d6a-d8b1-4122-be56-29eda64f0495")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D81")
 					(unit 1)
@@ -16374,7 +16374,7 @@
 			(uuid "d2074821-1688-4b0e-bda5-2a6cacb426da")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D30")
 					(unit 1)
@@ -16477,7 +16477,7 @@
 			(uuid "f0aa7a52-7836-4ab2-aace-497a8a9a3506")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D59")
 					(unit 1)
@@ -16616,7 +16616,7 @@
 			(uuid "d7bb744a-a24e-478c-9361-b3fd446152cc")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J2")
 					(unit 1)
@@ -16719,7 +16719,7 @@
 			(uuid "9b7b79d1-df0e-454d-9e12-68b7e3de7746")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D72")
 					(unit 1)
@@ -16797,7 +16797,7 @@
 			(uuid "58ae4f9e-4373-44ea-9a84-11c13cedb0f2")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR029")
 					(unit 1)
@@ -16885,7 +16885,7 @@
 			(uuid "28c0eb1f-77f5-47c8-bf9b-a3bb6d68d03f")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW13")
 					(unit 1)
@@ -16988,7 +16988,7 @@
 			(uuid "fbd33d76-b17e-47d3-8fda-40dd71379ca3")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D9")
 					(unit 1)
@@ -17066,7 +17066,7 @@
 			(uuid "aaabb074-6811-464b-8656-ee4b66455467")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR022")
 					(unit 1)
@@ -17169,7 +17169,7 @@
 			(uuid "b31bd636-0bff-4948-9751-0fafd0538c17")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D69")
 					(unit 1)
@@ -17257,7 +17257,7 @@
 			(uuid "2f9d1d0d-5778-4728-965a-9dc6a74b16d1")
 		)
 		(instances
-			(project "razor32"
+			(project "razor32_allin1"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW20")
 					(unit 1)
