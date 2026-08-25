@@ -2508,7 +2508,7 @@
 		)
 		(uuid "6879d058-8ad9-4f61-aa28-6e198bf05987")
 	)
-	(text "Y pin: INPUT_PULLUP\nX pin: INPUT"
+	(text "Y pin: INPUT_PULLUP\nX pin: INPUT/OUTPUT\n"
 		(exclude_from_sim no)
 		(at 337.82 185.166 0)
 		(effects
@@ -2836,24 +2836,6 @@
 		(uuid "01041a04-d33f-49c2-92da-2651a52ef598")
 	)
 	(junction
-		(at 201.93 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0550c381-d5ae-417a-b488-929a0c2d58da")
-	)
-	(junction
-		(at 227.33 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0ae6437e-78e5-4cae-bdc9-54f26a3a6adf")
-	)
-	(junction
-		(at 367.03 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "0c9122a6-83c3-42e1-b9a6-46f1ccb03e61")
-	)
-	(junction
 		(at 177.8 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2870,24 +2852,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "17a1bcce-a757-4f42-b774-cfb1b18aa47d")
-	)
-	(junction
-		(at 255.27 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "18035585-27b6-4a5d-8289-4ffc8cac7cda")
-	)
-	(junction
-		(at 171.45 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1bbf5626-3ae6-47a4-840d-cd199c60928d")
-	)
-	(junction
-		(at 144.78 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "1d00f97e-5e4e-4aaa-b7b8-7fc14f248e42")
 	)
 	(junction
 		(at 345.44 121.92)
@@ -2914,22 +2878,28 @@
 		(uuid "3b0086fd-8cd5-40f9-b2cc-ad153548c35e")
 	)
 	(junction
+		(at 394.97 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3bdbc8ce-19ab-40f6-bbe8-4408e4b00a31")
+	)
+	(junction
+		(at 367.03 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3fc1368b-b902-4c91-aefa-a88501f4e4f8")
+	)
+	(junction
 		(at 233.68 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "4ad26324-a2ab-4320-8935-f5ac0f5a6cdb")
 	)
 	(junction
-		(at 229.87 128.27)
+		(at 283.21 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "4b9bbc7c-bddf-4ded-bbb7-bf24ac752406")
-	)
-	(junction
-		(at 285.75 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57f8f783-70f1-4274-bdac-ac0b4b951b68")
+		(uuid "54fb728c-f357-4e49-818c-38b159e8966a")
 	)
 	(junction
 		(at 317.5 133.35)
@@ -2938,16 +2908,22 @@
 		(uuid "60a77d46-0dd2-4e66-b9f5-7a8085959452")
 	)
 	(junction
+		(at 171.45 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "61974f90-76b3-4d08-bf45-b000f4b38bec")
+	)
+	(junction
 		(at 59.69 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "61e02861-05ac-4cfc-9ec2-b86fcf67fdcd")
 	)
 	(junction
-		(at 257.81 128.27)
+		(at 311.15 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "65448b06-fe1d-4ef1-9ed1-229db86c7e2f")
+		(uuid "6646cc24-5ff6-4e21-b551-58882bad583b")
 	)
 	(junction
 		(at 64.77 142.24)
@@ -2962,16 +2938,16 @@
 		(uuid "6a7f4daa-0e03-40a5-84a0-0d590765fc21")
 	)
 	(junction
+		(at 144.78 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6ab7f380-b1c9-4909-ba78-ce71633ee4be")
+	)
+	(junction
 		(at 345.44 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6de17c66-42a9-48a1-bd17-6093f2e38042")
-	)
-	(junction
-		(at 397.51 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "70462530-f54a-4e18-a269-527256461d25")
 	)
 	(junction
 		(at 49.53 142.24)
@@ -2986,10 +2962,10 @@
 		(uuid "72b6dbce-41e1-4ad1-b670-b245d140fb0e")
 	)
 	(junction
-		(at 369.57 128.27)
+		(at 339.09 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "758450e3-6bb4-4741-8bf4-a6f6a419cd81")
+		(uuid "7336059a-d27b-4784-93b7-e4f04f3cff5e")
 	)
 	(junction
 		(at 46.99 177.8)
@@ -2998,16 +2974,40 @@
 		(uuid "76f871a5-badf-443b-b5a0-86fc868058bd")
 	)
 	(junction
+		(at 255.27 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7ffaa4e2-c503-4bf0-b08c-0273abcc4935")
+	)
+	(junction
+		(at 283.21 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "80fa991f-81ee-4230-9206-d0ce12e09d49")
+	)
+	(junction
+		(at 144.78 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8339959d-a6d8-4614-91f2-fcbaebdb96fc")
+	)
+	(junction
 		(at 289.56 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "84f045db-d578-426c-97a9-c9d53f779c50")
 	)
 	(junction
-		(at 283.21 138.43)
+		(at 171.45 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "894a869c-3c0b-4d49-b6af-7da4c10c441e")
+		(uuid "85ef4d5d-4311-4293-9d79-512cc9449519")
+	)
+	(junction
+		(at 227.33 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "897cf9e1-e011-4cbb-9dca-57bdafa53955")
 	)
 	(junction
 		(at 54.61 142.24)
@@ -3028,6 +3028,12 @@
 		(uuid "8f6ccf51-449a-4e6b-9481-ab5d9df96382")
 	)
 	(junction
+		(at 227.33 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "90a4bb0b-c9bd-485b-bcbc-458884677134")
+	)
+	(junction
 		(at 52.07 120.65)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3038,18 +3044,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "9969523f-0734-4369-944b-c853c6c178cf")
-	)
-	(junction
-		(at 146.05 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9c9359aa-3cbf-4eb9-9639-e8a5d8097719")
-	)
-	(junction
-		(at 394.97 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9d1905d0-ff16-4d08-b849-9a099ecd7d1d")
 	)
 	(junction
 		(at 57.15 142.24)
@@ -3064,12 +3058,6 @@
 		(uuid "9df9c9f4-d27e-42a1-94d9-4a5d587be8d2")
 	)
 	(junction
-		(at 339.09 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "9f73afa2-ead5-4f9e-9119-ea9aa013704b")
-	)
-	(junction
 		(at 317.5 121.92)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3080,6 +3068,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "a0a19409-0708-4626-a9f9-9f7a0698cdb8")
+	)
+	(junction
+		(at 199.39 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a2acd6f7-7ddd-47c6-8aa2-01f0f8f83d79")
 	)
 	(junction
 		(at 289.56 133.35)
@@ -3094,16 +3088,22 @@
 		(uuid "a55975dd-0306-45ec-bef8-c106488d9e18")
 	)
 	(junction
+		(at 199.39 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab0120f0-275f-4531-b48d-9eb728aafc60")
+	)
+	(junction
 		(at 205.74 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ad20a29c-8509-44ef-821b-fc0da4cdccce")
 	)
 	(junction
-		(at 341.63 128.27)
+		(at 311.15 130.81)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "ae6c2d87-914f-4e3e-9831-fd81fc1e8d3b")
+		(uuid "b058f96d-45a2-41c5-9687-568bd5264e5d")
 	)
 	(junction
 		(at 82.55 142.24)
@@ -3130,6 +3130,12 @@
 		(uuid "c219c3ee-11f3-40a3-9d08-50df8c88246b")
 	)
 	(junction
+		(at 367.03 119.38)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c38ccde2-986e-4e1a-bc09-103fcd16ede6")
+	)
+	(junction
 		(at 317.5 110.49)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3148,16 +3154,16 @@
 		(uuid "ccec844b-e190-49d6-9ffe-98f6fa62ff7e")
 	)
 	(junction
-		(at 199.39 138.43)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "da58ac29-d16c-489b-bae2-8864790054fd")
-	)
-	(junction
 		(at 97.79 172.72)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "daeec59d-da7f-45c5-9b59-ac3fb3cc9bcb")
+	)
+	(junction
+		(at 255.27 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e30c5cd8-e10c-4ca3-a44f-42a775659fe9")
 	)
 	(junction
 		(at 233.68 133.35)
@@ -3166,28 +3172,22 @@
 		(uuid "e80c7786-8628-43aa-a41d-8099bf8b649b")
 	)
 	(junction
-		(at 311.15 138.43)
+		(at 339.09 119.38)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f7c3269d-7c30-4ce4-a6c7-f534c2f78022")
-	)
-	(junction
-		(at 175.26 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fc32db03-3c12-49ea-9550-a67c09b36eec")
-	)
-	(junction
-		(at 313.69 128.27)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fe4c282f-728e-4553-b091-efe0b50d8716")
+		(uuid "f9892549-64fe-4620-a469-708a6ce220c1")
 	)
 	(junction
 		(at 373.38 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "fe686177-60e3-4ead-9d7b-29aea7f44b3d")
+	)
+	(junction
+		(at 394.97 130.81)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ff99d005-a29c-40f9-94a4-283449f42d38")
 	)
 	(wire
 		(pts
@@ -3317,17 +3317,6 @@
 	)
 	(wire
 		(pts
-			(xy 367.03 107.95) (xy 367.03 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "0806f660-3975-400f-b1a6-f835551d127b")
-	)
-	(wire
-		(pts
 			(xy 52.07 120.65) (xy 52.07 142.24)
 		)
 		(stroke
@@ -3335,17 +3324,6 @@
 			(type default)
 		)
 		(uuid "080e2acd-f6f2-44a7-bde2-088038323e4c")
-	)
-	(wire
-		(pts
-			(xy 255.27 138.43) (xy 257.81 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "098ce6d7-ae65-4bf9-8a50-13a7f3ccc6c2")
 	)
 	(wire
 		(pts
@@ -3380,14 +3358,14 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 128.27) (xy 146.05 128.27)
+			(xy 283.21 146.05) (xy 279.4 146.05)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "0f568daa-0f8d-45c4-a7f8-8fe831a58676")
+		(uuid "0e3cb611-0275-47ed-aad7-06c4c30e3e12")
 	)
 	(wire
 		(pts
@@ -3402,17 +3380,6 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 107.95) (xy 171.45 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "13691dbe-f233-47f2-9b5d-71d842201ebd")
-	)
-	(wire
-		(pts
 			(xy 62.23 167.64) (xy 41.91 167.64)
 		)
 		(stroke
@@ -3421,17 +3388,6 @@
 			(color 255 0 248 1)
 		)
 		(uuid "13b1554d-6afb-469f-81f6-b0a50290056f")
-	)
-	(wire
-		(pts
-			(xy 397.51 128.27) (xy 397.51 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "15e4c6bf-617b-453f-873d-abb93c2d20ad")
 	)
 	(wire
 		(pts
@@ -3463,17 +3419,6 @@
 			(color 255 0 22 1)
 		)
 		(uuid "173165ef-53d3-4236-969d-6f68aa94252a")
-	)
-	(wire
-		(pts
-			(xy 369.57 116.84) (xy 369.57 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "18600d1e-0d3d-49e8-ae5f-1eb85c591f4c")
 	)
 	(wire
 		(pts
@@ -3518,18 +3463,7 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 128.27) (xy 199.39 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "1daaee69-7a12-4e5b-a51f-25f718d5c728")
-	)
-	(wire
-		(pts
-			(xy 137.16 119.38) (xy 143.51 119.38)
+			(xy 137.16 119.38) (xy 144.78 119.38)
 		)
 		(stroke
 			(width 0)
@@ -3591,28 +3525,6 @@
 	)
 	(wire
 		(pts
-			(xy 229.87 116.84) (xy 229.87 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "272b0911-1e0e-40de-adaf-5124f035645a")
-	)
-	(wire
-		(pts
-			(xy 195.58 138.43) (xy 199.39 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "27ce7ca0-a52b-4a42-9c56-3a76c6e674e7")
-	)
-	(wire
-		(pts
 			(xy 220.98 130.81) (xy 227.33 130.81)
 		)
 		(stroke
@@ -3624,36 +3536,14 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 107.95) (xy 339.09 109.22)
+			(xy 367.03 149.86) (xy 363.22 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 255 0 13 1)
 		)
-		(uuid "2840db81-6062-4666-9840-3293754fbe55")
-	)
-	(wire
-		(pts
-			(xy 251.46 138.43) (xy 251.46 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "293e41b8-e886-4f19-8c61-29544d24acfa")
-	)
-	(wire
-		(pts
-			(xy 199.39 138.43) (xy 201.93 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2b3f9053-3eed-4533-9f8a-7a5b2da5f19f")
+		(uuid "28f274e5-00b0-4352-9fb3-d9592f2412d4")
 	)
 	(wire
 		(pts
@@ -3668,17 +3558,6 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 128.27) (xy 201.93 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2c3372b3-1345-4983-b2a4-40a533f5a53e")
-	)
-	(wire
-		(pts
 			(xy 166.37 144.78) (xy 166.37 152.4)
 		)
 		(stroke
@@ -3687,50 +3566,6 @@
 			(color 255 0 22 1)
 		)
 		(uuid "2c88bed5-4656-46ea-b68d-a37b42637c97")
-	)
-	(wire
-		(pts
-			(xy 335.28 138.43) (xy 339.09 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2ca78f8a-cc61-4ac0-8681-d3f874846ce5")
-	)
-	(wire
-		(pts
-			(xy 171.45 128.27) (xy 175.26 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2cb3544d-b8ff-40a8-9091-71693e8da7b6")
-	)
-	(wire
-		(pts
-			(xy 223.52 138.43) (xy 223.52 143.51)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2d932f63-92cd-4d38-a6a3-0cca20a0b04c")
-	)
-	(wire
-		(pts
-			(xy 394.97 128.27) (xy 394.97 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "2e8652d8-1eb4-49a2-ada4-14c0c3563b0b")
 	)
 	(wire
 		(pts
@@ -3765,6 +3600,17 @@
 	)
 	(wire
 		(pts
+			(xy 394.97 151.13) (xy 391.16 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "33069d7b-ad84-4cbd-ae33-23dd0622335e")
+	)
+	(wire
+		(pts
 			(xy 317.5 110.49) (xy 345.44 110.49)
 		)
 		(stroke
@@ -3796,6 +3642,17 @@
 	)
 	(wire
 		(pts
+			(xy 283.21 119.38) (xy 283.21 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "3521e501-9e11-44d5-8d3f-65e75babde49")
+	)
+	(wire
+		(pts
 			(xy 27.94 229.87) (xy 57.15 229.87)
 		)
 		(stroke
@@ -3803,17 +3660,6 @@
 			(type default)
 		)
 		(uuid "35332808-dbd4-4c42-a5b8-3ec9600e3843")
-	)
-	(wire
-		(pts
-			(xy 279.4 138.43) (xy 283.21 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "3586c37c-64e5-458b-a444-fabd6b0c4171")
 	)
 	(wire
 		(pts
@@ -3860,6 +3706,17 @@
 	)
 	(wire
 		(pts
+			(xy 367.03 119.38) (xy 367.03 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "38b0f189-33f4-4ffe-92bf-eb5f0f00b657")
+	)
+	(wire
+		(pts
 			(xy 33.02 236.22) (xy 33.02 232.41)
 		)
 		(stroke
@@ -3867,6 +3724,17 @@
 			(type default)
 		)
 		(uuid "38e5f52e-c874-4878-885f-99c7d8e1a7cb")
+	)
+	(wire
+		(pts
+			(xy 339.09 148.59) (xy 335.28 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "391071d4-91de-492f-9bfa-8c2351b8f1c6")
 	)
 	(wire
 		(pts
@@ -3878,17 +3746,6 @@
 			(color 255 0 13 1)
 		)
 		(uuid "393ff01b-9406-43aa-9dcc-e27edd790307")
-	)
-	(wire
-		(pts
-			(xy 283.21 128.27) (xy 283.21 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "3a4bcf85-8330-4d94-b62f-f156d50791dc")
 	)
 	(wire
 		(pts
@@ -3920,17 +3777,6 @@
 			(type default)
 		)
 		(uuid "3d64689b-d5d5-4da0-b131-049b2154c71c")
-	)
-	(wire
-		(pts
-			(xy 311.15 128.27) (xy 311.15 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "3e56fe6a-1c77-4154-8ea0-6af322c622f6")
 	)
 	(wire
 		(pts
@@ -4008,17 +3854,6 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 138.43) (xy 341.63 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "450bd440-d85e-42b3-ae2a-b872c6a80d80")
-	)
-	(wire
-		(pts
 			(xy 30.48 236.22) (xy 30.48 231.14)
 		)
 		(stroke
@@ -4037,17 +3872,6 @@
 			(color 255 87 0 1)
 		)
 		(uuid "4573c77e-8ff9-42ce-b239-f91902e9d414")
-	)
-	(wire
-		(pts
-			(xy 166.37 144.78) (xy 251.46 144.78)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 22 1)
-		)
-		(uuid "4729c017-4a07-4529-9df4-5ef9da1e4f46")
 	)
 	(wire
 		(pts
@@ -4079,6 +3903,28 @@
 			(type default)
 		)
 		(uuid "4fb2362e-f945-47a1-b367-dd6303a42642")
+	)
+	(wire
+		(pts
+			(xy 311.15 147.32) (xy 307.34 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "50a54069-d21b-45e6-b543-b9dae880565f")
+	)
+	(wire
+		(pts
+			(xy 367.03 107.95) (xy 367.03 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "5219b089-82a2-4502-ba04-bd7458e391d8")
 	)
 	(wire
 		(pts
@@ -4122,17 +3968,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 109.22) (xy 143.51 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "5522fc5a-bc39-4b66-b432-085958801c35")
-	)
-	(wire
-		(pts
 			(xy 67.31 142.24) (xy 67.31 175.26)
 		)
 		(stroke
@@ -4154,17 +3989,6 @@
 	)
 	(wire
 		(pts
-			(xy 313.69 128.27) (xy 313.69 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "55b688a1-fea0-45eb-bbaf-4dbc334e9555")
-	)
-	(wire
-		(pts
 			(xy 191.77 151.13) (xy 191.77 152.4)
 		)
 		(stroke
@@ -4183,17 +4007,6 @@
 			(type default)
 		)
 		(uuid "5648f1b6-b8d0-4722-9b44-3d9a85aa64a7")
-	)
-	(wire
-		(pts
-			(xy 391.16 138.43) (xy 394.97 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "5677c67c-849a-4cf4-833f-76bff262734e")
 	)
 	(wire
 		(pts
@@ -4236,28 +4049,6 @@
 			(type default)
 		)
 		(uuid "5b2a08d5-bd45-4e93-9ceb-c3f8c4c2da37")
-	)
-	(wire
-		(pts
-			(xy 311.15 116.84) (xy 313.69 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "5b61d832-1805-4c74-a620-0fc7b2c7877f")
-	)
-	(wire
-		(pts
-			(xy 394.97 116.84) (xy 397.51 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "5bdd4d0e-6e82-41d3-a0b1-9ae343dba7ae")
 	)
 	(wire
 		(pts
@@ -4334,18 +4125,7 @@
 	)
 	(wire
 		(pts
-			(xy 307.34 138.43) (xy 307.34 147.32)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "619daefd-cec1-4a6f-a5ee-b03ee28565fc")
-	)
-	(wire
-		(pts
-			(xy 195.58 142.24) (xy 156.21 142.24)
+			(xy 156.21 142.24) (xy 199.39 142.24)
 		)
 		(stroke
 			(width 0)
@@ -4353,6 +4133,17 @@
 			(color 255 0 22 1)
 		)
 		(uuid "61edad7c-7139-4c1c-87c9-b505f858f98b")
+	)
+	(wire
+		(pts
+			(xy 394.97 107.95) (xy 394.97 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "62099428-b6a6-4957-9a69-ab327e8b1b14")
 	)
 	(wire
 		(pts
@@ -4386,17 +4177,6 @@
 	)
 	(wire
 		(pts
-			(xy 367.03 128.27) (xy 369.57 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "6574fa45-87fe-47f4-9154-a757752ea1d6")
-	)
-	(wire
-		(pts
 			(xy 43.18 171.45) (xy 43.18 213.36)
 		)
 		(stroke
@@ -4408,7 +4188,7 @@
 	)
 	(wire
 		(pts
-			(xy 137.16 107.95) (xy 143.51 107.95)
+			(xy 137.16 107.95) (xy 144.78 107.95)
 		)
 		(stroke
 			(width 0)
@@ -4426,28 +4206,6 @@
 			(type default)
 		)
 		(uuid "68b126a4-538d-4a8a-a534-e404245ba62d")
-	)
-	(wire
-		(pts
-			(xy 227.33 116.84) (xy 229.87 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "695c6e5b-a70f-4853-a6d3-9253efdbfca9")
-	)
-	(wire
-		(pts
-			(xy 394.97 128.27) (xy 397.51 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "69a6e89e-9ef2-4798-b923-afcf415d4f03")
 	)
 	(wire
 		(pts
@@ -4494,28 +4252,6 @@
 	)
 	(wire
 		(pts
-			(xy 339.09 128.27) (xy 341.63 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "6d579d32-9a93-4e4e-bea0-9ea719bcc242")
-	)
-	(wire
-		(pts
-			(xy 227.33 138.43) (xy 229.87 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "6db9b650-e5ea-40ce-a707-bcea68e23315")
-	)
-	(wire
-		(pts
 			(xy 233.68 125.73) (xy 238.76 125.73)
 		)
 		(stroke
@@ -4526,25 +4262,25 @@
 	)
 	(wire
 		(pts
-			(xy 394.97 138.43) (xy 397.51 138.43)
+			(xy 199.39 130.81) (xy 199.39 142.24)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "7212b4ed-4e67-4cd3-bbe2-9b698e22d289")
+		(uuid "707d9052-4b5a-4d8b-abdb-ffd85e0eeb7e")
 	)
 	(wire
 		(pts
-			(xy 175.26 128.27) (xy 175.26 138.43)
+			(xy 227.33 130.81) (xy 227.33 143.51)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "729c6b57-22fe-49f3-ad03-1b842a1f08b8")
+		(uuid "71a4d71f-fc5c-4544-a236-6f388471a1d6")
 	)
 	(wire
 		(pts
@@ -4578,17 +4314,6 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 128.27) (xy 146.05 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "7566f8c3-11f4-4b92-aa6d-1ec973c59f69")
-	)
-	(wire
-		(pts
 			(xy 177.8 102.87) (xy 182.88 102.87)
 		)
 		(stroke
@@ -4596,17 +4321,6 @@
 			(type default)
 		)
 		(uuid "757479b7-0e8b-4345-9ea7-83deebc917ca")
-	)
-	(wire
-		(pts
-			(xy 193.04 107.95) (xy 199.39 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "76a3747c-43a0-41a4-89da-512ec0a4bac1")
 	)
 	(wire
 		(pts
@@ -4631,6 +4345,28 @@
 	)
 	(wire
 		(pts
+			(xy 339.09 119.38) (xy 339.09 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "7770e1a8-2ac5-4444-a7dd-bfa9921ea6eb")
+	)
+	(wire
+		(pts
+			(xy 339.09 130.81) (xy 339.09 148.59)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "77c5f0b6-5255-4e24-b13a-50a5985fafa9")
+	)
+	(wire
+		(pts
 			(xy 144.78 138.43) (xy 144.78 151.13)
 		)
 		(stroke
@@ -4642,17 +4378,6 @@
 	)
 	(wire
 		(pts
-			(xy 311.15 107.95) (xy 311.15 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "7a55182f-36ac-47c5-8446-7d4336f96a9c")
-	)
-	(wire
-		(pts
 			(xy 360.68 107.95) (xy 367.03 107.95)
 		)
 		(stroke
@@ -4661,6 +4386,17 @@
 			(color 255 0 13 1)
 		)
 		(uuid "7b2a9a23-28c0-4894-90be-f06b58c08efe")
+	)
+	(wire
+		(pts
+			(xy 394.97 119.38) (xy 394.97 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "7c07b50f-9433-4560-8a39-101aad1f4496")
 	)
 	(wire
 		(pts
@@ -4696,17 +4432,6 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 116.84) (xy 201.93 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "7e66d62e-19ad-4062-91df-c1b417d19a6e")
-	)
-	(wire
-		(pts
 			(xy 90.17 172.72) (xy 90.17 185.42)
 		)
 		(stroke
@@ -4715,17 +4440,6 @@
 			(color 255 145 6 1)
 		)
 		(uuid "7f76cea9-5df2-4023-b519-d23e4ca476d3")
-	)
-	(wire
-		(pts
-			(xy 397.51 116.84) (xy 397.51 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "7f7cc8f0-0c2e-4b97-b3f4-1abf75ad68f4")
 	)
 	(wire
 		(pts
@@ -4780,17 +4494,6 @@
 	)
 	(wire
 		(pts
-			(xy 201.93 128.27) (xy 201.93 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "8262c1cd-ebb1-4b2c-b64b-915a5a7d43ad")
-	)
-	(wire
-		(pts
 			(xy 233.68 114.3) (xy 238.76 114.3)
 		)
 		(stroke
@@ -4822,14 +4525,14 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 116.84) (xy 285.75 116.84)
+			(xy 166.37 144.78) (xy 255.27 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "83a8f8df-8e6f-4630-a4c4-009792b9b321")
+		(uuid "85034622-a99c-46b3-9b04-a191603d4e8d")
 	)
 	(wire
 		(pts
@@ -4851,17 +4554,6 @@
 			(color 255 0 20 1)
 		)
 		(uuid "88aa64a7-1614-4c1a-98a1-70d76b122292")
-	)
-	(wire
-		(pts
-			(xy 283.21 138.43) (xy 285.75 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "894db423-2224-4df5-9fd8-666bebbdb043")
 	)
 	(wire
 		(pts
@@ -4906,17 +4598,6 @@
 	)
 	(wire
 		(pts
-			(xy 391.16 138.43) (xy 391.16 151.13)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "8dd3986b-5dce-405c-ab99-a623fac2c8d2")
-	)
-	(wire
-		(pts
 			(xy 25.4 236.22) (xy 25.4 227.33)
 		)
 		(stroke
@@ -4924,17 +4605,6 @@
 			(type default)
 		)
 		(uuid "8e1cef83-fd51-42f3-b8b3-8109f3eb220a")
-	)
-	(wire
-		(pts
-			(xy 229.87 128.27) (xy 229.87 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "8ebc609d-ed92-4206-b005-5a34acb4407e")
 	)
 	(wire
 		(pts
@@ -4958,47 +4628,14 @@
 	)
 	(wire
 		(pts
-			(xy 251.46 138.43) (xy 255.27 138.43)
+			(xy 339.09 107.95) (xy 339.09 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "944e547e-e077-442b-a844-bc24fd6f2453")
-	)
-	(wire
-		(pts
-			(xy 307.34 138.43) (xy 311.15 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "94d53588-ab28-4c43-a204-fd2c4ad8f6e2")
-	)
-	(wire
-		(pts
-			(xy 255.27 116.84) (xy 257.81 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "94f883f1-f03f-4b74-92e5-3c8d8ee1be9e")
-	)
-	(wire
-		(pts
-			(xy 143.51 116.84) (xy 146.05 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "94fd6c1a-75c3-4b33-a059-2193717522ce")
+		(uuid "90b86fff-fe37-4320-a056-1797b7d23988")
 	)
 	(wire
 		(pts
@@ -5024,17 +4661,6 @@
 	)
 	(wire
 		(pts
-			(xy 199.39 107.95) (xy 199.39 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "958a2085-8da0-4ad6-ab8f-6e16b5ae00c5")
-	)
-	(wire
-		(pts
 			(xy 77.47 120.65) (xy 77.47 142.24)
 		)
 		(stroke
@@ -5045,18 +4671,18 @@
 	)
 	(wire
 		(pts
-			(xy 313.69 116.84) (xy 313.69 128.27)
+			(xy 255.27 130.81) (xy 255.27 144.78)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "969700a1-e1ec-4794-bee1-6b4ab6a14d65")
+		(uuid "96868b14-ec4e-45e4-b7f6-e5fdae4463df")
 	)
 	(wire
 		(pts
-			(xy 137.16 130.81) (xy 143.51 130.81)
+			(xy 137.16 130.81) (xy 144.78 130.81)
 		)
 		(stroke
 			(width 0)
@@ -5097,14 +4723,14 @@
 	)
 	(wire
 		(pts
-			(xy 171.45 116.84) (xy 175.26 116.84)
+			(xy 255.27 119.38) (xy 255.27 130.81)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "99ea306b-8d46-470b-86c4-771de53a91ba")
+		(uuid "9a435502-a43b-4a40-a268-6132193ba70a")
 	)
 	(wire
 		(pts
@@ -5138,17 +4764,6 @@
 	)
 	(wire
 		(pts
-			(xy 223.52 138.43) (xy 227.33 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "9ca4b02e-09ca-4fd5-9539-3336c2c5c0e7")
-	)
-	(wire
-		(pts
 			(xy 54.61 142.24) (xy 54.61 185.42)
 		)
 		(stroke
@@ -5156,39 +4771,6 @@
 			(type default)
 		)
 		(uuid "9cf913d5-9afc-448d-9d17-ccbdb7c4615a")
-	)
-	(wire
-		(pts
-			(xy 341.63 116.84) (xy 341.63 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "9e2c321e-a9d5-4e16-9b7b-065d546dbd95")
-	)
-	(wire
-		(pts
-			(xy 201.93 116.84) (xy 201.93 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "9e9b5a36-6d17-41ed-aaec-3d466c15833a")
-	)
-	(wire
-		(pts
-			(xy 171.45 138.43) (xy 175.26 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "9eecb199-896f-4896-9f54-20bcba402d20")
 	)
 	(wire
 		(pts
@@ -5200,17 +4782,6 @@
 			(color 255 0 13 1)
 		)
 		(uuid "9fde4f03-2d57-491e-8421-df1006ed0b63")
-	)
-	(wire
-		(pts
-			(xy 363.22 138.43) (xy 363.22 149.86)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "9ffdbd6e-f148-49c8-9518-fa85d9379c15")
 	)
 	(wire
 		(pts
@@ -5266,36 +4837,25 @@
 	)
 	(wire
 		(pts
-			(xy 341.63 128.27) (xy 341.63 138.43)
+			(xy 283.21 107.95) (xy 283.21 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "a2b50b6d-18f2-4b2d-b71e-eb3e5626e52b")
+		(uuid "a262be76-9580-4351-9836-d0bf88d74214")
 	)
 	(wire
 		(pts
-			(xy 255.27 128.27) (xy 255.27 127)
+			(xy 283.21 130.81) (xy 283.21 146.05)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "a3377628-aa67-4b97-97dd-08070dd36214")
-	)
-	(wire
-		(pts
-			(xy 227.33 128.27) (xy 227.33 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "a363790d-08c2-4fea-bbdd-b5a750969175")
+		(uuid "a2953058-c055-4f52-9b8f-72330400963d")
 	)
 	(wire
 		(pts
@@ -5340,14 +4900,25 @@
 	)
 	(wire
 		(pts
-			(xy 394.97 107.95) (xy 394.97 109.22)
+			(xy 227.33 107.95) (xy 227.33 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 255 0 13 1)
 		)
-		(uuid "a8772551-9eac-4c63-aa71-369c84669f2e")
+		(uuid "a72355db-480d-4be8-a63e-8bf0116d6bdf")
+	)
+	(wire
+		(pts
+			(xy 171.45 107.95) (xy 171.45 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "a8b38e38-3a58-4cac-8043-54541033f5c2")
 	)
 	(wire
 		(pts
@@ -5393,6 +4964,28 @@
 	)
 	(wire
 		(pts
+			(xy 311.15 119.38) (xy 311.15 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "ad29ae15-7fc5-418a-ab7c-6dd8eb593a0e")
+	)
+	(wire
+		(pts
+			(xy 311.15 130.81) (xy 311.15 147.32)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "ae737bcb-cf07-4551-907f-b43d6b1141ae")
+	)
+	(wire
+		(pts
 			(xy 72.39 120.65) (xy 72.39 142.24)
 		)
 		(stroke
@@ -5403,36 +4996,14 @@
 	)
 	(wire
 		(pts
-			(xy 283.21 107.95) (xy 283.21 109.22)
+			(xy 367.03 130.81) (xy 367.03 149.86)
 		)
 		(stroke
 			(width 0)
 			(type default)
 			(color 255 0 13 1)
 		)
-		(uuid "af59335f-21fe-4b57-9591-91670b09cb4e")
-	)
-	(wire
-		(pts
-			(xy 363.22 138.43) (xy 367.03 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b037ccec-6d00-45f9-a423-7027a34c002f")
-	)
-	(wire
-		(pts
-			(xy 285.75 128.27) (xy 285.75 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b0e52715-0396-43b3-a349-b08fed8b6a3d")
+		(uuid "b15667d3-db08-46fe-8701-4752270f0158")
 	)
 	(wire
 		(pts
@@ -5446,14 +5017,14 @@
 	)
 	(wire
 		(pts
-			(xy 146.05 116.84) (xy 146.05 128.27)
+			(xy 311.15 107.95) (xy 311.15 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "b382a677-5ad5-407b-8a89-f23d0076f35a")
+		(uuid "b3e771e5-746a-4010-8ad2-285320a997d7")
 	)
 	(wire
 		(pts
@@ -5488,6 +5059,17 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 119.38) (xy 171.45 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "b53eae3d-df35-43e7-8868-a4541a5d13e2")
+	)
+	(wire
+		(pts
 			(xy 121.92 102.87) (xy 127 102.87)
 		)
 		(stroke
@@ -5495,50 +5077,6 @@
 			(type default)
 		)
 		(uuid "b55b6fc2-4e23-4c78-876a-9ef028eb3b74")
-	)
-	(wire
-		(pts
-			(xy 311.15 128.27) (xy 313.69 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b57ea51b-50ba-454f-b3aa-436c34887713")
-	)
-	(wire
-		(pts
-			(xy 257.81 128.27) (xy 257.81 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b62a3ab6-aaff-4d14-bc77-645a19c3f5b6")
-	)
-	(wire
-		(pts
-			(xy 144.78 138.43) (xy 146.05 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b6d04bbd-5fa0-4891-98d3-6e89dc6ee2b6")
-	)
-	(wire
-		(pts
-			(xy 367.03 138.43) (xy 369.57 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "b766ae5d-64de-4c40-a582-08adc00985e3")
 	)
 	(wire
 		(pts
@@ -5564,17 +5102,6 @@
 	)
 	(wire
 		(pts
-			(xy 227.33 107.95) (xy 227.33 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 0 13 1)
-		)
-		(uuid "b93d3c4d-e339-4e13-a5c0-6a5e8f8f0a73")
-	)
-	(wire
-		(pts
 			(xy 30.48 257.81) (xy 30.48 265.43)
 		)
 		(stroke
@@ -5595,14 +5122,25 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 116.84) (xy 175.26 128.27)
+			(xy 199.39 130.81) (xy 199.39 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "ba65befb-c33d-4360-bd4f-93e85b53a0a8")
+		(uuid "b9db6fa8-f66b-4117-b45a-faf41c335f20")
+	)
+	(wire
+		(pts
+			(xy 394.97 130.81) (xy 394.97 151.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "b9e3b001-ddbc-437b-93fa-033cef9e7a0c")
 	)
 	(wire
 		(pts
@@ -5633,17 +5171,6 @@
 			(type default)
 		)
 		(uuid "bd896331-e065-418c-804b-b67cfd6b44fc")
-	)
-	(wire
-		(pts
-			(xy 367.03 116.84) (xy 369.57 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "bf108a83-917c-4fc5-a422-3018afb52ae6")
 	)
 	(wire
 		(pts
@@ -5719,17 +5246,6 @@
 	)
 	(wire
 		(pts
-			(xy 369.57 128.27) (xy 369.57 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "c43f63ab-3e07-45c2-a57d-c09b5444314c")
-	)
-	(wire
-		(pts
 			(xy 289.56 133.35) (xy 317.5 133.35)
 		)
 		(stroke
@@ -5757,6 +5273,17 @@
 			(type default)
 		)
 		(uuid "c5c939df-cb59-419c-99c2-e4cb7d0f122e")
+	)
+	(wire
+		(pts
+			(xy 199.39 119.38) (xy 199.39 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "c77e5f6a-aeb1-4311-8e2e-65c8d1e50919")
 	)
 	(wire
 		(pts
@@ -5810,17 +5337,6 @@
 	)
 	(wire
 		(pts
-			(xy 285.75 116.84) (xy 285.75 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "cbad90cb-14e5-4465-a4f5-0ab5b87fa408")
-	)
-	(wire
-		(pts
 			(xy 363.22 149.86) (xy 186.69 149.86)
 		)
 		(stroke
@@ -5843,6 +5359,17 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 119.38) (xy 227.33 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "ce5200c2-e11f-4efb-a07b-89dac58d138f")
+	)
+	(wire
+		(pts
 			(xy 74.93 208.28) (xy 74.93 224.79)
 		)
 		(stroke
@@ -5850,17 +5377,6 @@
 			(type default)
 		)
 		(uuid "ce7d47b1-b3c9-421e-a6d6-db7a6da06f00")
-	)
-	(wire
-		(pts
-			(xy 171.45 128.27) (xy 171.45 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "d11c6760-2df8-4f30-aa76-abad52751d3e")
 	)
 	(wire
 		(pts
@@ -5897,6 +5413,17 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 130.81) (xy 144.78 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "d37e27d5-2a3e-4f7f-9803-c133b9fd71a4")
+	)
+	(wire
+		(pts
 			(xy 74.93 120.65) (xy 74.93 142.24)
 		)
 		(stroke
@@ -5925,17 +5452,6 @@
 			(color 255 0 13 1)
 		)
 		(uuid "d40da792-e60a-4182-bfc3-c42d157db59a")
-	)
-	(wire
-		(pts
-			(xy 257.81 116.84) (xy 257.81 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "d4620fc6-3676-4285-95fa-276afcc46ae1")
 	)
 	(wire
 		(pts
@@ -6024,17 +5540,6 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 128.27) (xy 143.51 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "deb4b996-5c89-42d7-b17e-7af270b21451")
-	)
-	(wire
-		(pts
 			(xy 317.5 133.35) (xy 345.44 133.35)
 		)
 		(stroke
@@ -6077,17 +5582,6 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 128.27) (xy 257.81 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "e1db64d1-887d-4440-8276-a2211390339a")
-	)
-	(wire
-		(pts
 			(xy 373.38 121.92) (xy 405.13 121.92)
 		)
 		(stroke
@@ -6095,17 +5589,6 @@
 			(type default)
 		)
 		(uuid "e242c932-feef-4600-bbc9-37e385074bb8")
-	)
-	(wire
-		(pts
-			(xy 367.03 128.27) (xy 367.03 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "e3b257c8-689b-46b0-847b-42294cc53bf7")
 	)
 	(wire
 		(pts
@@ -6117,17 +5600,6 @@
 			(color 254 255 0 1)
 		)
 		(uuid "e42bd254-e6a4-43c1-816c-c5c5b730badc")
-	)
-	(wire
-		(pts
-			(xy 227.33 128.27) (xy 229.87 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "e6572421-6aa8-42da-9b76-baecf705ac36")
 	)
 	(wire
 		(pts
@@ -6162,6 +5634,17 @@
 	)
 	(wire
 		(pts
+			(xy 227.33 143.51) (xy 223.52 143.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "eae1f593-d9a0-4ed8-8196-e9d2f5ad7621")
+	)
+	(wire
+		(pts
 			(xy 25.4 274.32) (xy 82.55 274.32)
 		)
 		(stroke
@@ -6179,28 +5662,6 @@
 			(type default)
 		)
 		(uuid "ec6f39ea-775a-46d7-a213-268faff78996")
-	)
-	(wire
-		(pts
-			(xy 335.28 138.43) (xy 335.28 148.59)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "ece41a0e-2be0-41fc-86b6-2a36058ce2ef")
-	)
-	(wire
-		(pts
-			(xy 195.58 138.43) (xy 195.58 142.24)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "ed5e2c8c-5981-4c50-81e9-19bae30f62b6")
 	)
 	(wire
 		(pts
@@ -6225,7 +5686,7 @@
 	)
 	(wire
 		(pts
-			(xy 255.27 107.95) (xy 255.27 109.22)
+			(xy 255.27 107.95) (xy 255.27 119.38)
 		)
 		(stroke
 			(width 0)
@@ -6289,25 +5750,14 @@
 	)
 	(wire
 		(pts
-			(xy 279.4 138.43) (xy 279.4 146.05)
+			(xy 144.78 107.95) (xy 144.78 119.38)
 		)
 		(stroke
 			(width 0)
 			(type default)
-			(color 255 2 0 1)
+			(color 255 0 13 1)
 		)
-		(uuid "f5ea326c-3b85-4371-96f7-a846d2f3c104")
-	)
-	(wire
-		(pts
-			(xy 339.09 128.27) (xy 339.09 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "f620e991-760d-409b-aa02-13fa046f4944")
+		(uuid "f481b474-f7fb-4ced-92d3-1bff028a7067")
 	)
 	(wire
 		(pts
@@ -6318,39 +5768,6 @@
 			(type default)
 		)
 		(uuid "f679d13f-c151-4e5c-a717-03894cdd5e86")
-	)
-	(wire
-		(pts
-			(xy 311.15 138.43) (xy 313.69 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "f697034a-468d-4b4e-9b8a-954aa878cf5a")
-	)
-	(wire
-		(pts
-			(xy 143.51 138.43) (xy 144.78 138.43)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "f771de44-ab34-44cd-b078-384acb6e8a09")
-	)
-	(wire
-		(pts
-			(xy 339.09 116.84) (xy 341.63 116.84)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "f8e7b4d6-8d5b-4c7d-beb9-0c9a796eff5e")
 	)
 	(wire
 		(pts
@@ -6375,6 +5792,17 @@
 	)
 	(wire
 		(pts
+			(xy 144.78 119.38) (xy 144.78 130.81)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "fb1223d7-5e88-4d23-a40c-4f7734acc166")
+	)
+	(wire
+		(pts
 			(xy 82.55 172.72) (xy 90.17 172.72)
 		)
 		(stroke
@@ -6386,6 +5814,17 @@
 	)
 	(wire
 		(pts
+			(xy 171.45 130.81) (xy 171.45 138.43)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "fc5e7010-05c3-4081-a864-a0b2b5a0e01a")
+	)
+	(wire
+		(pts
 			(xy 62.23 120.65) (xy 62.23 142.24)
 		)
 		(stroke
@@ -6393,6 +5832,17 @@
 			(type default)
 		)
 		(uuid "fc862746-e52e-41c9-9bd7-75c1aef45983")
+	)
+	(wire
+		(pts
+			(xy 199.39 107.95) (xy 193.04 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+			(color 255 0 13 1)
+		)
+		(uuid "fdae0a19-896a-452b-b11c-04ed34c9be20")
 	)
 	(wire
 		(pts
@@ -6413,17 +5863,6 @@
 			(type default)
 		)
 		(uuid "ffcad356-3a97-48fd-9591-4c22778f07c5")
-	)
-	(wire
-		(pts
-			(xy 283.21 128.27) (xy 285.75 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-			(color 255 2 0 1)
-		)
-		(uuid "ffe5bc54-a369-4f10-8158-bad7e221b933")
 	)
 	(global_label "Y1"
 		(shape input)
@@ -6494,212 +5933,6 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 255.27 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "0465cf86-c020-4cce-a1a5-131e49ff9fd5")
-		(property "Reference" "D13"
-			(at 252.222 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 251.46 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 259.715 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 255.27 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 255.27 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 255.27 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 255.27 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "84d89f97-e885-44af-9cf8-f6e21a128be0")
-		)
-		(pin "2"
-			(uuid "3f51f774-6846-44f7-ab3a-a650f8fcaaa1")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 143.51 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "063f23c4-4b40-44ae-9fbb-bb5e0b75ee40")
-		(property "Reference" "D1"
-			(at 140.462 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 139.7 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 147.955 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 143.51 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 143.51 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 143.51 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 143.51 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e7d090e3-ba73-41b7-ba47-03d0f758071c")
-		)
-		(pin "2"
-			(uuid "8912b096-1bde-4fa6-b539-abeb7d213671")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D1")
-					(unit 1)
-				)
 			)
 		)
 	)
@@ -6783,112 +6016,9 @@
 			(uuid "0c672e35-2a89-4472-bc5a-fb08c3aa3b32")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 394.97 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "08c6666b-5053-4385-9501-579fb1c7a759")
-		(property "Reference" "D28"
-			(at 391.922 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 391.16 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 399.415 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 394.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 394.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 394.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 394.97 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9f6f7012-4173-4110-a500-c12b5ffa57f3")
-		)
-		(pin "2"
-			(uuid "8d32fdb5-4d59-42cb-bf79-dce3a2281f64")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D28")
 					(unit 1)
 				)
 			)
@@ -6974,7 +6104,7 @@
 			(uuid "4951cc26-7c4b-4c3f-a50f-a17d58a5755a")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW1")
 					(unit 1)
@@ -7062,7 +6192,7 @@
 			(uuid "395bb446-3075-42b6-8ccd-f17b981283b7")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW30")
 					(unit 1)
@@ -7157,7 +6287,7 @@
 			(uuid "64542b3b-3217-4893-a791-751d9a9fb83b")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J3")
 					(unit 1)
@@ -7235,7 +6365,7 @@
 			(uuid "2fd5eb72-db0e-456f-a4f3-8ee56e35a551")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR011")
 					(unit 1)
@@ -7338,7 +6468,7 @@
 			(uuid "8f764e26-247b-4753-8152-62005b1376e6")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D87")
 					(unit 1)
@@ -7441,215 +6571,9 @@
 			(uuid "0ff1a39a-da05-408f-ae6b-39aab6700154")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D79")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 227.33 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "28e878b9-b665-4756-820f-ddfe126385d5")
-		(property "Reference" "D12"
-			(at 224.282 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 223.52 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 231.775 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 227.33 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 227.33 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 227.33 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 227.33 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "641f1766-8487-4f80-8cb2-b6d80a9ab363")
-		)
-		(pin "2"
-			(uuid "2d87ad18-e4cb-4571-8d55-a09450eff831")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 199.39 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "2b1e643d-9fcf-461b-b46e-0f8b1844b09c")
-		(property "Reference" "D7"
-			(at 196.342 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 195.58 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 203.835 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 199.39 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 199.39 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 199.39 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 199.39 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "484bc597-402d-43c8-9776-6712bf8a1a51")
-		)
-		(pin "2"
-			(uuid "0618fa1d-214c-482f-baa1-b2fdb930805e")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D7")
 					(unit 1)
 				)
 			)
@@ -7735,7 +6659,7 @@
 			(uuid "957040fc-efa5-452a-9ad6-5b60a7f23160")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW18")
 					(unit 1)
@@ -7830,7 +6754,7 @@
 			(uuid "b4603272-0816-467e-817a-64dd9545ea49")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J4")
 					(unit 1)
@@ -7933,7 +6857,7 @@
 			(uuid "d79a00d0-a61a-477a-a1e3-947536c1f4b7")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D71")
 					(unit 1)
@@ -8036,7 +6960,7 @@
 			(uuid "599dec12-7305-4c69-a67e-84cd8c6e2f51")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D63")
 					(unit 1)
@@ -8124,7 +7048,7 @@
 			(uuid "749b70c9-9f07-4d97-b553-ab31c58ae5d7")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW29")
 					(unit 1)
@@ -8202,7 +7126,7 @@
 			(uuid "44d631df-9bc2-4f96-9b50-900c321a7963")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR02")
 					(unit 1)
@@ -8305,112 +7229,9 @@
 			(uuid "ab2e2b1f-843f-4f4b-8b2c-a724889e5153")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D85")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 367.03 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3cf25af1-4fe4-4e11-8fe9-cf7417a92ceb")
-		(property "Reference" "D27"
-			(at 363.982 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 363.22 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 371.475 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 367.03 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 367.03 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 367.03 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 367.03 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "8791e7bc-5cd2-4ffd-8f0f-7e1b54c1e163")
-		)
-		(pin "2"
-			(uuid "c33edd57-e33d-41b7-a1ed-f19981efc8a0")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D27")
 					(unit 1)
 				)
 			)
@@ -8511,7 +7332,7 @@
 			(uuid "0c2e9cf4-d5d2-45c5-8a08-b83de8d4bc2d")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D88")
 					(unit 1)
@@ -8599,7 +7420,7 @@
 			(uuid "f1b3fd9c-7cc9-47e2-8516-d8f8f16feb15")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW16")
 					(unit 1)
@@ -8687,7 +7508,7 @@
 			(uuid "43919000-47d4-4fa3-ade2-b1e18fe96b60")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW10")
 					(unit 1)
@@ -8775,112 +7596,9 @@
 			(uuid "dbf4ca9e-7d79-4295-ba8e-0896010e4915")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 367.03 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "54537e5b-13c5-4bda-8af6-99038a647941")
-		(property "Reference" "D26"
-			(at 363.982 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 363.22 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 371.475 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 367.03 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 367.03 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 367.03 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 367.03 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d36870e1-d2d0-4fd2-a831-35f2d6ae8d15")
-		)
-		(pin "2"
-			(uuid "149d6df6-f26f-4266-abcb-ce7939de5c0d")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D26")
 					(unit 1)
 				)
 			)
@@ -8956,7 +7674,7 @@
 			(uuid "11ab2959-ce10-4113-8a04-f417989d0e4c")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR07")
 					(unit 1)
@@ -9044,112 +7762,9 @@
 			(uuid "91830aa7-dfca-490d-bff0-f5b445204e8e")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 339.09 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "56a0ba76-b583-4d9e-b7a1-2c17252e2c3a")
-		(property "Reference" "D22"
-			(at 336.042 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 335.28 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 343.535 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 339.09 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 339.09 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 339.09 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 339.09 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "175040f5-69c5-482c-9710-4c478b4cbb5a")
-		)
-		(pin "2"
-			(uuid "2c21c568-f0d7-4eaf-87f3-1ca4affa4802")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D22")
 					(unit 1)
 				)
 			)
@@ -9235,7 +7850,7 @@
 			(uuid "88535d80-bddf-4133-b340-83244ac17207")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW8")
 					(unit 1)
@@ -9313,7 +7928,7 @@
 			(uuid "5857597a-9364-4a55-983d-9cbc59c139b4")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR031")
 					(unit 1)
@@ -9401,7 +8016,7 @@
 			(uuid "6393f147-2e74-44fb-9666-f8206f040538")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW5")
 					(unit 1)
@@ -9489,112 +8104,9 @@
 			(uuid "4496058b-e995-42c2-90e5-da32952eb898")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 171.45 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5bfda9e0-b945-4a2e-8fef-c190e8b2d40f")
-		(property "Reference" "D6"
-			(at 168.402 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 167.64 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 175.895 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 171.45 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 171.45 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 171.45 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 171.45 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "781dda0a-3094-4894-bdb4-07cc05eb59e4")
-		)
-		(pin "2"
-			(uuid "8869175c-d8fb-43ba-903e-c642037c4f65")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D6")
 					(unit 1)
 				)
 			)
@@ -9680,7 +8192,7 @@
 			(uuid "4745f994-af49-4847-b7b8-59c4b939ed77")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW24")
 					(unit 1)
@@ -9758,7 +8270,7 @@
 			(uuid "d6473036-d9ce-4f4f-a9b5-849bdf3f54b3")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR05")
 					(unit 1)
@@ -9861,7 +8373,7 @@
 			(uuid "93415606-baf0-4009-8543-3fdb97b6e9d0")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D80")
 					(unit 1)
@@ -9949,112 +8461,9 @@
 			(uuid "ceafb46b-dc21-431d-8029-b0a31df85c98")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW22")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 171.45 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "64944cd6-9fb0-409c-bc84-70062c41d118")
-		(property "Reference" "D5"
-			(at 168.402 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 167.64 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 175.895 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 171.45 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 171.45 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 171.45 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 171.45 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c14ee544-2087-4d14-95e3-4d09eb095f13")
-		)
-		(pin "2"
-			(uuid "3f5eb207-caf2-4806-8e85-836af98323f9")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D5")
 					(unit 1)
 				)
 			)
@@ -10155,112 +8564,9 @@
 			(uuid "c4527235-e8a3-44e6-83ca-1fd3f19ab2e4")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D68")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 311.15 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "693e2769-60bb-4d69-b6a3-25dee2b8bd82")
-		(property "Reference" "D19"
-			(at 308.102 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 307.34 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 315.595 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 311.15 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 311.15 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 311.15 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 311.15 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "b983dd9d-61a6-41d2-972f-26d404220d24")
-		)
-		(pin "2"
-			(uuid "276a337a-b74f-4d9a-a067-70597652804b")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D19")
 					(unit 1)
 				)
 			)
@@ -10336,7 +8642,7 @@
 			(uuid "85dfec9c-8a69-40a6-a719-345f209d220a")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR08")
 					(unit 1)
@@ -10424,7 +8730,7 @@
 			(uuid "45bb8459-1403-4609-a5b5-8521339d2f66")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW28")
 					(unit 1)
@@ -10512,318 +8818,9 @@
 			(uuid "53c72b07-8bcc-4613-be22-da2cae34f829")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 227.33 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "719e5025-5855-469a-84d1-a27ed0719146")
-		(property "Reference" "D10"
-			(at 224.282 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 223.52 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 231.775 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 227.33 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 227.33 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 227.33 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 227.33 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "294e4d76-e73e-4733-812f-64d67077fb25")
-		)
-		(pin "2"
-			(uuid "54f31357-bb3d-451b-b342-b28978029c6a")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D10")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 311.15 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "71cbc473-82d9-4cb6-bb25-a28363fce955")
-		(property "Reference" "D21"
-			(at 308.102 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 307.34 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 315.595 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 311.15 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 311.15 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 311.15 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 311.15 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e9f7cf9a-91c8-43fb-8dbd-33144d7b2c71")
-		)
-		(pin "2"
-			(uuid "75973dc2-028d-452b-ba6a-a0df18b37dc3")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D21")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 283.21 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "71db30ed-58d6-47fd-a6b1-fdfd60a86c6c")
-		(property "Reference" "D18"
-			(at 280.162 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 279.4 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 287.655 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 283.21 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 283.21 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 283.21 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 283.21 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e594fa4b-d8ef-498d-a3cc-f1c761bba45a")
-		)
-		(pin "2"
-			(uuid "40ed3fb9-9a69-48aa-9565-079fa04ecb2b")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D18")
 					(unit 1)
 				)
 			)
@@ -10909,112 +8906,9 @@
 			(uuid "28740906-7dcc-43bf-90a4-d876e89decdc")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW27")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 311.15 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "79153dda-1849-47f8-8135-9571c13d61b2")
-		(property "Reference" "D20"
-			(at 308.102 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 307.34 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 315.595 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 311.15 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 311.15 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 311.15 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 311.15 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cb9d37df-5121-4ce9-ab61-cc4f2052217f")
-		)
-		(pin "2"
-			(uuid "ecb83043-6bda-40c6-8160-4d53cc3f7481")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D20")
 					(unit 1)
 				)
 			)
@@ -11115,7 +9009,7 @@
 			(uuid "2d820b36-3607-4db5-b44b-fcdcd267d27e")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D58")
 					(unit 1)
@@ -11218,7 +9112,7 @@
 			(uuid "a39c4153-c96c-4f62-a0a8-66c5b3abdced")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D75")
 					(unit 1)
@@ -11306,7 +9200,7 @@
 			(uuid "74bdce03-980e-42ba-b487-fdc9619dadb7")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW25")
 					(unit 1)
@@ -11409,7 +9303,7 @@
 			(uuid "7e47d7cf-3f92-48ac-9181-7941841e8e6c")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D67")
 					(unit 1)
@@ -11512,215 +9406,9 @@
 			(uuid "f835291d-664a-4a4c-a557-51252b39fabc")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D70")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 339.09 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "87199d41-3543-4fc8-98a6-a0d5199f860c")
-		(property "Reference" "D23"
-			(at 336.042 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 335.28 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 343.535 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 339.09 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 339.09 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 339.09 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 339.09 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "a2d7b883-8171-48d0-bee5-958692289876")
-		)
-		(pin "2"
-			(uuid "1866d799-bfc2-46fc-b3c6-4c35c71c52b3")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D23")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 283.21 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "88a5370f-6510-40de-aa66-f1e94121fa4a")
-		(property "Reference" "D16"
-			(at 280.162 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 279.4 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 287.655 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 283.21 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 283.21 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 283.21 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 283.21 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "00eab766-8f4c-4f7a-a7c8-db8685e2ed82")
-		)
-		(pin "2"
-			(uuid "78357177-8118-444a-896e-7c1dbe0246dd")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -11806,7 +9494,7 @@
 			(uuid "67ac08f1-f4be-4400-8033-cdc1979abc03")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW19")
 					(unit 1)
@@ -11909,7 +9597,7 @@
 			(uuid "621e2eeb-35b6-4700-9562-398b7cf98f81")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D76")
 					(unit 1)
@@ -12012,7 +9700,7 @@
 			(uuid "fa07fe82-1098-4cc9-9e9d-6303b9436b30")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D65")
 					(unit 1)
@@ -12100,112 +9788,9 @@
 			(uuid "fa68e762-39dd-4e2c-a964-64a5d6b9ae57")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW26")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 255.27 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "945efbf6-ef0e-440b-871a-921875ca961a")
-		(property "Reference" "D14"
-			(at 252.222 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 251.46 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 259.715 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 255.27 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 255.27 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 255.27 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 255.27 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7ec10ff3-766f-46a4-ae62-88f782b09ea8")
-		)
-		(pin "2"
-			(uuid "9036edcf-ba6d-4b7d-94ed-788ae84a1eaa")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D14")
 					(unit 1)
 				)
 			)
@@ -12320,7 +9905,7 @@
 			(uuid "847ce9ad-abca-4969-8560-80af9a796bd8")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J6")
 					(unit 1)
@@ -12398,7 +9983,7 @@
 			(uuid "6abb9727-3970-405d-8068-cd0b5d575db8")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR010")
 					(unit 1)
@@ -12501,112 +10086,9 @@
 			(uuid "6ac2f5ff-a61b-4940-87b1-860eca95b0b5")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D83")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 143.51 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "98e22e76-a9f8-4b55-874d-9396f3a583a9")
-		(property "Reference" "D3"
-			(at 140.462 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 139.7 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 147.955 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 143.51 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 143.51 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 143.51 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 143.51 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6cd18716-5d3b-443c-92bd-1e7580338091")
-		)
-		(pin "2"
-			(uuid "b7917e13-a3e9-4c28-a986-c47cf69cef5b")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D3")
 					(unit 1)
 				)
 			)
@@ -12707,112 +10189,9 @@
 			(uuid "4ecd16cb-7510-4c0d-9b90-dbd996582dd1")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D89")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 394.97 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "9e997cf0-11e9-4561-95c2-45fd350c9656")
-		(property "Reference" "D29"
-			(at 391.922 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 391.16 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 399.415 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 394.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 394.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 394.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 394.97 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "9f5b8b82-2a7f-4af7-9c16-5368cdee7559")
-		)
-		(pin "2"
-			(uuid "8512046c-5f48-47dc-b8d9-906443c2309f")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D29")
 					(unit 1)
 				)
 			)
@@ -12913,7 +10292,7 @@
 			(uuid "8d4bc4a2-6fa0-402b-ab9c-e55e030f6b30")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D90")
 					(unit 1)
@@ -12991,112 +10370,9 @@
 			(uuid "7cc8eb6d-40dd-4f8a-b498-948cfae52cb5")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR020")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 171.45 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a516f560-c709-4c69-b20d-065117df0936")
-		(property "Reference" "D4"
-			(at 168.402 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 167.64 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 175.895 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 171.45 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 171.45 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 171.45 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 171.45 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "142e7030-6032-4fb4-b468-b0a9bce7a039")
-		)
-		(pin "2"
-			(uuid "42aa93f0-a2ba-45db-afbd-fd017a9bc2cf")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D4")
 					(unit 1)
 				)
 			)
@@ -13197,7 +10473,7 @@
 			(uuid "2464445f-aaee-4515-a278-0af139802a51")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D82")
 					(unit 1)
@@ -13275,7 +10551,7 @@
 			(uuid "c96d9613-13ae-4ba4-8303-093bb711bf07")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR03")
 					(unit 1)
@@ -13378,7 +10654,7 @@
 			(uuid "4e8c02aa-872c-4a37-a938-675c84d17769")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D78")
 					(unit 1)
@@ -13466,7 +10742,7 @@
 			(uuid "823689ff-61b7-455d-b83a-6bb7a2772cba")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW15")
 					(unit 1)
@@ -13569,7 +10845,7 @@
 			(uuid "b0297a9a-7cf5-40d8-bd2d-3ccfd8f96bcc")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D84")
 					(unit 1)
@@ -13657,421 +10933,9 @@
 			(uuid "8fd8945a-b5a8-476d-ba57-0e2e34bb001f")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 367.03 113.03 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bc399071-5924-4504-ad89-40bc7369f8b3")
-		(property "Reference" "D25"
-			(at 363.982 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 363.22 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 371.475 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 367.03 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 367.03 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 367.03 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 367.03 113.03 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "eab94bb4-3f1a-48f8-8602-4458453203b7")
-		)
-		(pin "2"
-			(uuid "812819f0-d13b-4b83-8013-a97bf31d1db4")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D25")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 283.21 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "bf1ac4c9-586d-42c3-9b7b-b158ee70c151")
-		(property "Reference" "D17"
-			(at 280.162 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 279.4 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 287.655 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 283.21 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 283.21 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 283.21 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 283.21 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "feae774f-f97a-44d9-bb4a-395af0b12fc2")
-		)
-		(pin "2"
-			(uuid "59c4e379-fe71-499b-9bbb-d538f22f6664")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D17")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 143.51 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c0815ba5-7818-452e-89c9-c12414fb5339")
-		(property "Reference" "D2"
-			(at 140.462 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 139.7 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 147.955 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 143.51 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 143.51 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 143.51 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 143.51 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f3081db0-5ffd-4d83-bdc6-228fc2c69963")
-		)
-		(pin "2"
-			(uuid "a4c73b00-5270-4378-b722-d31e898ef427")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 339.09 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c17d10b5-067a-4b1b-b555-caf5ea20ec3f")
-		(property "Reference" "D24"
-			(at 336.042 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 335.28 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 343.535 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 339.09 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 339.09 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 339.09 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 339.09 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c5b441c1-1d75-47e9-b814-789e46522439")
-		)
-		(pin "2"
-			(uuid "03ccf11f-4d2a-46da-bf09-d0ec6fdaba63")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D24")
 					(unit 1)
 				)
 			)
@@ -14147,215 +11011,9 @@
 			(uuid "66943ace-c1ee-4404-a5c5-ddf57a057185")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 199.39 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c776600b-d2cc-4c0d-9ad5-3a7972575191")
-		(property "Reference" "D8"
-			(at 196.342 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 195.58 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 203.835 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 199.39 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 199.39 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 199.39 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 199.39 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59ea56d9-8759-4191-b758-d5c5c454bbc0")
-		)
-		(pin "2"
-			(uuid "cda24bb8-c67b-4a8d-a5d1-419c6b3ce1d7")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D8")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 227.33 123.19 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ccad1af5-a9c7-4d15-9243-ece9ee1601a0")
-		(property "Reference" "D11"
-			(at 224.282 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 223.52 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 231.775 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 227.33 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 227.33 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 227.33 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 227.33 123.19 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d8a226f7-67ee-4edb-a9af-94f04e7ac828")
-		)
-		(pin "2"
-			(uuid "e3a1138f-562c-4893-9aea-4e620a2da191")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D11")
 					(unit 1)
 				)
 			)
@@ -14492,7 +11150,7 @@
 			(uuid "b80ab7d1-426c-425f-ad8c-124dd2d444ed")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J1")
 					(unit 1)
@@ -14580,7 +11238,7 @@
 			(uuid "50ffaa40-b801-411a-8083-a71577c29f09")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW23")
 					(unit 1)
@@ -14683,7 +11341,7 @@
 			(uuid "95e0c68e-8064-4029-8280-f6c37d73713d")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D73")
 					(unit 1)
@@ -14771,7 +11429,7 @@
 			(uuid "380763e4-5284-4757-900d-f3be549762e9")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW4")
 					(unit 1)
@@ -14859,7 +11517,7 @@
 			(uuid "534fac01-d227-4956-95bf-c9f9b324b845")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW9")
 					(unit 1)
@@ -14946,7 +11604,7 @@
 			(uuid "637a50bf-8ed0-4938-b91a-48142e16f142")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW2")
 					(unit 1)
@@ -15024,7 +11682,7 @@
 			(uuid "1e00626f-0c10-4858-8381-5976a9127b14")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR04")
 					(unit 1)
@@ -15102,7 +11760,7 @@
 			(uuid "d0e11aca-0510-4af5-8ee4-f6d0fee3826f")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR018")
 					(unit 1)
@@ -15205,7 +11863,7 @@
 			(uuid "26895b4f-59be-41fb-8177-3298393067e5")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D77")
 					(unit 1)
@@ -15308,112 +11966,9 @@
 			(uuid "9f664298-250d-45ca-9736-c6a0c54a8309")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D86")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 255.27 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ddb77030-6d89-4a47-b4bc-085f26f76772")
-		(property "Reference" "D15"
-			(at 252.222 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 251.46 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 259.715 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 255.27 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 255.27 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 255.27 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 255.27 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "00421415-c94c-4be5-b321-928930436d48")
-		)
-		(pin "2"
-			(uuid "5031933b-6a87-467f-8772-f2d42390b335")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D15")
 					(unit 1)
 				)
 			)
@@ -15499,7 +12054,7 @@
 			(uuid "b9b5012b-7204-415d-97e6-8df2c617408b")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW11")
 					(unit 1)
@@ -15602,7 +12157,7 @@
 			(uuid "cdcc0c5b-f08c-402e-8585-5dc3716a5a46")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D74")
 					(unit 1)
@@ -15680,7 +12235,7 @@
 			(uuid "af20846a-08aa-4392-a530-eee7cdee02b3")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR06")
 					(unit 1)
@@ -15758,7 +12313,7 @@
 			(uuid "515efd32-34d4-4fa0-9c9c-5453397396be")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR09")
 					(unit 1)
@@ -15861,7 +12416,7 @@
 			(uuid "d9cfe005-c433-4f3e-9c74-a08a48b87d0f")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D64")
 					(unit 1)
@@ -15964,7 +12519,7 @@
 			(uuid "2510e102-563c-42ab-8b31-caf3c7c9b430")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D66")
 					(unit 1)
@@ -16080,7 +12635,7 @@
 			(uuid "d5885bda-d63b-4f35-a1e1-c2d2a60a1da5")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J5")
 					(unit 1)
@@ -16168,7 +12723,7 @@
 			(uuid "6ed24118-9df6-4801-9bee-035358be93e5")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW7")
 					(unit 1)
@@ -16271,112 +12826,9 @@
 			(uuid "b2f49d6a-d8b1-4122-be56-29eda64f0495")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D81")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 394.97 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f06b8a40-2f79-466d-85b6-97ae435c0350")
-		(property "Reference" "D30"
-			(at 391.922 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 391.16 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 399.415 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 394.97 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 394.97 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 394.97 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 394.97 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2fedf7ce-ba3d-4acb-943d-04b69a9b4328")
-		)
-		(pin "2"
-			(uuid "d2074821-1688-4b0e-bda5-2a6cacb426da")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D30")
 					(unit 1)
 				)
 			)
@@ -16477,7 +12929,7 @@
 			(uuid "f0aa7a52-7836-4ab2-aace-497a8a9a3506")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D59")
 					(unit 1)
@@ -16616,7 +13068,7 @@
 			(uuid "d7bb744a-a24e-478c-9361-b3fd446152cc")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "J2")
 					(unit 1)
@@ -16719,7 +13171,7 @@
 			(uuid "9b7b79d1-df0e-454d-9e12-68b7e3de7746")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D72")
 					(unit 1)
@@ -16797,7 +13249,7 @@
 			(uuid "58ae4f9e-4373-44ea-9a84-11c13cedb0f2")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR029")
 					(unit 1)
@@ -16885,112 +13337,9 @@
 			(uuid "28c0eb1f-77f5-47c8-bf9b-a3bb6d68d03f")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4007")
-		(at 199.39 134.62 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f583c53c-1bbf-4c5a-9619-4e7f54bbb871")
-		(property "Reference" "D9"
-			(at 196.342 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4007"
-			(at 195.58 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
-			(at 203.835 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 199.39 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "1000V 1A General Purpose Rectifier Diode, DO-41"
-			(at 199.39 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 199.39 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 199.39 134.62 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "59792045-e5e5-470d-abb9-99120939fd07")
-		)
-		(pin "2"
-			(uuid "fbd33d76-b17e-47d3-8fda-40dd71379ca3")
-		)
-		(instances
-			(project "razor32_allin1"
-				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
-					(reference "D9")
 					(unit 1)
 				)
 			)
@@ -17066,7 +13415,7 @@
 			(uuid "aaabb074-6811-464b-8656-ee4b66455467")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "#PWR022")
 					(unit 1)
@@ -17169,7 +13518,7 @@
 			(uuid "b31bd636-0bff-4948-9751-0fafd0538c17")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "D69")
 					(unit 1)
@@ -17257,7 +13606,7 @@
 			(uuid "2f9d1d0d-5778-4728-965a-9dc6a74b16d1")
 		)
 		(instances
-			(project "razor32_allin1"
+			(project "razor32"
 				(path "/0f1d9307-122b-47ed-9471-7667eb5816c5"
 					(reference "SW20")
 					(unit 1)
