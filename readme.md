@@ -29,24 +29,24 @@ Designed using Blender, the Case comes with 4 parts: The lower box, upper box, h
 ## PCB
 The PCBs were made using KiCad. The board contains the sockets for esp32 and screen and a 3x10 matricial keyboard using push buttons.
 
-<img width="1554" height="643" alt="image" src="https://github.com/user-attachments/assets/978d0212-b814-4360-8908-0f115b7902e9" />
+<img width="1552" height="635" alt="image" src="https://github.com/user-attachments/assets/bb65db5e-8fe4-406e-8cc4-4279fa65e9ce" />
 F.Cu
-<img width="1553" height="647" alt="image" src="https://github.com/user-attachments/assets/03a0e6d1-09b2-4657-9c0a-62f6257420bb" />
+<img width="1554" height="642" alt="image" src="https://github.com/user-attachments/assets/8e43224d-572f-4551-ab2e-7bbd130f8db6" />
 In.1.Cu
-<img width="1549" height="645" alt="in_1_cu" src="https://github.com/user-attachments/assets/6f52b10a-beeb-4c9d-9fab-ef5318c1a9e0" />
+<img width="1553" height="648" alt="image" src="https://github.com/user-attachments/assets/84fe1ab5-4585-4b7d-8349-80eeb58be74b" />
 In.2.Cu
-<img width="1552" height="643" alt="in_2_cu" src="https://github.com/user-attachments/assets/255fb91b-1b1d-4447-a878-a5c38d252215" />
+<img width="1554" height="647" alt="image" src="https://github.com/user-attachments/assets/5122ed8c-1942-4f9d-a764-668effb3a2fb" />
 B.Cu
-<img width="1555" height="649" alt="b_cu" src="https://github.com/user-attachments/assets/e560d248-3e61-44b0-adb1-6e0abcc9557c" />
+<img width="1553" height="646" alt="image" src="https://github.com/user-attachments/assets/180d0790-9fb7-4b6d-b69d-22ce8d4ecffd" />
 3D render front
 
-![image.png](https://cdn.hackclub.com/019e9a15-c1cd-702c-8423-ca17017fb9ae/image.png)
+<img width="1193" height="492" alt="image" src="https://github.com/user-attachments/assets/1f13fa46-ca99-45f8-bacd-faad630ac335" />
 3D render back
 
-![image.png](https://cdn.hackclub.com/019e9a16-30f5-767a-8891-511ec2bbf898/image.png)
+<img width="1195" height="493" alt="image" src="https://github.com/user-attachments/assets/934cced1-8e1a-4696-a7b5-efd85375df8f" />
 
 Schematic
-<img width="1406" height="940" alt="image" src="https://github.com/user-attachments/assets/c855fa32-a0d0-49cf-b6a7-035c64f532b4" />
+<img width="1131" height="639" alt="image" src="https://github.com/user-attachments/assets/66fd9c85-617d-40fe-bd33-a3ecb1bf88a1" />
 
 #### External Wiring Diagram
 <img width="883" height="662" alt="wiring diagram" src="https://github.com/user-attachments/assets/c300e543-da08-47b7-805b-9ff1040d1792" />
