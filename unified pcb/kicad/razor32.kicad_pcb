@@ -11608,9 +11608,9 @@
 		)
 	)
 	(gr_text "^"
-		(at 149.2 91.1 0)
+		(at 149.05 102.925 0)
 		(layer "F.Cu")
-		(uuid "85ee821e-b561-4dc3-8a69-9d81a194d3ac")
+		(uuid "9911ca1c-746a-4618-9a11-7e48dc0d38b6")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -11621,9 +11621,9 @@
 		)
 	)
 	(gr_text "^"
-		(at 149.4 102.95 0)
+		(at 149.2 91.1 0)
 		(layer "F.Cu")
-		(uuid "9911ca1c-746a-4618-9a11-7e48dc0d38b6")
+		(uuid "85ee821e-b561-4dc3-8a69-9d81a194d3ac")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -11660,9 +11660,9 @@
 		)
 	)
 	(gr_text "^"
-		(at 162.65 103 0)
+		(at 162.625 115 0)
 		(layer "F.Cu")
-		(uuid "4dbcb97f-30dd-48d7-a048-9894cdc99987")
+		(uuid "913f9019-77c7-48e7-9104-6253bb0a0108")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -11673,9 +11673,9 @@
 		)
 	)
 	(gr_text "^"
-		(at 162.85 115 0)
+		(at 162.65 103 0)
 		(layer "F.Cu")
-		(uuid "913f9019-77c7-48e7-9104-6253bb0a0108")
+		(uuid "4dbcb97f-30dd-48d7-a048-9894cdc99987")
 		(effects
 			(font
 				(size 1.5 1.5)
@@ -14216,7 +14216,7 @@
 	(via
 		(at 176.2 117.6)
 		(size 0.5)
-		(drill 0.25)
+		(drill 0.35)
 		(layers "F.Cu" "B.Cu")
 		(free yes)
 		(capping no)
